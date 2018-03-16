@@ -1,4 +1,4 @@
-# HTML and CSS course
+# Day 1 : HTML & CSS
 
 ## What is a Webpage ?
 
