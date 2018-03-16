@@ -114,7 +114,7 @@ The web is reffered to as ***Client-Server*** communication:
     - Headers - contain plain text information
     - Body - sometimes contains binary data
 - The information found in these three sections **vary depending if there is a request or response**:
-![HTTP-Request-message](img/HTTP-request-message.png "HTTP-Request-message")
+![HTTP-Request-message](img/HTTP-request-message.png "HTTP-Request-message") 
 ![HTTP-Response-message](img/HTTP-response-message.png "HTTP-Response-message")
 
 ## HTML Page Structure
@@ -185,3 +185,362 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
     - **Search engine friendly**: search engines rank content and not code, but using semantics to understand content
 - Some examples of using Semantic HTML can be found here: https://internetingishard.com/html-and-css/semantic-html/
 
+## Let's add some style : CSS
+
+  - **CSS1**, first introduced in 1996, with the features: fonts, colors, alignment and spacing
+  - **CSS2.1**, released in 2004, added to previous features: layout and positioning
+  - **CSS3** has additional features regarding effects, sizing and speech
+  - There is **no CSS4**, the language has no longer levels - only the modules will be versioned
+
+**Q: What is CSS?**
+
+**A:** 
+- **C**ascading **S**tyle **S**heets
+- while HTML gives the structure of the content, CSS gives a way to describe how the content should be presented
+- whem the browser displays HTML, it uses its own built-in default style
+- can control the displaying style of multiple web pages at once
+- external stylesheets are stored in **CSS files**
+
+**Style element**
+
+- ***&lt;style&gt;*** element helps to add some design to the web page
+- placed inside the head of HTML
+- just like other tags, it has an opening tag and a closing one
+- but the &lt;style&gt; tag also requires an **attribute** called **type** which tells the browser the king of style used. In this case, it will be **text/css**
+- an **attribute** provides additional information about an element
+- there are not currently any other styles that work with today's browsers, but **type** attribute was created to anticipate possible future ones
+- e.g.:
+````HTML
+<html>
+  <head>
+    <title>Stylized page</title>
+    <style type="text/css">
+      body {
+        background-color: red;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px dotted gray;
+        padding: 10px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    Some content here
+  </body>
+</html>
+````
+
+- Let's analyze the content between &lt;style&gt; tags:
+  - **body** : is the selector, the content between curly braces follow the template: **propertyName: value**
+  - **background-color** : sets the background color to the desired one
+  - **margin-left**, **margin-right** : sets the left and right margins to some values
+  - **border** : defines a border deisgned with specific width, style and color
+  - **padding**: creates some padding
+  - **font-family** : defines the font to use for text
+
+**Include External CSS**
+- Styles are usually included into external CSS files
+- With an external style sheet, the look of an entire site can be changed by modifying one file
+- To use an external style sheet, a link can be added in the &lt;head&gt; section of the HTML page:
+
+```HTML
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+````
+````CSS
+body {
+  background-color: yellow;
+}
+p {
+  color: red;
+}
+````
+
+**Q: What are the different ways to represent colors in CSS?**
+
+**A:**
+  - Hexadecimal colors : **#RRGGBB** 
+    - components of the color: RR(red), GG(green) and BB(blue) hexadecimal integers between 00 and FF
+    - e.g. : #0000FF is blue
+  - RGB colors : **rgb(red, green, blue)** 
+    - each parameter defines the intensity of the color and can be an integer between 0 and 255
+    - e.g. : rgb(0, 0, 255) is blue
+  - RGBA colors : **rgba(red, green, blue, alpha)**
+    - extension of RGB colors
+    - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
+    - e.g. : rgba(0, 0, 0, 255, 0.3) is blue with opacity
+  - HSL Colors: **hsl(hue, saturation, lightness)**
+    - hue is a degree on the color wheel (from 0 to 360, 0 or 360 is red, 120 is green, 240 is blue), saturation is a percentage value (0% means a shade of gray and 100% is the full color) and lightness is also a percentage (0% is black, 100% is white)
+    - e.g. : hsl(240, 60%, 70%) is pastel blue
+  - HSLA Colors : **hsla(hue, saturation, lightness, alpha)**
+    - extension of HSL colors
+    - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
+    - e.g. : hsla(240, 60%, 70%, 0.3) is pastel blue with opacity
+  - Predefined/Cross-browser colors
+    - there are 140 color names predefined in CSS specification
+    - e.g.: Aqua, Blue, Brown
+
+**Simple Selectors**
+- A selector is a pattern used to apply patterns to elements
+- There are 3 types of simple selectors:
+  - **based on the type of element** 
+    - e.g.: the previous **body** selector will select all body elements in HTML
+  - **based on class**
+    -e.g. : **.bookTitle** identifies the HTML elements matching *bookTitle* class atrribute
+  - **based on id**
+    - e.g.: **#menu** : will select all elements which have the id named *menu*
+- Same CSS properties may be applied to multiple selectors, by separating them by comma:
+  - e.g.: **h1, h2** {...}
+- Also, for selecting everything, **star selector (*)** can be used
+
+**More Complex Selectors**
+- **descendant selector**
+![descendant_selector](img/descendant_selector.png "descendant_selector") 
+  - apply the style for all **p** elements anywhere inside of **div** elements
+- **child selector**
+![child_selector](img/child_selector.png "child_selector") 
+  - apply the style for all **p** elements that are direct descendants (childs) of **div** elements
+- **attribute selector**
+![attribute_selector](img/attribute_selector.png "attribute_selector") 
+  - apply the style for all **img** elements that have the value of *alt* atribute equal to *spacer*
+- **pseudo-class**
+![pseudo_class](img/pseudo_class.png "pseudo_class")
+  - apply the style for all visited **a** elements (hyperlinks)
+  
+  **Q: What is a pseudo-class?**
+
+  **A:** A pseudo-class is used to define a special state of an element. For example, it can be used to:
+    - Style an element when a user mouses over it
+    - Style visited and unvisited links differently
+
+  **Q: What is a pseudo-element?**
+
+  **A:** A pseudo-element ( **selector::pseudo-element** ) is used to style specified parts of an element. For example, it can be used to:
+    - Style the first letter or line of an element
+    - Insert content before or after the content of an element
+
+**Note**
+
+Here there are just a few selectors. In order to see all of possible ones, visit https://www.w3.org/TR/selectors-3/
+
+**Specifying CSS Property Values**
+- There are a lot of ways to specify property values (by the property):
+  - **Keywords:** thin, thick, larger
+  - **Physical measurements:** inches (in), points (pt), picas (pc)
+  - **Screen measurements:** pixels (px)
+  - **Relative measurements:** %,em
+  - **Color codes:** hex, rgb
+  - **Fonts:** Helvetica, sans-serif 
+  - **Functional notation:** url("https://example.com/ex.jpg")
+
+**Specificity**
+
+- is a weight that is applied to a given CSS declaration, determined by the number of seach *selector type* in the matching selector
+- when multiple delcarations have equal specificity, the last declaration found in the CSS is applied to the element
+- only applies when the same element is targeted by multiple declarations
+- **directly targeted elements** will always take precedence over rules which an element inherits from its ancestor
+![specificity](img/specificity.png "specificity") 
+- The following list of selector types increases by specificity:
+  - 0. Type selectors ( h1 ) and pseudo-elements ( ::before )
+  - 1. Class selectors ( .example ), attributes selectors ( [type="radio"] ) and pseudo-classes ( :hover )
+  - 2. ID selectors ( #example )
+- Inline styles added to an element ( style="font-weight:bold") always overwrite any styles in external stylesheets => have **the highest** specificity 
+- **!important** rule is used on a style declaration and this one overrides any other declarations. Using of this one is **bad practice** because it makes debugging more difficult by breaking the natural **cascading**.
+![specificity_no](img/specificity_no.png "specificity_no")
+
+**Inheritance**
+- some properties will be inherited from the element's parents
+  - e.g. : font-size
+- if we take a look at a make, it looks pretty much as a tree 
+
+**The Bog Three**
+- An HTML element can be considered as a box
+- There are three big properties that can influence this box:
+  - **border**: not visible by default, but the width, style and color can be controlled
+  - **padding**: the space between the border and the content of the box. 
+  - **margin**: the space between the box and other elements
+
+**Padding, Margin, Border**
+- Every box has 4 sides
+- CSS allows to set all sides equally or independently
+![padding_margin_border](img/padding_margin_border.png "padding_margin_border")
+- the order of the 4 values from *margin* are: top, right, bottom and left ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
+- *border* also has a shorter form, the 3 values means: width, type and color 
+
+**Note**
+
+When the **top and bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins**
+
+**Display and visibility**
+- Display is generally block, inline or none
+  - Block elements sit on top of each other
+    - e.g.: **div** element is a block-level element
+  - Inline elements only move downward when there is no enough space
+    - e.g.: **span** element is an inline element
+  - Display of none removes an element
+- Visibility:
+  - Elements are visible by default
+  - Hidden elements are not visible, but reserve space
+
+**Position**
+- 4 values:
+  - **static:**
+    - default value
+    - an element with ***position: static*** is not positioned in any special way, it is always positioned according to the normal flow of the page
+  - **fixed:**
+    - an element with ***position: fixed*** always stays in the same place even if the page is scrolled
+    - it does not leave a gap in the page where it would normally have been located
+  - **sticky:**
+    - an element with ***position: sticky*** is positioned based on the user's scroll position
+  - **relative:**
+    - an element with ***position: relative*** is positioned relative to its normal position
+  - **absolute**
+    - an element with ***position: absolute*** is positioned relative to the nearest positioned ancestor. If there is no positioned ancestor, it uses the document body
+
+**Flexbox**
+
+- The Flexible Box Layout Module makes it easier to design flexible responsive layout structure without using float or positioning
+- Excels at vertical centering and equal heights
+- Very easy to reorder boxes
+- First, it is needed to define **flex container** (the parent) and **flex items** (the children)
+- The flex container becomes flexible by setting the **display** property to ***flex***
+````CSS
+.flex-container {
+  display: flex
+}
+````
+- The flex container properties are:
+  - **flex-direction**
+  - **flex-wrap**
+  - **flex-flow**
+  - **justify-content**
+  - **align-items**
+  - **align-content**
+
+- It easily solves one of the most common style problem: **perfect centering**:
+````CSS
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+````
+- The direct child elements of a flex container automatically becomes flexible (flex) items
+- The flex item properties are:
+  - **order**
+  - **flex-arrow**
+  - **flex-shrink**
+  - **flex-basis**
+  - **flex**
+  - **align-self**
+
+- Main disadvantage is that Flexbox was planned to be 1-dimension
+
+**Note**
+
+To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.com/
+
+**CSS Grid**
+- Released on March 2017
+- Excels at dividing a page into major regions or defining the relationship in terms of size, position and layer
+- Like tables, **grid layout** enables the author to align elements into columns and rows
+- CSS Grid is designed to work in 2-dimension way - no "row" markup required
+- It is better to use Flexbox for UI elements, but use Grid for major layout
+- Example for using CSS Grid:
+
+````HTML
+<div class="wrapper">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+  <div class="five">Five</div>
+  <div class="six">Six</div>
+</div>
+````
+
+````CSS
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+````
+
+The display will be divided in this way:
+![CSS_Grid](img/CSS_Grid.png "CSS_Grid") 
+
+**Note**
+
+To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
+
+
+**Responsive Web Design**
+
+- makes web pages look good on all devices
+- uses only HTML and CSS
+- can be viewed using many different devices: desktops, tablets and phones
+- the web page should look good and be easy to use, regardless of the device
+- it is called responsive web design when CSS and HTML is used in order to resize, hide or move the content to make it look good on any screen
+
+**Q: What is a Media Query?**
+
+**A:** 
+  - It is a CSS technique introduced in CSS3. 
+  - It uses the **@media** rule to include a block of CSS properties only if a certain condition is true.
+  - It is added a breakpoint where certain parts of the design will behave differently on each side of the breakpoint. 
+  ````CSS
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+      width: 8.33%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+      width: 8.33%;
+    }
+  }
+  ````
+  
