@@ -115,6 +115,7 @@ The web is reffered to as ***Client-Server*** communication:
     - Body - sometimes contains binary data
 - The information found in these three sections **vary depending if there is a request or response**:
 ![HTTP-Request-message](img/HTTP-request-message.png "HTTP-Request-message") 
+&nbsp;
 ![HTTP-Response-message](img/HTTP-response-message.png "HTTP-Response-message")
 
 ## HTML Page Structure
