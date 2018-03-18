@@ -3,45 +3,53 @@
 ## What is a Webpage ?
 
 A **Web page**:
+
 - is a document commonly written in **HTML** (*HyperText Markup Language*)
-- is accesible through the internet using any web browser (*Google Chrome*, *Opera*, *Safari*, *Mozilla Firefox* and so on) 
+- is accesible through the internet using any web browser (*Google Chrome*, *Opera*, *Safari*, *Mozilla Firefox* and so on)
 - may contain text, audio, video, downloadable data files, hyperlink to other web pages
 - can be viewed by entering correct URL pointing to the Web page
 
-## A little history lesson 
+## A little history lesson
 
 **Q: When was first Webpage created?**
 
-**A:** 
-- First Webpage was created in 1991 by Tim Berners Lee. 
-- He published it from a lab in the Swiss Alps. 
-- The page is still up nowadays, but it was updated many times from then. 
+**A:**
+
+- First Webpage was created in 1991 by Tim Berners Lee.
+- He published it from a lab in the Swiss Alps.
+- The page is still up nowadays, but it was updated many times from then.
 - It was created to explain the World Wide Web concept to the newcomers.
 - The actual version of the World's first Website can be found here: http://info.cern.ch/hypertext/WWW/TheProject.html
 
 ## Types of Webpages
 
-1. Static Webpages:
+**Static Webpages:**
+
 - shows the same content each time access it
 - e.g. : HTML Webpage
-2. Dynamic Webpages:
+
+**Dynamic Webpages**:
+
 - changes the content each time access it
 - are usually witten in Scripting Languages such as PHP, JSP, ASP, Perl etc.
 - Sscripting Languages return information in HTML form from a Database. Then, the browser translate the HTML to computer understandable language
 - e.g. : a Webpage displaying current date and time
 
-## Difference between a Webpage, a Website and a Web Application ##
+## Difference between a Webpage, a Website and a Web Application
 
 **Webpage:**
+
 - Single document written using HTML
 - Can be accessed by entering its URL (Uniform Resource Locator) address in a Web Browser
 
 **Website:**
+
 - A group of ***interlinked*** and ***well-structured*** web pages that exist on the same domain
 - We move from one page to another using ***hyperlinks***
 - As there exists 2 types of webpages, there are 2 types of websites also: ***static*** (contains only static web pages) and ***dynamic*** (contains dynamic web pages)
 
 **Web Application:**
+
 - A ***software program*** that exists on the server and run using a web browser, through a web page
 - Created using a combination of ***programming languages*** and ***web application frameworks***
 - It may use the RAM, allow user interactivity and it is designed for many uses
@@ -52,13 +60,15 @@ A **Web page**:
 
 ***The web*** is a service that allows computers to share and exchange data, such as: images, videos, documents etc.
 
-The web is reffered to as ***Client-Server*** communication: 
+The web is reffered to as ***Client-Server*** communication:
+
 - computers that ask for data, so these are ***Clients***
 - computers that give the data, calling also *computers that serve*, so this is the ***Servers***
 
 **Q: What is a client?**
 
 **A:**
+
 - is a way to make requests through the web
 - can be a machine or a program
 - ***Client Machine*** is the device that the user can use to access the web (e.g. : laptop, desktop, smartphones)
@@ -67,20 +77,22 @@ The web is reffered to as ***Client-Server*** communication:
 **Q: What is a server?**
 
 **A:**
+
 - is a computer program, **NOT** a device
 - by extension, the server is a high-performance computer, but it is called server because it runs **server programs**
 - provide functionality and **serve***other programs called clients
 - a single server can **serve multiple clients at the same time**, that is the reason why we need servers to be *super-computers*
 - **multiple servers** can run on a **single machine**
-- there are many types of servers: 
-    - ***Web servers*** (*Apache*) - serve **HTTP** requests
-    - ***Database servers*** - run Database Management Systems
+- there are many types of servers:
+  - ***Web servers*** (*Apache*) - serve **HTTP** requests
+  - ***Database servers*** - run Database Management Systems
 - can contain web resources, host web applications, stores user and program data etc.
 - is always listening for requests and as soon as it receives one, responds with a message
 
 **Q: How does the Client-Server model works?**
 
 **A:** It is an architecture on the web that splits computers into 2 sections:
+
 - computers that asks for and request services (***Clients***)
 - computers that serve clients (***Servers***)
 
@@ -89,14 +101,15 @@ The web is reffered to as ***Client-Server*** communication:
 **Q: Is there any alternative?**
 
 **A:**
+
 - The Client-Server model is just one way for the computers to communicate via the web.
 - It is based on a **centralized structure**
 - There is another way to communicate via a **decentralized structure** - ***The Peer to Peer Model***
 - In The Peer to Peer Model:
-    - There is no client and no server
-    - Both computers can be requesters and response providers
-    - Each one is able to send and receive data directly with one another
-    - e.g. : Videochat protocols
+  - There is no client and no server
+  - Both computers can be requesters and response providers
+  - Each one is able to send and receive data directly with one another
+  - e.g. : Videochat protocols
 
 ## HTTP Protocol
 
@@ -110,9 +123,9 @@ The web is reffered to as ***Client-Server*** communication:
 - It is a **stateless** protocol: the client and the server know about each other **just durring the current request**. If they wants to reconnect, will estabilish a new connection as the first time.
 - Was designed for the Web in the first place
 - A typical HTTP message contains:
-    - Start line - contain plain text information
-    - Headers - contain plain text information
-    - Body - sometimes contains binary data
+  - Start line - contain plain text information
+  - Headers - contain plain text information
+  - Body - sometimes contains binary data
 - The information found in these three sections **vary depending if there is a request or response**:
 ![HTTP-Request-message](img/HTTP-Request-message.png "HTTP-Request-message") 
 &nbsp;
@@ -120,10 +133,13 @@ The web is reffered to as ***Client-Server*** communication:
 
 ## HTML Page Structure
 - A HTML element usually consists of a **start** tag and **end** tag, with the content inserted between them:
+
 ```HTML
 <tagname>Some HTML content...</tagname>
 ````
+
 - There is a sample of HTML page document:
+
 ````HTML
 <html>
   <head>
@@ -144,14 +160,16 @@ The web is reffered to as ***Client-Server*** communication:
   </body>
 </html>
 ````
+
 - From the sample below, can be seen that all content is between **html** tags. 
 - Next, we have:
-    - a declarative header section (delimited by the **head** element)
-    - a body, which contains the document's actual content (delimited by **body** element)
+  - a declarative header section (delimited by the **head** element)
+  - a body, which contains the document's actual content (delimited by **body** element)
 
-**HTML - Basic Tags**
+**HTML - Basic Tags:**
 
-***Heading tags***
+***Heading tags:***
+
 - Any document starts with a heading
 - The headings may have 6 different sizes, which use the following elements: **&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;**.
 
@@ -181,9 +199,9 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
 - it is about using *tags*, *class names* and *ids* that reinforce the *meaning of the content* within the tags
 - It is an additional layer of communication. Real people looking only at how your page displays may never get that additional communication, but machines will (like screen readers and search engines)
 - **Semantic HTML** is important because it is:
-    - **Clean**: easier to read and edit
-    - **More accessible**: it can be better understood by a greater variety of devices
-    - **Search engine friendly**: search engines rank content and not code, but using semantics to understand content
+  - **Clean**: easier to read and edit
+  - **More accessible**: it can be better understood by a greater variety of devices
+  - **Search engine friendly**: search engines rank content and not code, but using semantics to understand content
 - Some examples of using Semantic HTML can be found here: https://internetingishard.com/html-and-css/semantic-html/
 
 ## Let's add some style : CSS
@@ -195,7 +213,7 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
 
 **Q: What is CSS?**
 
-**A:** 
+**A:**
 - **C**ascading **S**tyle **S**heets
 - while HTML gives the structure of the content, CSS gives a way to describe how the content should be presented
 - whem the browser displays HTML, it uses its own built-in default style
@@ -211,6 +229,7 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
 - an **attribute** provides additional information about an element
 - there are not currently any other styles that work with today's browsers, but **type** attribute was created to anticipate possible future ones
 - e.g.:
+
 ````HTML
 <html>
   <head>
@@ -241,6 +260,7 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
   - **font-family** : defines the font to use for text
 
 **Include External CSS**
+
 - Styles are usually included into external CSS files
 - With an external style sheet, the look of an entire site can be changed by modifying one file
 - To use an external style sheet, a link can be added in the &lt;head&gt; section of the HTML page:
@@ -256,6 +276,7 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
   </body>
 </html>
 ````
+
 ````CSS
 body {
   background-color: yellow;
@@ -268,31 +289,33 @@ p {
 **Q: What are the different ways to represent colors in CSS?**
 
 **A:**
-  - Hexadecimal colors : **#RRGGBB** 
-    - components of the color: RR(red), GG(green) and BB(blue) hexadecimal integers between 00 and FF
-    - e.g. : #0000FF is blue
-  - RGB colors : **rgb(red, green, blue)** 
-    - each parameter defines the intensity of the color and can be an integer between 0 and 255
-    - e.g. : rgb(0, 0, 255) is blue
-  - RGBA colors : **rgba(red, green, blue, alpha)**
-    - extension of RGB colors
-    - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
-    - e.g. : rgba(0, 0, 0, 255, 0.3) is blue with opacity
-  - HSL Colors: **hsl(hue, saturation, lightness)**
-    - hue is a degree on the color wheel (from 0 to 360, 0 or 360 is red, 120 is green, 240 is blue), saturation is a percentage value (0% means a shade of gray and 100% is the full color) and lightness is also a percentage (0% is black, 100% is white)
-    - e.g. : hsl(240, 60%, 70%) is pastel blue
-  - HSLA Colors : **hsla(hue, saturation, lightness, alpha)**
-    - extension of HSL colors
-    - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
-    - e.g. : hsla(240, 60%, 70%, 0.3) is pastel blue with opacity
-  - Predefined/Cross-browser colors
-    - there are 140 color names predefined in CSS specification
-    - e.g.: Aqua, Blue, Brown
+
+- Hexadecimal colors : **#RRGGBB**
+  - components of the color: RR(red), GG(green) and BB(blue) hexadecimal integers between 00 and FF
+  - e.g. : #0000FF is blue
+- RGB colors : **rgb(red, green, blue)** 
+  - each parameter defines the intensity of the color and can be an integer between 0 and 255
+  - e.g. : rgb(0, 0, 255) is blue
+- RGBA colors : **rgba(red, green, blue, alpha)**
+  - extension of RGB colors
+  - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
+  - e.g. : rgba(0, 0, 0, 255, 0.3) is blue with opacity
+- HSL Colors: **hsl(hue, saturation, lightness)**
+  - hue is a degree on the color wheel (from 0 to 360, 0 or 360 is red, 120 is green, 240 is blue), saturation is a percentage value (0% means a shade of gray and 100% is the full color) and lightness is also a percentage (0% is black, 100% is white)
+  - e.g. : hsl(240, 60%, 70%) is pastel blue
+- HSLA Colors : **hsla(hue, saturation, lightness, alpha)**
+  - extension of HSL colors
+  - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
+  - e.g. : hsla(240, 60%, 70%, 0.3) is pastel blue with opacity
+- Predefined/Cross-browser colors
+  - there are 140 color names predefined in CSS specification
+  - e.g.: Aqua, Blue, Brown
 
 **Simple Selectors**
+
 - A selector is a pattern used to apply patterns to elements
 - There are 3 types of simple selectors:
-  - **based on the type of element** 
+  - **based on the type of element**
     - e.g.: the previous **body** selector will select all body elements in HTML
   - **based on class**
     -e.g. : **.bookTitle** identifies the HTML elements matching *bookTitle* class atrribute
@@ -302,20 +325,100 @@ p {
   - e.g.: **h1, h2** {...}
 - Also, for selecting everything, **star selector (*)** can be used
 
+```CSS
+nav {
+  background-color:#ddd;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+#about {
+  padding: 0 30px 25px 5px;
+}
+
+h1, h2, h3 {
+  color: #000;
+}
+
+```
+
 **More Complex Selectors**
-- **descendant selector**
-![descendant_selector](img/descendant_selector.png "descendant_selector") 
-  - apply the style for all **p** elements anywhere inside of **div** elements
-- **child selector**
-![child_selector](img/child_selector.png "child_selector") 
-  - apply the style for all **p** elements that are direct descendants (childs) of **div** elements
-- **attribute selector**
-![attribute_selector](img/attribute_selector.png "attribute_selector") 
-  - apply the style for all **img** elements that have the value of *alt* atribute equal to *spacer*
-- **pseudo-class**
-![pseudo_class](img/pseudo_class.png "pseudo_class")
-  - apply the style for all visited **a** elements (hyperlinks)
-  
+
+- **descendant selector** - apply the style for all **p** elements anywhere inside of **div** elements
+
+```CSS
+div p {
+  background-color:#ddd;
+}
+```
+
+```HTML
+<div>
+  <article>
+      <p>I'm a descendant</p>
+  </article>
+  <p>I'm also a descendant</p>
+</div>
+```
+
+- **child selector** - apply the style for all **p** elements that are direct descendants (childs) of **div** elements
+
+```CSS
+div > p {
+  background-color:#ddd;
+}
+```
+
+```HTML
+<div>
+  <article>
+      <p>I'm a descendant but not a child</p>
+  </article>
+  <p>I'm a child and also a descendent</p>
+</div>
+```
+
+- **chain selector** - apply the style for all **div** elements that contain the class  **mark**
+
+```CSS
+div.mark {
+  background-color:#ddd;
+}
+```
+
+```HTML
+<div>
+  <article class="mark">
+      I'm not a div
+  </article>
+  <div class="mark">
+    I'm a marked div :)
+  </div>
+</div>
+```
+
+- **attribute selector** - apply the style for all **img** elements that have the value of *alt* atribute equal to *fruit*
+
+```CSS
+img[alt=fruit] {
+  padding:0 20px;
+}
+```
+
+```HTML
+<img src="apple.jpg" alt="fruit"></img>
+```
+
+- **pseudo-class** - apply the style for all visited **a** elements (hyperlinks)
+
+```CSS
+a:visited {
+  color: blue;
+}
+```
+
   **Q: What is a pseudo-class?**
 
   **A:** A pseudo-class is used to define a special state of an element. For example, it can be used to:
@@ -332,47 +435,70 @@ p {
 
 Here there are just a few selectors. In order to see all of possible ones, visit https://www.w3.org/TR/selectors-3/
 
-**Specifying CSS Property Values**
+**Specifying CSS Property Values:**
 - There are a lot of ways to specify property values (by the property):
   - **Keywords:** thin, thick, larger
   - **Physical measurements:** inches (in), points (pt), picas (pc)
   - **Screen measurements:** pixels (px)
   - **Relative measurements:** %,em
   - **Color codes:** hex, rgb
-  - **Fonts:** Helvetica, sans-serif 
+  - **Fonts:** Helvetica, sans-serif
   - **Functional notation:** url("https://example.com/ex.jpg")
 
-**Specificity**
+**Specificity:**
 
 - is a weight that is applied to a given CSS declaration, determined by the number of seach *selector type* in the matching selector
 - when multiple delcarations have equal specificity, the last declaration found in the CSS is applied to the element
 - only applies when the same element is targeted by multiple declarations
 - **directly targeted elements** will always take precedence over rules which an element inherits from its ancestor
-![specificity](img/specificity.png "specificity") 
+
+```CSS
+body > div {
+  background-color: red;
+}
+
+div {
+  background-color: black;
+}
+
+* {
+  background-color: green;
+}
+```
+
+![specificity](img/specificity.png "specificity")
 - The following list of selector types increases by specificity:
   - 0. Type selectors ( h1 ) and pseudo-elements ( ::before )
   - 1. Class selectors ( .example ), attributes selectors ( [type="radio"] ) and pseudo-classes ( :hover )
   - 2. ID selectors ( #example )
-- Inline styles added to an element ( style="font-weight:bold") always overwrite any styles in external stylesheets => have **the highest** specificity 
+- Inline styles added to an element ( style="font-weight:bold") always overwrite any styles in external stylesheets => have **the highest** specificity
 - **!important** rule is used on a style declaration and this one overrides any other declarations. Using of this one is **bad practice** because it makes debugging more difficult by breaking the natural **cascading**.
 ![specificity_no](img/specificity_no.png "specificity_no")
 
 **Inheritance**
 - some properties will be inherited from the element's parents
   - e.g. : font-size
-- if we take a look at a make, it looks pretty much as a tree 
+- if we take a look at a make, it looks pretty much as a tree
 
-**The Bog Three**
+**The box Three**
 - An HTML element can be considered as a box
 - There are three big properties that can influence this box:
   - **border**: not visible by default, but the width, style and color can be controlled
-  - **padding**: the space between the border and the content of the box. 
+  - **padding**: the space between the border and the content of the box.
   - **margin**: the space between the box and other elements
 
 **Padding, Margin, Border**
 - Every box has 4 sides
 - CSS allows to set all sides equally or independently
-![padding_margin_border](img/padding_margin_border.png "padding_margin_border")
+
+```CSS
+ul li {
+  padding-right: 10px;
+  margin: 0 3px 0 3px;
+  border-botton: 3px solid #000;
+}
+```
+
 - the order of the 4 values from *margin* are: top, right, bottom and left ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
 - *border* also has a shorter form, the 3 values means: width, type and color 
 
@@ -380,7 +506,8 @@ Here there are just a few selectors. In order to see all of possible ones, visit
 
 When the **top and bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins**
 
-**Display and visibility**
+**Display and visibility:**
+
 - Display is generally block, inline or none
   - Block elements sit on top of each other
     - e.g.: **div** element is a block-level element
@@ -391,7 +518,8 @@ When the **top and bottom** margins meet, they overlap by taking the maximum of 
   - Elements are visible by default
   - Hidden elements are not visible, but reserve space
 
-**Position**
+**Position:**
+
 - 4 values:
   - **static:**
     - default value
@@ -406,18 +534,20 @@ When the **top and bottom** margins meet, they overlap by taking the maximum of 
   - **absolute**
     - an element with ***position: absolute*** is positioned relative to the nearest positioned ancestor. If there is no positioned ancestor, it uses the document body
 
-**Flexbox**
+**Flexbox:**
 
 - The Flexible Box Layout Module makes it easier to design flexible responsive layout structure without using float or positioning
 - Excels at vertical centering and equal heights
 - Very easy to reorder boxes
 - First, it is needed to define **flex container** (the parent) and **flex items** (the children)
 - The flex container becomes flexible by setting the **display** property to ***flex***
+
 ````CSS
 .flex-container {
   display: flex
 }
 ````
+
 - The flex container properties are:
   - **flex-direction**
   - **flex-wrap**
@@ -427,6 +557,7 @@ When the **top and bottom** margins meet, they overlap by taking the maximum of 
   - **align-content**
 
 - It easily solves one of the most common style problem: **perfect centering**:
+
 ````CSS
 .flex-container {
   display: flex;
@@ -435,6 +566,7 @@ When the **top and bottom** margins meet, they overlap by taking the maximum of 
   align-items: center;
 }
 ````
+
 - The direct child elements of a flex container automatically becomes flexible (flex) items
 - The flex item properties are:
   - **order**
@@ -446,11 +578,10 @@ When the **top and bottom** margins meet, they overlap by taking the maximum of 
 
 - Main disadvantage is that Flexbox was planned to be 1-dimension
 
-**Note**
-
 To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.com/
 
-**CSS Grid**
+**CSS Grid:**
+
 - Released on March 2017
 - Excels at dividing a page into major regions or defining the relationship in terms of size, position and layer
 - Like tables, **grid layout** enables the author to align elements into columns and rows
@@ -503,14 +634,13 @@ To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.
 ````
 
 The display will be divided in this way:
-![CSS_Grid](img/CSS_Grid.png "CSS_Grid") 
+![CSS_Grid](img/CSS_Grid.png "CSS_Grid")
 
 **Note**
 
 To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
 
-
-**Responsive Web Design**
+**Responsive Web Design:**
 
 - makes web pages look good on all devices
 - uses only HTML and CSS
@@ -520,28 +650,29 @@ To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden
 
 **Q: What is a Media Query?**
 
-**A:** 
-  - It is a CSS technique introduced in CSS3. 
-  - It uses the **@media** rule to include a block of CSS properties only if a certain condition is true.
-  - It is added a breakpoint where certain parts of the design will behave differently on each side of the breakpoint. 
-  ````CSS
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
+**A:**
+
+- It is a CSS technique introduced in CSS3.
+- It uses the **@media** rule to include a block of CSS properties only if a certain condition is true.
+- It is added a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.
+
+````CSS
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+      width: 100%;
   }
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {
-      width: 8.33%;
-    }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
   }
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {
-      width: 8.33%;
-    }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
   }
-  ````
-  
+}
+````
