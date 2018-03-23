@@ -2,14 +2,43 @@
 
 ## Table of contents
 
-- [What is a Webpage?](#what-is-a-webpage)
+- [What is a Webpage?](#what-is-a-webpage) 
 - [A little history lesson : first Webpage created](#a-little-history-lesson-first-webpage-created)
 - [Types of Webpages](#types-of-webpages)
+  - [Static Webpages](#static-ebpages:)
+  - [Dynamic Webpages](#dynamic-webpages)
 - [Difference between a Webpage, a Website and a Web Application](#difference-between-a-webpage-a-website-and-a-web-application)
+  - [Webpage](#webpage)
+  - [Website](#website)
+  - [Web Application](#web-application)
 - [Client-Server model](#client-server-model)
+  - [Client](#client)
+  - [Server](#server)
+  - [How does the Client-Server model works?](#how-does-the-client-server-model-works)
 - [HTTP Protocol](#http-protocol)
 - [HTML Page Structure](#html-page-structure)
+  - [HTML - Basic Tags](#html-basic-tags)
+  - [Semantic HTML](#semantic-html)
 - [Let's add some style : CSS](#lets-add-some-style-css)
+  - [About CSS](#about-css)
+  - [Style element](#style-element)
+  - [Include External CSS](#include-external-css)
+  - [Representing colors in CSS](#representing-colors-in-css)
+  - [Simple Selectors](#simple-selectors)
+  - [More Complex Selectors](#more-complex-selectors)
+  - [Pseudo-class](#pseudo-class)
+  - [Pseudo-element](#pseudo-element)
+  - [Specifying CSS Property Values](#specifying-css-property-values)
+  - [Specificity](#specificity)
+  - [Inheritance](#inheritance)
+  - [The box Three](#the-box-three)
+  - [Padding, Margin, Border](#padding-margin-border)
+  - [Display and visibility](#display-and-visibility)
+  - [Position](#position)
+  - [Flexbox](#flexbox)
+  - [CSS Grid](#css-grid)
+  - [Responsive Web Design](#responsive-web-design)
+  - [Media Query](#media-query)
 
 ## What is a Webpage ?
 
@@ -70,14 +99,14 @@ The web is reffered to as **Client-Server** communication:
 - computers that ask for data, so these are **Clients**
 - computers that give the data, calling also *computers that serve*, so this is the **Servers**
 
-### A client:
+### Client:
 
 - is a way to make requests through the web
 - can be a machine or a program
 - ***Client Machine*** is the device that the user can use to access the web (e.g. : laptop, desktop, smartphones)
 - ***Client Program*** is a program that allows the user to ***make requests*** (*e.g. : Web Browser*)
 
-### A server:
+### Server:
 
 - is a computer program, **NOT** a device
 - by extension, the server is a high-performance computer, but it is called server because it runs **server programs**
@@ -284,7 +313,7 @@ p {
 }
 ```
 
-### Representing colors in CSS:
+### Representing colors in CSS
 
 - **Hexadecimal colors : *#RRGGBB***
   - components of the color: RR(red), GG(green) and BB(blue) hexadecimal integers between 00 and FF
@@ -415,13 +444,13 @@ a:visited {
 }
 ```
 
-  ### The pseudo-class:
+  ### Pseudo-class:
 
   - is used to define a special state of an element. For example, it can be used to:
     - Style an element when a user mouses over it
     - Style visited and unvisited links differently
 
-  ### The pseudo-element:
+  ### Pseudo-element:
 
  - is used to style specified parts of an element. For example, it can be used to:
     - Style the first letter or line of an element
