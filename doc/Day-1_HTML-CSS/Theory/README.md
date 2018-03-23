@@ -5,7 +5,7 @@
 - [What is a Webpage?](#what-is-a-webpage) 
 - [A little history lesson : first Webpage created](#a-little-history-lesson-first-webpage-created)
 - [Types of Webpages](#types-of-webpages)
-  - [Static Webpages](#static-ebpages:)
+  - [Static Webpages](#static-webpages)
   - [Dynamic Webpages](#dynamic-webpages)
 - [Difference between a Webpage, a Website and a Web Application](#difference-between-a-webpage-a-website-and-a-web-application)
   - [Webpage](#webpage)
