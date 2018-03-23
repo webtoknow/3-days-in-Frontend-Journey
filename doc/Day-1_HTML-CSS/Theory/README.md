@@ -2,14 +2,14 @@
 
 ## Table of contents
 
-- [What is a Webpage?](#What-is-a-Webpage)
-- [A little history lesson - first Webpage created](#A-little-history-lesson-:-first-Webpage-created)
-- [Types of Webpages](#Types-of-Webpages)
-- [Difference between a Webpage, a Website and a Web Application](#Difference-between-a-Webpage,-a-Website-and-a-Web-Application)
-- [Client-Server model](#Client-Server-model)
-- [HTTP Protocol](#HTTP-Protocol)
-- [HTML Page Structure](#HTML-Page-Structure)
-- [Let's add some style : CSS](#Let's-add-some-style-:-CSS)
+- [What is a Webpage?](#what-is-a-webpage)
+- [A little history lesson : first Webpage created](#a-little-history-lesson-first-webpage-created)
+- [Types of Webpages](#types-of-webpages)
+- [Difference between a Webpage, a Website and a Web Application](#difference-between-a-webpage-a-website-and-a-web-application)
+- [Client-Server model](#client-server-model)
+- [HTTP Protocol](#http-protocol)
+- [HTML Page Structure](#html-page-structure)
+- [Let's add some style : CSS](#lets-add-some-style-css)
 
 ## What is a Webpage ?
 
