@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [What is a Webpage?](#what-is-a-webpage) 
-- [A little history lesson : first Webpage created](#a-little-history-lesson-first-webpage-created)
+- [First Webpage created](#first-webpage-created)
 - [Types of Webpages](#types-of-webpages)
   - [Static Webpages](#static-webpages)
   - [Dynamic Webpages](#dynamic-webpages)
@@ -19,7 +19,7 @@
 - [HTML Page Structure](#html-page-structure)
   - [HTML Basic Tags](#html-basic-tags)
   - [Semantic HTML](#semantic-html)
-- [Let's add some style : CSS](#lets-add-some-style-css)
+- [Let's add some style using CSS](#lets-add-some-style-using-css)
   - [About CSS](#about-css)
   - [Style element](#style-element)
   - [Include External CSS](#include-external-css)
@@ -47,7 +47,7 @@
 - may contain text, audio, video, downloadable data files, hyperlink to other web pages
 - can be viewed by entering correct URL pointing to the Web page
 
-## A little history lesson : first Webpage created
+## First Webpage created
 
 - First Webpage was created in 1991 by Tim Berners Lee.
 - He published it from a lab in the Swiss Alps.
@@ -232,7 +232,7 @@ This is just a quick preview of some samples of HTML tags. The whole list can be
   - **Clean**: easier to read and edit
 - Some examples of using Semantic HTML can be found here: https://internetingishard.com/html-and-css/semantic-html/
 
-## Let's add some style : CSS
+## Let's add some style using CSS
 
   - **CSS1**, first introduced in 1996, with the features: fonts, colors, alignment and spacing
   - **CSS2.1**, released in 2004, added to previous features: layout and positioning
