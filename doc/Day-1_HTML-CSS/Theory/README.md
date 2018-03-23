@@ -40,7 +40,7 @@
   - [Responsive Web Design](#responsive-web-design)
   - [Media Query](#media-query)
 
-## What is a Webpage ?
+## What is a Webpage?
 
 - is a document commonly written in **HTML** (***HyperText Markup Language***)
 - is accesible through the internet using any web browser (*Google Chrome*, *Opera*, *Safari*, *Mozilla Firefox* and so on)
