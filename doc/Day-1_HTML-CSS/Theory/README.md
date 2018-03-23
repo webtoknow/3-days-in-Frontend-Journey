@@ -17,7 +17,7 @@
   - [How does the Client-Server model works?](#how-does-the-client-server-model-works)
 - [HTTP Protocol](#http-protocol)
 - [HTML Page Structure](#html-page-structure)
-  - [HTML - Basic Tags](#html-basic-tags)
+  - [HTML Basic Tags](#html-basic-tags)
   - [Semantic HTML](#semantic-html)
 - [Let's add some style : CSS](#lets-add-some-style-css)
   - [About CSS](#about-css)
@@ -33,7 +33,7 @@
   - [Inheritance](#inheritance)
   - [The box Three](#the-box-three)
   - [Padding, Margin, Border](#padding-margin-border)
-  - [Display and visibility](#display-and-visibility)
+  - [Display and Visibility](#display-and-visibility)
   - [Position](#position)
   - [Flexbox](#flexbox)
   - [CSS Grid](#css-grid)
@@ -194,7 +194,7 @@ It is an architecture on the web that splits computers into 2 sections:
   - a declarative header section (delimited by the **head** element)
   - a body, which contains the document's actual content (delimited by **body** element)
 
-### HTML - Basic Tags:
+### HTML Basic Tags:
 
 **Heading tags: *&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;***
 
@@ -533,7 +533,7 @@ ul li {
 
 When the **top** and **bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins.**
 
-### Display and visibility
+### Display and Visibility
 
 - **Display** is generally **block**, **inline** or **none**
   - **Block elements** sit on top of each other
