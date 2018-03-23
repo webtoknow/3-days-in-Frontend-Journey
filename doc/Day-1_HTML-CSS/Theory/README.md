@@ -128,16 +128,16 @@ It is an architecture on the web that splits computers into 2 sections:
 
 ![Client-Server-Architecture](img/Client-Server-Architecture.png "Client-Server-Architecture")
 
-### **Note**
-
-- The Client-Server model is just one way for the computers to communicate via the web.
-- It is based on a **centralized structure**
-- There is another way to communicate via a **decentralized structure** - ***The Peer to Peer Model***
-- In The Peer to Peer Model:
-  - There is no client and no server
-  - Both computers can be requesters and response providers
-  - Each one is able to send and receive data directly with one another
-  - *e.g. : Videochat protocols*
+> ### **Note**
+>
+> - The Client-Server model is just one way for the computers to communicate via the web.
+> - It is based on a **centralized structure**
+> - There is another way to communicate via a **decentralized structure** - ***The Peer to Peer Model***
+> - In The Peer to Peer Model:
+>   - There is no client and no server
+>   - Both computers can be requesters and response providers
+>   - Each one is able to send and receive data directly with one another
+>  - *e.g. : Videochat protocols*
 
 ## HTTP Protocol
 
@@ -217,13 +217,13 @@ It is an architecture on the web that splits computers into 2 sections:
 **Nonbreaking Spaces - *\&nbsp;***
 - To make client browser not to break text, *\&nbsp;* space entity should be used.
 
-### **Note**
-
-This is just a quick preview of some samples of HTML tags. The whole list can be found here: https://www.w3schools.com/tags/ref_byfunc.asp
+> ### **Note**
+>
+> This is just a quick preview of some samples of HTML tags. The whole list can be found here: https://www.w3schools.com/tags/ref_byfunc.asp
 
 ### Semantic HTML
 
-- reffers to the idea that all HTML markup should convey the underlying meaning of the content - not its appearance
+- refers to the idea that all HTML markup should convey the underlying meaning of the content - not its appearance
 - it is about using **tags**, **class names** and **ids** that reinforce the **meaning of the content** within the tags
 - It is an additional layer of communication. Real people looking only at how your page displays may never get that additional communication, but machines will (like screen readers and search engines)
 - **Semantic HTML** is important because it is:
@@ -458,9 +458,9 @@ a:visited {
  - *e.g.: **selector::pseudo-element*** 
   
 
-### **Note**
-
-Here there are just a few selectors. In order to see all of possible ones, visit https://www.w3.org/TR/selectors-3/
+> ### **Note**
+>
+> Here there are just a few selectors. In order to see all of possible ones, visit https://www.w3.org/TR/selectors-3/
 
 ### Specifying CSS Property Values
 - There are a lot of ways to specify property values (by the property):
@@ -529,9 +529,9 @@ ul li {
 - the order of the 4 values from **margin** are: **top, right, bottom and left** ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
 - **border** also has a shorter form, the 3 values means: **width**, **type** and **color** 
 
-### **Note**
-
-When the **top** and **bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins.**
+> ### **Note**
+>
+> When the **top** and **bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins.**
 
 ### Display and Visibility
 
@@ -605,8 +605,9 @@ When the **top** and **bottom** margins meet, they overlap by taking the maximum
 
 - Main disadvantage is that Flexbox was planned to be 1-dimension
 
-### **Note** 
-To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.com/
+> ### **Note** 
+>
+> To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.com/
 
 ### CSS Grid
 
@@ -664,9 +665,9 @@ To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.
 The display will be divided in this way:
 ![CSS_Grid](img/CSS_Grid.png "CSS_Grid")
 
-### **Note**
-
-To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
+> ### **Note**
+>
+> To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
 
 ### Responsive Web Design
 
