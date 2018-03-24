@@ -1,0 +1,145 @@
+
+html {
+    font-family: 'Cardo', serif;
+    color:#1e1e1e;
+}
+
+
+p {
+    margin-bottom: 30px;
+    line-height: 1.9;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top:100px;
+}
+
+.nav__container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav__item {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    list-style-type: none;
+    margin: 0 0 0 100px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    text-decoration: none;
+    color:#1e1e1e;
+}
+
+.add__container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 130px;
+}
+
+.button {
+    background: none;
+    border: 1px solid #9b9b9b;
+    border-radius: 50px;
+    font-size: 14px;
+    height: 60px;
+    line-height: 1.3;
+    width: 300px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.title {
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 46px;
+    margin: 90px auto 0 auto;
+    text-align: center;
+    width: 800px;
+}
+
+.info__container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.info__item {
+    color: #9b9b9b;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.info__item:not(:last-child):after {
+    content: '\2022';
+    font-weight: bold;
+    padding: 0 20px;
+
+}
+.info__mark {
+    color: #1e1e1e;
+    font-weight: bold;
+}
+
+.actions__container {
+    margin: 40px 0 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actions__btn {
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.actions__btn:not(:last-child):after {
+    content: '\007c';
+    padding: 5px;
+}
+
+.content__container {
+    margin-top: 80px;
+}
+
+.readme__container {
+    display: flex;
+    justify-content: center;
+    margin: 140px 0 100px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0 100px 0;
+}
+
+.footer__link {
+    color:#1e1e1e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    line-height: 1.2;
+    text-decoration: none;
+}

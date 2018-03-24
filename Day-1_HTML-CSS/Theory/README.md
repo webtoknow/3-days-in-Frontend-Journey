@@ -128,7 +128,7 @@ It is an architecture on the web that splits computers into 2 sections:
 
 ![Client-Server-Architecture](img/Client-Server-Architecture.png "Client-Server-Architecture")
 
-> ### **Note**
+> **Note**
 >
 > - The Client-Server model is just one way for the computers to communicate via the web.
 > - It is based on a **centralized structure**
@@ -137,7 +137,7 @@ It is an architecture on the web that splits computers into 2 sections:
 >   - There is no client and no server
 >   - Both computers can be requesters and response providers
 >   - Each one is able to send and receive data directly with one another
->  - *e.g. : Videochat protocols*
+>   - *e.g. : Videochat protocols*
 
 ## HTTP Protocol
 
@@ -155,11 +155,13 @@ It is an architecture on the web that splits computers into 2 sections:
   - Headers - contain plain text information
   - Body - sometimes contains binary data
 - The information found in these three sections **vary depending if there is a request or response**:
-![HTTP-Request-message](img/HTTP-Request-message.png "HTTP-Request-message") 
+
+![HTTP-Request-message](img/HTTP-Request-message.png "HTTP-Request-message")
 &nbsp;
 ![HTTP-Response-message](img/HTTP-Response-message.png "HTTP-Response-message")
 
 ## HTML Page Structure
+
 - A HTML element usually consists of a **start** tag and **end** tag, with the content inserted between them:
 
 ```HTML
@@ -189,7 +191,7 @@ It is an architecture on the web that splits computers into 2 sections:
 </html>
 ```
 
-- From the sample below, can be seen that all content is between **html** tags. 
+- From the sample below, can be seen that all content is between **html** tags.
 - Next, we have:
   - a declarative header section (delimited by the **head** element)
   - a body, which contains the document's actual content (delimited by **body** element)
@@ -202,22 +204,27 @@ It is an architecture on the web that splits computers into 2 sections:
 - The headings may have 6 different sizes, which use the following elements: *&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;*.
 
 **Paragraph Tag - *&lt;p&gt;***
+
 - The *&lt;p&gt;* tag offers a way to structure the text into different paragraphs
 
 **Line break Tag - *&lt;br /&gt;***
+
 - After using the *&lt;br /&gt;* tag, anything following it starts from the next line.
 - This is an example of **empty** element, when no opening or closing tags are needed, because there is nothing to go between them
 
 **Centering content - *&lt;center&gt;***
+
 - This tag is used to put any content in the center of the page.
 
 **Preserve formatting - *&lt;pre&gt;***
+
 - Sometimes it is needed to keep the exact format as it is written; *&lt;pre&gt;* tag may be used for this purpose.
 
 **Nonbreaking Spaces - *\&nbsp;***
+
 - To make client browser not to break text, *\&nbsp;* space entity should be used.
 
-> ### **Note**
+> **Note**
 >
 > This is just a quick preview of some samples of HTML tags. The whole list can be found here: https://www.w3schools.com/tags/ref_byfunc.asp
 
@@ -234,10 +241,10 @@ It is an architecture on the web that splits computers into 2 sections:
 
 ## Let's add some style using CSS
 
-  - **CSS1**, first introduced in 1996, with the features: fonts, colors, alignment and spacing
-  - **CSS2.1**, released in 2004, added to previous features: layout and positioning
-  - **CSS3** has additional features regarding effects, sizing and speech
-  - There is **no CSS4**, the language has no longer levels - only the modules will be versioned
+- **CSS1**, first introduced in 1996, with the features: fonts, colors, alignment and spacing
+- **CSS2.1**, released in 2004, added to previous features: layout and positioning
+- **CSS3** has additional features regarding effects, sizing and speech
+- There is **no CSS4**, the language has no longer levels - only the modules will be versioned
 
 ### About CSS
 
@@ -444,33 +451,22 @@ a:visited {
 }
 ```
 
-  ### Pseudo-class:
+### Pseudo-class:
 
-  - is used to define a special state of an element. For example, it can be used to:
-    - Style an element when a user mouses over it
-    - Style visited and unvisited links differently
+- is used to define a special state of an element. For example, it can be used to:
+  - Style an element when a user mouses over it
+  - Style visited and unvisited links differently
 
-  ### Pseudo-element:
+### Pseudo-element:
 
- - is used to style specified parts of an element. For example, it can be used to:
-    - Style the first letter or line of an element
-    - Insert content before or after the content of an element
- - *e.g.: **selector::pseudo-element*** 
-  
+- is used to style specified parts of an element. For example, it can be used to:
+- Style the first letter or line of an element
+- Insert content before or after the content of an element
+- *e.g.: **selector::pseudo-element***
 
-> ### **Note**
+> **Note**
 >
-> Here there are just a few selectors. In order to see all of possible ones, visit https://www.w3.org/TR/selectors-3/
-
-### Specifying CSS Property Values
-- There are a lot of ways to specify property values (by the property):
-  - **Keywords:** *thin, thick, larger*
-  - **Physical measurements:** *inches (in), points (pt), picas (pc)*
-  - **Screen measurements:** *pixels (px)*
-  - **Relative measurements:** *%,em*
-  - **Color codes:** *hex, rgb*
-  - **Fonts:** *Helvetica, sans-serif*
-  - **Functional notation:** *url("https://example.com/ex.jpg")*
+> Here there are just a few selectors. In order to see all of possible ones, visit [selectors specs](https://www.w3.org/TR/selectors-3/).
 
 ### Specificity
 
@@ -494,20 +490,44 @@ div {
 ```
 
 ![specificity](img/specificity.png "specificity")
-- The following list of selector types increases by specificity:
-  - 0. **Type selectors** ( *h1* ) and **pseudo-elements** ( *::before* )
-  - 1. **Class selectors** ( *.example* ), **attributes selectors** ( *[type="radio"]* ) and **pseudo-classes** ( *:hover* )
-  - 2. **ID selectors** ( *#example* )
+
+The following list of selector types increases by specificity:
+
+- **Type selectors** ( *h1* ) and **pseudo-elements** ( *::before* )
+- **Class selectors** ( *.example* ), **attributes selectors** ( *[type="radio"]* ) and **pseudo-classes** ( *:hover* )
+- **ID selectors** ( *#example* )
 - **Inline styles** added to an element ( *style="font-weight:bold"*) **always overwrite** any styles in external stylesheets => have **the highest specificity**
 - **!important** rule is used on a style declaration and this one overrides any other declarations. Using of this one is **bad practice** because it makes debugging more difficult by breaking the natural **cascading**.
-![specificity_no](img/specificity_no.png "specificity_no")
+
+![specificity-example](img/specificity-example.png "Specificity Exemple")
+
+> **Note**
+>
+> We can calculate selector specificity using [Keegan Street calculator](https://specificity.keegan.st/).
+
+### Specifying CSS Property Values
+
+- There are a lot of ways to specify property values (by the property):
+  - **Keywords:** *thin, thick, larger*
+  - **Physical measurements:** *inches (in), points (pt), picas (pc)*
+  - **Screen measurements:** *pixels (px)*
+  - **Relative measurements:** *%,em*
+  - **Color codes:** *hex, rgb*
+  - **Fonts:** *Helvetica, sans-serif*
+  - **Functional notation:** *url("images/ex.jpg")*
+
+> **Note**
+>
+> To learn more easy CSS properties we can use a [Cheet Sheet](https://toptal-email-assets.s3.amazonaws.com/css-cheat-sheet.pdf).
 
 ### Inheritance
+
 - some properties will be inherited from the element's parents
   - *e.g. : font-size*
 - if we take a look at a make, it looks pretty much as a tree
 
 ### The box Three
+
 - An HTML element can be considered as a box
 - There are three big properties that can influence this box:
   - **border**: not visible by default, but the width, style and color can be controlled
@@ -515,6 +535,7 @@ div {
   - **margin**: the space between the box and other elements
 
 ### Padding, Margin, Border
+
 - Every box has **4 sides**
 - CSS allows to set all sides equally or independently
 
@@ -527,9 +548,9 @@ ul li {
 ```
 
 - the order of the 4 values from **margin** are: **top, right, bottom and left** ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
-- **border** also has a shorter form, the 3 values means: **width**, **type** and **color** 
+- **border** also has a shorter form, the 3 values means: **width**, **type** and **color**
 
-> ### **Note**
+> **Note**
 >
 > When the **top** and **bottom** margins meet, they overlap by taking the maximum of sizes. This rule is applied only for **vertical margins.**
 
@@ -605,9 +626,9 @@ ul li {
 
 - Main disadvantage is that Flexbox was planned to be 1-dimension
 
-> ### **Note** 
+> **Note**
 >
-> To learn flexbox in an easy and funny way, play this game: http://flexboxfroggy.com/
+> To learn flexbox in an easy and funny way, play [Flexbox defence](http://www.flexboxdefense.com/).
 
 ### CSS Grid
 
@@ -665,7 +686,7 @@ ul li {
 The display will be divided in this way:
 ![CSS_Grid](img/CSS_Grid.png "CSS_Grid")
 
-> ### **Note**
+> **Note**
 >
 > To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
 
