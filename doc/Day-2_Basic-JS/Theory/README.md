@@ -14,7 +14,7 @@
 - [Web Application Programming Interfaces](#web-application-programming-interfaces)
     - [API in client-side JavaScript](#api-in-client-side-javascript)
 - [What is JavaScript?](#what-is-javascript)
-    - [JavaScript running order](#javaScript-running-order)
+    - [JavaScript running order](#javascript-running-order)
     - [Interpreted versus compiled code](#interpreted-versus-compiled-code)
     - [How can JavaScript be added to a Web page?](#how-can-javascript-be-added-to-a-web-page)
 - [Primitives](#primitives)
