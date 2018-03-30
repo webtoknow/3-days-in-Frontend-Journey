@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>My Travel blog</title>
 </head>
 
 <body>
@@ -166,6 +166,23 @@
             <a href="#" class="footer__link">previous</a>
             <a href="#" class="footer__link">next</a>
         </footer>
+    </div>
+    <div class="modal__overlay">
+        <div class="modal">
+            <div class="modal__content">
+                <h2 class="title">Add new article</h2>
+                <input id="title" type="text" class="input" placeholder="Please enter title">
+                <input id="tag" type="text" class="input" placeholder="Please enter tag">
+                <input id="author" type="text" class="input" placeholder="Please enter author">
+                <input id="date" type="text" class="input" placeholder="Please enter date">
+                <input id="saying" type="text" class="input" placeholder="Please enter saying">
+                <textarea id="content" name="content" cols="30" rows="10" placeholder="Please enter content"></textarea>
+                <div class="modal__bts">
+                        <button id="save" type="button" class="button">Cancel</button>
+                        <button id="cancel" type="button" class="button">Save</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

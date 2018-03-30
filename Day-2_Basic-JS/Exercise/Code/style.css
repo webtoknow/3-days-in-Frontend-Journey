@@ -4,7 +4,6 @@ html {
     color:#1e1e1e;
 }
 
-
 p {
     margin-bottom: 30px;
     line-height: 1.9;
@@ -142,4 +141,33 @@ p {
     font-size: 34px;
     line-height: 1.2;
     text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.modal__overlay {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 1000px;
+    height: 750px;
+    background: white;
+    box-shadow: 0 0 26px 6px;
+}
+
+.modal__content {
+    
 }
