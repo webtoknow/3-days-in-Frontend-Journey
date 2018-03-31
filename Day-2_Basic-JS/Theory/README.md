@@ -24,6 +24,11 @@
     - [Indexed collections: Arrays and Typed Arrays](#indexed-collections-arrays-and-typed-arrays)
     - [Structured data: JSON](#structured-data-json)
 - [Functions](#functions)
+    - [Function declaration](#function-declaration)
+    - [Function expressions](#function-expressions)
+    - [Calling functions](#calling-functions)
+    - [Function scope](#function-scope)
+    - [Arrow functions](arrow-functions)
 
 ## How browsers work?
 
@@ -198,7 +203,7 @@ will be translated into:
     - **internal JavaScript**
 
         *e.g.:*
-        ```JavaScript
+        ```javascript
         <script>
 
             //JavaScript goes here
@@ -208,7 +213,7 @@ will be translated into:
     - **external JavaScript**
 
         *e.g.:*
-        ```JavaScript
+        ```javascript
         <script src="script.js"></script>
         ```
 ## Primitives
@@ -273,4 +278,92 @@ will be translated into:
 - JavaScript procedure: a set of statements that performs a task or calculates a value
 - to use a function, it has to be defined somewhere in the scope from which it will be called
 
-...to be continued
+### Function declaration
+- **function** keyword, followed by:
+    - the name of the function
+    - list of parameters to the function, followed enclosed in parantheses and separated by commas
+    - the JavaScript statements that define the function, enclosed in curly brakets, { } 
+    - *e.g.:*
+    ```javascript
+    function square(number) {
+        return number * number;
+    }
+    ```
+
+> **Note**
+>
+> - **Primitive** parameters are passed to functions **by value**. This means that, if a value is passed to function and the function changes it, **this change is not reflected globally** 
+> - If a **non-primitive** type is passed as parameter to the function and the function chages the value, **the change will be reflected globally**
+
+### Function expressions
+- a function can be **anonymous** (it can not have a name)
+- can be also defined as:
+```javascript
+var square = function(number) { return number*number; }
+```
+- a name can be provided, for example, for the recursive functions, which are called inside the function:
+```javascript
+var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
+```
+
+> **Note**
+>
+> - it can be also used the **Function** constructor to create a function
+> - *e.g.:*
+> ```javascript
+> var sum = new Function('a', 'b', 'return a + b');
+> ```
+
+### Calling functions
+
+- defining a funciton does not execute it
+- just names the function and specifies what to do when the function is called
+- **calling** the function actually performs the specified actions with the indicated parameters
+- *e.g.:*
+```javascript
+square(5); // will return 25 according to the previous declaration 
+```
+- function declaration can be hoisted (appear below the call in the code)
+- *e.g.:*
+```javascript
+console.log(square(5));
+/*...*/
+function square(n) {return n*n; }
+```
+
+### Function scope
+
+- variables defined inside of a funciton cannot be accessed from outside 
+- the variable is defined only in the scope of the function
+- a function can access all variables and functions defined inside the scope in which it is defined
+- *e.g.:*
+    - *a function declared in global scope can access all variables defined in the global scope*
+    - *a function defined inside another function can access all variables defined in the parent function and all the variables to which the parent function has access*
+
+### Arrow functions
+
+- an arrow function expression has a shorer syntax than function expressions
+- lexically bind the **this** value
+- until arrow functions, all function defined has **its own this ** value 
+- an arrow function does not newly define its own **this** 
+- are **anonymous**
+- were introduced in ES6
+- *e.g.:*
+```javascript
+var students = [
+    'Alex',
+    'Andreea',
+    'Maria',
+    'Matei'
+]
+
+//normal function
+students.map(function(student) {
+    return student.length;
+})
+
+//arrow function
+students.map((student) => {
+    return student.length;
+})
+``` 
