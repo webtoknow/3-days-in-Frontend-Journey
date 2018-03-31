@@ -45,7 +45,7 @@ p {
 .add__container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 130px;
+    margin-top: 130px 0 90px 0;
 }
 
 .button {
@@ -64,7 +64,7 @@ p {
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
     font-size: 46px;
-    margin: 90px auto 0 auto;
+    margin: 0 auto 0 auto;
     text-align: center;
     width: 800px;
 }
@@ -169,5 +169,47 @@ body {
 }
 
 .modal__content {
-    
+    padding: 50px 75px;
+}
+
+.inputs__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Cardo', serif;
+    padding: 0 5px;
+    margin-bottom: 25px;
+}
+
+.input--big {
+    width: 100%;
+}
+
+.textarea {
+    display: block;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Cardo', serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.button--pink {
+    background: #FFE3E3;
 }
