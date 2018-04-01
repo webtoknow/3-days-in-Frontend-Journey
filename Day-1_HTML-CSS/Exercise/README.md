@@ -30,6 +30,7 @@ and follow the instructions.
   - [Article ReadMore button](#article-readmore-button)
 - [Footer](#footer)
 - [Modal](#modal)
+
 ## HTML document structure
 
 Create index.html and style.css files.
@@ -366,9 +367,11 @@ p {
                 <input type="text" class="input" placeholder="Please enter tag">
                 <input type="text" class="input" placeholder="Please enter author">
                 <input type="text" class="input" placeholder="Please enter date">
-                <input type="text" class="input input--big" placeholder="Please enter saying">
+                <input id="imgUrl" type="text" class="input" placeholder="Please enter image url">
+                <input type="text" class="input" placeholder="Please enter saying">
+                <input type="text" class="input input--big" placeholder="Please enter summary">
             </div>
-            <textarea class="textarea" name="content" cols="28" rows="10" placeholder="Please enter content"></textarea>
+            <textarea class="textarea" name="content" cols="28" rows="7" placeholder="Please enter content"></textarea>
             <div class="modal__buttons">
                 <button type="button" class="button">Cancel</button>
                 <button type="button" class="button button--pink">Save</button>
