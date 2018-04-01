@@ -29,7 +29,7 @@ and follow the instructions.
   - [Article content](#article-content)
   - [Article ReadMore button](#article-readmore-button)
 - [Footer](#footer)
-
+- [Modal](#modal)
 ## HTML document structure
 
 Create index.html and style.css files.
@@ -154,7 +154,7 @@ p {
 .add__container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 130px;
+    margin: 130px 0 90px 0;
 }
 
 .button {
@@ -200,7 +200,7 @@ p {
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
     font-size: 46px;
-    margin: 90px auto 0 auto;
+    margin: 0 auto;
     text-align: center;
     width: 800px;
 }
@@ -351,5 +351,105 @@ p {
     font-size: 34px;
     line-height: 1.2;
     text-decoration: none;
+}
+```
+
+## Modal
+
+```HTML
+<div class="modal__overlay">
+    <div class="modal">
+        <div class="modal__content">
+            <h2 class="title">Add new article</h2>
+            <div class="inputs__container">
+                <input type="text" class="input" placeholder="Please enter title">
+                <input type="text" class="input" placeholder="Please enter tag">
+                <input type="text" class="input" placeholder="Please enter author">
+                <input type="text" class="input" placeholder="Please enter date">
+                <input type="text" class="input input--big" placeholder="Please enter saying">
+            </div>
+            <textarea class="textarea" name="content" cols="28" rows="10" placeholder="Please enter content"></textarea>
+            <div class="modal__buttons">
+                <button type="button" class="button">Cancel</button>
+                <button type="button" class="button button--pink">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+```CSS
+
+.show-modal {
+    overflow: hidden;
+}
+.show-modal .modal__overlay{
+    display: flex;
+}
+.modal__overlay {
+    background-color: rgba(0,0,0,0.4); /* Overlay background color with opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left:0;
+    top:0;
+    height: 100vh; /* Full height */
+    width: 100vw; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 1000px;
+    height: 750px;
+    background: white;
+    box-shadow: 0 0 26px 6px; /* Black shadow */
+}
+
+.modal__content {
+    padding: 50px 75px;
+}
+
+.inputs__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Cardo', serif;
+    padding: 0 5px;
+    margin-bottom: 25px;
+}
+
+.input--big {
+    width: 100%;
+}
+
+.textarea {
+    display: block;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Cardo', serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.button--pink {
+    background: #FFE3E3;
 }
 ```
