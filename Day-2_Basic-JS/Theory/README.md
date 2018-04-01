@@ -6,7 +6,7 @@
   - [The browser's main functionality](#the-browsers-main-functionality)
   - [The browser's high level structure](#the-browsers-high-level-structure)
   - [The main flow](#the-main-flow)
-  - [DOM](#dom)
+  - [DOM Intro](#dom-intro)
   - [CSS Parsing](#css-parsing)
   - [Processing scripts and style sheets](#processing-scripts-and-style-sheets)
   - [The rendering engine's threads](#the-rendering-engines-threads)
@@ -29,7 +29,13 @@
   - [Calling functions](#calling-functions)
   - [Function scope](#function-scope)
   - [Arrow functions](arrow-functions)
+- [DOM](#dom)
+  - [DOM and JavaScript](#dom-and-javascript)
+  - [Data Types](#data-types)
+  - [Interfaces in the DOM](#interfaces-in-the-dom)
 - [Events](#events)
+  - [Inline event handlers](#inline-event-handlers)
+  - [addEventListener() and removeElementListener()](#addeventlistener-and-removeelementlistener)
 
 ## How browsers work?
 
@@ -81,7 +87,7 @@
 > - this is a gradual process
 > - for beeter user experience, the rendering engine will try to display contents on the screen as soon as possible (it will not wait until all HTML is parsed before starting to build and layout the render tree, it will start to display parts of it, while the process will continue with the rest of contents)
 
-### DOM
+### DOM Intro
 
 - Coming from **D**ocument **O**bject **M**odel
 - The output tree is a tree of DOM element and attribute nodes
@@ -397,4 +403,174 @@ students.map((student) => {
 })
 ```
 
+## DOM
+
+- **D**ocument **O**bject **M**odel
+- API which takes a HTML, XHTML or XML document as a tree, and every node is an object, meaning a part of the document
+- The objects can be manipulated through functions and the changes after calling them will be reflected in the display of document
+- So, DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript
+- The [W3 DOM](https://www.w3.org/DOM/) standards are implemented in most modern browsers
+- there are some methods that manipulate the DOM
+- *e.g.:*
+
+```javascript
+// takes all elements of type paragraph from HTML document
+var paragrapghs = document.getElementByTagName("p");
+
+```
+
+### DOM and JavaScript
+
+- previous example is written in JavaScript, but it uses the DOM to access the document and its elements
+- DOM is not a programming language but, without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents and their elements
+- DOM was designed to be independent of any particular language, making the structural representation of the document available from a single and consistent API.
+- the DOM can be manipulated also in Python, for example.
+- *example for using DOM methods to manipulate HTML nodes:*
+
+```javascript
+// run this function when the document is loaded
+window.onload = function() {
+    // create some elements
+    var heading = document.createElement("h1");
+    var heading_text = document.createTextNode("This is the head")
+    heading.appendChild(heading_text);
+    document.body.appendChild(heading);
+}
+```
+
+### Data Types
+
+- **[document](https://developer.mozilla.org/en-US/docs/Web/API/Document)**: the root of document itself
+- **[element](https://developer.mozilla.org/en-US/docs/Web/API/Element)**:
+  - element or node of type element
+  - implement the **DOM Element** and **Node** interfaces
+  - for example, **document.createElement()** returns an object reference to a node
+- **[nodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)**:
+  - array of elements
+  - items are accessed by index
+  - returned by, for example, **document.getElementsByTagName()**
+- **[attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)**:
+  - an object refference that exposes a special interface for attributes
+  - attributes are nodes in DOM just like elements
+  - returned by, for example, **createAttribute()** method
+  - an attribute is, for example, the class of a node
+- **[namedNodeMap](https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap)**:
+  - like an array of Attribute objects
+  - the items are accessed by name or index
+
+### Interfaces in the DOM
+
+- many objects borrow from several different interfaces
+- **Document** and **window** objects are the most used objects in DOM programming
+- **window** object represents something like the browser
+- **document** object is the root of the document itself
+- **Element** inherits from the generic **Node** interface and together provide many of the methods and properties used on individual elements
+- *some examples of common API in web and XML page scripting using the DOM:*
+  - ***[document.getEleemntById(id)](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)***
+  - ***[document.getElementsByTagName(name)](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName)***
+  - ***[document.createElement(name)](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)***
+  - ***[parentNode.appendChild(node)](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)***
+  - ***[element.innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)***
+  - ***[element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)***
+  - ***[element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)***
+  - ***[element.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)***
+  - ***[window.onload()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)***
+  - ***[window.scrollTo()](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo)***
+
 ## Events
+
+- actions or occurences that happen in the programming environment
+- *e.g.: an user clicks on a button from webpage*
+- there are a lot of events types that might occur:
+  - clicking the mouse over a certain element
+  - hovering the cursor over a certain element
+  - pressing a key in the keyboard
+  - resizing or closing the window
+  - a web page finishing loading
+  - a form being submitted
+  - a video being played, paused or finishing play
+  - an error occurring
+- each available event has an **event handler** (also named **event listener**) : a block of code, usually a user-defined JavaSript function, that will be run when event fires
+- defining such a block of code to be run in response to event firing is called **registering an event handler**
+- HTML4 added the ability to let events trigger actions in a browser - [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
+
+
+> **Note**
+>
+> - [web events](https://developer.mozilla.org/en-US/docs/Web/Events) are not part of the core JavaScript language
+> - they are part of the JavaScript API build into the browser
+
+- *e.g. of JavaScript events:*
+
+```HTML
+<button onclick="myClickFunction()">Click me</button>
+```
+
+```javascript
+function myClickFunction() {
+    alert("Clicked!");
+}
+```
+
+```HTML
+<html>
+    <body onload="myLoadFunction()">
+        <div>Hello from here!</div>
+    </body>
+</html>
+```
+
+```javascript
+function myLoadFunction() {
+    alert("Loaded!");
+}
+```
+
+### Inline event handlers
+
+- the attribute value is literally the JavaScript code you want to run when the event occurs
+- **it is NOT recommended to be used**, because it is not a good idea to mix HTML with JavaScript, as it becomes hard to parse. In addition, keeping JavaScript in one place is better, because it can be aaplied to multiple HTML documents
+
+```HTML
+<button onclick="alert('Hello from HTML!');">
+```
+
+### addEventListener() and removeElementListener()
+
+- another way to add events
+- these functions are similar to event handlers, but the syntax is different
+
+```javascript
+var btn = document.querySelector('button')
+
+function myClickFunction() {
+    alert('Clicked!')
+}
+
+btn.addEventListener('click', myClickFunction);
+```
+
+- inside the **addEventListener** function, two parameters have to be specified:
+  - the name of the event we want to register this handler for
+  - the handler function
+
+> **Note**
+>
+> - we can add the handler function directly inside the 2nd parameter of the handler function, as an anonymous function
+> - *e.g.:*
+>
+> ```javascript
+> btn.addEventListener('click', function() {
+>    alert('Clicked!')
+> });
+>```
+
+- this mechanism has some advantages over the previous one
+- there is a counterpart function, **removeEventListener()**:
+  - removes a previously added listener
+  - improve the efficiency to clean up old unused event handlers
+  - *e.g.:*
+
+    ```javascript
+    btn.removeEventListener('click', myClickFunction)
+    ```
