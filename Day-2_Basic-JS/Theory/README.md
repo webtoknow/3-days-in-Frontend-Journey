@@ -3,32 +3,33 @@
 ## Table of contents
 
 - [How browsers work?](#how-browsers-work)
-    - [The browser's main functionality](#the-browsers-main-functionality)
-    - [The browser's high level structure](#the-browsers-high-level-structure)
-    - [The main flow](#the-main-flow)
-    - [DOM](#dom)
-    - [CSS Parsing](#css-parsing)
-    - [Processing scripts and style sheets](#processing-scripts-and-style-sheets)
-    - [The rendering engine's threads](#the-rendering-engines-threads)
-    - [Event loop](#event-loop)
+  - [The browser's main functionality](#the-browsers-main-functionality)
+  - [The browser's high level structure](#the-browsers-high-level-structure)
+  - [The main flow](#the-main-flow)
+  - [DOM](#dom)
+  - [CSS Parsing](#css-parsing)
+  - [Processing scripts and style sheets](#processing-scripts-and-style-sheets)
+  - [The rendering engine's threads](#the-rendering-engines-threads)
+  - [Event loop](#event-loop)
 - [Web Application Programming Interfaces](#web-application-programming-interfaces)
-    - [API in client-side JavaScript](#api-in-client-side-javascript)
+  - [API in client-side JavaScript](#api-in-client-side-javascript)
 - [What is JavaScript?](#what-is-javascript)
-    - [JavaScript running order](#javascript-running-order)
-    - [Interpreted versus compiled code](#interpreted-versus-compiled-code)
-    - [How can JavaScript be added to a Web page?](#how-can-javascript-be-added-to-a-web-page)
+  - [JavaScript running order](#javascript-running-order)
+  - [Interpreted versus compiled code](#interpreted-versus-compiled-code)
+  - [How can JavaScript be added to a Web page?](#how-can-javascript-be-added-to-a-web-page)
 - [Primitives](#primitives)
-    - [Primitive wrapper objects in JavaScript](#primitive-wrapper-objects-in-javascript)
+  - [Primitive wrapper objects in JavaScript](#primitive-wrapper-objects-in-javascript)
 - [Objects](#objects)
-    - [Dates](#dates)
-    - [Indexed collections: Arrays and Typed Arrays](#indexed-collections-arrays-and-typed-arrays)
-    - [Structured data: JSON](#structured-data-json)
+  - [Dates](#dates)
+  - [Indexed collections: Arrays and Typed Arrays](#indexed-collections-arrays-and-typed-arrays)
+  - [Structured data: JSON](#structured-data-json)
 - [Functions](#functions)
-    - [Function declaration](#function-declaration)
-    - [Function expressions](#function-expressions)
-    - [Calling functions](#calling-functions)
-    - [Function scope](#function-scope)
-    - [Arrow functions](arrow-functions)
+  - [Function declaration](#function-declaration)
+  - [Function expressions](#function-expressions)
+  - [Calling functions](#calling-functions)
+  - [Function scope](#function-scope)
+  - [Arrow functions](arrow-functions)
+- [Events](#events)
 
 ## How browsers work?
 
@@ -36,11 +37,11 @@
 - now, with open-source browsers serve the majority of the web, so we can see what's inside a web browser -> millions of C++ lines
 - as a web developer, **learning the internals of browser operations helps you make better decisions and know the justifications behind development best practices**
 - there are 5 major browsers used on desktop today:
-    - Chrome
-    - Internet Explorer
-    - Firefox
-    - Safari
-    - Opera
+  - Chrome
+  - Internet Explorer
+  - Firefox
+  - Safari
+  - Opera
 
 ### The browser's main functionality
 
@@ -75,7 +76,7 @@
 - **Layout process**: each node receives the exact coordinates where it should appear on the screen
 - **Painting**: each node will be painted using the UI backend layer
 
-> ### **Note**
+> **Note**
 >
 > - this is a gradual process
 > - for beeter user experience, the rendering engine will try to display contents on the screen as soon as possible (it will not wait until all HTML is parsed before starting to build and layout the render tree, it will start to display parts of it, while the process will continue with the rest of contents)
@@ -88,6 +89,7 @@
 - Like HTML, DOM is specified by the W3C organization
 - has an almost one-to-one relation to the markup
 - *e.g.:*
+
 ```HTML
 <html>
     <body>
@@ -100,6 +102,7 @@
     </body>
 </html>
 ```
+
 will be translated to the following DOM tree:
 
 ![DOM-tree](img/DOM-tree.png "DOM-tree")
@@ -108,10 +111,12 @@ will be translated to the following DOM tree:
 - you will never get an "Invalid Syntax" error on an HTML page (browsers fix any invalid content and go on)
 
 ### CSS parsing
+
 - Each CSS file is parsed into a StyleSheet object
 - Each object contains CSS rules
 - CSS rule objects contain selector and declaration objects and other other objects corresponding to CSS grammar
 - *e.g.:*
+
 ```CSS
 p, div {
     margin-top: 3px;
@@ -120,65 +125,74 @@ p, div {
     color: red;
 }
 ```
+
 will be translated into:
 
 ![CSS-tree](img/CSS-tree.png "CSS-tree")
 
 ### Processing scripts and style sheets
 
-**Scripts**
+#### Scripts
+
 - the model of the web is synchronous
 - scripts are expecting to be parsed and executed immediately when the parser reaches a &lt;script&gt; tag
 - parsing of the document stops until the script has been executed
 - if the script is external, then the resource must first be fetched from the network
 - both WebKit and Firefox do an optimization: while executing scripts, another thread parses the rest of the document and finds out what other resources need to be loaded from the network and loads them (**Speculative parsing**)
 
-**Style sheets**
+#### Style sheets
+
 - it seems that since style sheets don't change the DOM tree, there is no reason to wait for them and stop the document parsing
 - there is an edge case: for the scripts asking for style information during the document parsing steps, if the style is not loaded and parsed yet, the script will get wrong answers and this caused lots of problems
 - **Firefox blocks all scripts** when there is a style sheet that is still being loaded and parsed
 - **WebKit blocks scripts only when they try to access certain style properties that may be affected by unloaded style sheet**
 
-**Style computation**
+#### Style computation
+
 - visual properties of each render object will be calculated by style properties of each element
 - the style includes style sheets of various origins: **inline elements** and **visual properties in the HTML** (*e.g.: bgcolor property*), then is translated to matching CSS style properties
 
 ### The rendering engine's threads
+
 - the rendering engine is single threaded
 - almost everything, except network operations, happens in a single thread
 - network operations can be performed by several parallel threads
 - the number of parralel connections is limited (usually 2-6 connections)
 
 ### Event loop
+
 - the browser main thread is an event loop
 - it's an infinite loop that keeps the process alive
 - it waits for events (like layout and paint events) and processes them
 
 ## Web Application Programming Interfaces
+
 - called also API
 - are a set clearly defined methods of communication between various software components
 - allow developers to create complex functionality more easily
 
 ### API in client-side JavaScript
+
 - are not part of the JavaScript language itself
 - they are built on top of the core JavaScript language
 - there are 2 categories:
-    - **Browser APIs**:
-        - built into web browser
-        - able to expose data from the browser
-        - *e.g.: [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) provides some simple JS constructs for retrieving location data* 
-    - **Third party APIs:**
-        - are not build into the browser by default
-        - the developer have to grab their code and information from somewhere on the Web
-        - *e.g.: [Twitter API](https://developer.twitter.com/en/docs) alows to display latest tweets on your website*
+  - **Browser APIs**:
+    - built into web browser
+    - able to expose data from the browser
+    - *e.g.: [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) provides some simple JS constructs for retrieving location data*
+  - **Third party APIs:**
+    - are not build into the browser by default
+    - the developer have to grab their code and information from somewhere on the Web
+    - *e.g.: [Twitter API](https://developer.twitter.com/en/docs) alows to display latest tweets on your website*
 
 ## What is JavaScript?
+
 - scripting language that allows us to implement complex things on web pages (*e.g.: create dynamically updating content, control multimedia, animate images and so on.*)
 - the third layer of the three standard web technologies ( beside HTML and CSS )
 - the core JavaScript language consists of some common programming features that allow us to do things like:
-    - store useful values inside variables
-    - operations with different types of variables
-    - running code in response to certain events occuring on a web page (*e.g.: **click** event*)
+  - store useful values inside variables
+  - operations with different types of variables
+  - running code in response to certain events occuring on a web page (*e.g.: **click** event*)
 - when a web page is loaded in the browser, the code (HTML, CSS and JS) are run inside an execution environment (the browser tab)
 - is executed by the browser's JavaScript engine, after the HTML and CSS have been assembled and put together into a web page
 - dinamically modify HTML and CSS to update an user interface, via the DOM API
@@ -189,18 +203,20 @@ will be translated into:
 - this means that it needs to be careful what order the things are put in
 
 ### Interpreted versus compiled code
-- **JavaScript is an interpreted language**: 
-    - the code is run from top to bottom and the result of running the code is immediately returned
-    - code is not needed to be transformed into a different form before the browser runs it
+
+- **JavaScript is an interpreted language**:
+  - the code is run from top to bottom and the result of running the code is immediately returned
+  - code is not needed to be transformed into a different form before the browser runs it
 - **Compiled languages** :
-    - are transformed (compiled) into another form before they are run by the computer
-    - *e.g.: C/C++ are compiled into assembly language that is then run by the computer*
+  - are transformed (compiled) into another form before they are run by the computer
+  - *e.g.: C/C++ are compiled into assembly language that is then run by the computer*
 
 ### How can JavaScript be added to a Web page?
+
 - in a similar way to CSS (**&lt;link&gt;** to apply external stylesheets and **&lt;style&gt;** to apply internal stylesheets to HTML)
 - uses **&lt;script&gt;** tag
 - 2 ways on doing this:
-    - **internal JavaScript**
+  - **internal JavaScript**
 
         *e.g.:*
         ```javascript
@@ -210,22 +226,23 @@ will be translated into:
 
         </script>
         ```
-    - **external JavaScript**
+  - **external JavaScript**
 
         *e.g.:*
         ```javascript
         <script src="script.js"></script>
         ```
+
 ## Primitives
 
 - data that is not an object and has no methods
 - in JavaScript, there are 6 primitive data types:
-    - **string**: textual data
-    - **number**: only one number type (no specific type for integer, for example)
-    - **boolean**: **true** or **false**
-    - **null**: intentional absence of a value
-    - **undefined**: no assigned value
-    - **symbol** (new to ES6): an **unique** value that may be used as the key of on Object property
+  - **string**: textual data
+  - **number**: only one number type (no specific type for integer, for example)
+  - **boolean**: **true** or **false**
+  - **null**: intentional absence of a value
+  - **undefined**: no assigned value
+  - **symbol** (new to ES6): an **unique** value that may be used as the key of on Object property
 > **Note**
 >
 > All primitives are **immutable** (after they were created, it can never change)
@@ -233,10 +250,10 @@ will be translated into:
 ### Primitive wrapper objects in JavaScript
 
 - except for **null** and **undefined**, all primitive values have object equivalents that wrao around the primitive values:
-    - **String**
-    - **Number**
-    - **Boolean**
-    - **Symbol**
+  - **String**
+  - **Number**
+  - **Boolean**
+  - **Symbol**
 - **valueOf()** method returns the primitive value
 
 ## Objects
@@ -247,43 +264,47 @@ will be translated into:
 - properties are identified using key values
 - a key value is a String or a Symbol value
 - 2 types of object properties which have certain attributes:
-    - **data property**:
-        - associates a key with a value
-    - **accessor property**
-        - associates a key with one or two accessor functions (**get** and **set**) to retrieve or store a value
+  - **data property**:
+    - associates a key with a value
+  - **accessor property**
+    - associates a key with one or two accessor functions (**get** and **set**) to retrieve or store a value
 
 ### Dates
 
 - when representing dates, the best choice is to use the built-in [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JS
 
 ### Indexed collections: Arrays and Typed Arrays
+
 - **Arrays**:
-    - inherit from **Array.prototype** which provides to them a set of methods to manipulate arrays 
-    - *e.g.: indexOf, push*
+  - inherit from **Array.prototype** which provides to them a set of methods to manipulate arrays
+  - *e.g.: indexOf, push*
 - **Typed Arrays**
-    - new to ES6
-    - keyed collections: **Maps, Sets, WeakMaps, WeakSets**
-    - [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and [WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) represent a set of objects
-    - [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) associate a value to an object
+  - new to ES6
+  - keyed collections: **Maps, Sets, WeakMaps, WeakSets**
+  - [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and [WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) represent a set of objects
+  - [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) associate a value to an object
 
 ### Structured data: JSON
+
 - [JavaScript Object Notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- derived from JavaScript, but used by many programming languages 
+- derived from JavaScript, but used by many programming languages
 
 > **Note**
 >
 > The type can be determined using the **typeof** operator
 
 ## Functions
+
 - JavaScript procedure: a set of statements that performs a task or calculates a value
 - to use a function, it has to be defined somewhere in the scope from which it will be called
 
 ### Function declaration
+
 - **function** keyword, followed by:
-    - the name of the function
-    - list of parameters to the function, followed enclosed in parantheses and separated by commas
-    - the JavaScript statements that define the function, enclosed in curly brakets, { } 
-    - *e.g.:*
+  - the name of the function
+  - list of parameters to the function, followed enclosed in parantheses and separated by commas
+  - the JavaScript statements that define the function, enclosed in curly brakets, { }
+  - *e.g.:*
     ```javascript
     function square(number) {
         return number * number;
@@ -292,16 +313,20 @@ will be translated into:
 
 > **Note**
 >
-> - **Primitive** parameters are passed to functions **by value**. This means that, if a value is passed to function and the function changes it, **this change is not reflected globally** 
+> - **Primitive** parameters are passed to functions **by value**. This means that, if a value is passed to function and the function changes it, **this change is not reflected globally**
 > - If a **non-primitive** type is passed as parameter to the function and the function chages the value, **the change will be reflected globally**
 
 ### Function expressions
+
 - a function can be **anonymous** (it can not have a name)
 - can be also defined as:
+
 ```javascript
 var square = function(number) { return number*number; }
 ```
+
 - a name can be provided, for example, for the recursive functions, which are called inside the function:
+
 ```javascript
 var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
 ```
@@ -320,11 +345,14 @@ var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
 - just names the function and specifies what to do when the function is called
 - **calling** the function actually performs the specified actions with the indicated parameters
 - *e.g.:*
+
 ```javascript
-square(5); // will return 25 according to the previous declaration 
+square(5); // will return 25 according to the previous declaration
 ```
+
 - function declaration can be hoisted (appear below the call in the code)
 - *e.g.:*
+
 ```javascript
 console.log(square(5));
 /*...*/
@@ -333,22 +361,23 @@ function square(n) {return n*n; }
 
 ### Function scope
 
-- variables defined inside of a funciton cannot be accessed from outside 
+- variables defined inside of a funciton cannot be accessed from outside
 - the variable is defined only in the scope of the function
 - a function can access all variables and functions defined inside the scope in which it is defined
 - *e.g.:*
-    - *a function declared in global scope can access all variables defined in the global scope*
-    - *a function defined inside another function can access all variables defined in the parent function and all the variables to which the parent function has access*
+  - *a function declared in global scope can access all variables defined in the global scope*
+  - *a function defined inside another function can access all variables defined in the parent function and all the variables to which the parent function has access*
 
 ### Arrow functions
 
 - an arrow function expression has a shorer syntax than function expressions
 - lexically bind the **this** value
-- until arrow functions, all function defined has **its own this ** value 
-- an arrow function does not newly define its own **this** 
+- until arrow functions, all function defined has **its own this** value
+- an arrow function does not newly define its own **this**
 - are **anonymous**
 - were introduced in ES6
 - *e.g.:*
+
 ```javascript
 var students = [
     'Alex',
@@ -366,4 +395,6 @@ students.map(function(student) {
 students.map((student) => {
     return student.length;
 })
-``` 
+```
+
+## Events

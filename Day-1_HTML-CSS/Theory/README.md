@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [What is a Webpage?](#what-is-a-webpage) 
+- [What is a Webpage?](#what-is-a-webpage)
 - [First Webpage created](#first-webpage-created)
 - [Types of Webpages](#types-of-webpages)
   - [Static Webpages](#static-webpages)
@@ -53,16 +53,16 @@
 - He published it from a lab in the Swiss Alps.
 - The page is still up nowadays, but it was updated many times from then.
 - It was created to explain the World Wide Web concept to the newcomers.
-- The actual version of the World's first Website can be found here: http://info.cern.ch/hypertext/WWW/TheProject.html
+- If you are curious to see how it looks like, visit [World's first Website](http://info.cern.ch/hypertext/WWW/TheProject.html).
 
 ## Types of Webpages
 
-### Static Webpages:
+### Static Webpages
 
 - shows the same content each time access it
 - *e.g. : HTML Webpage*
 
-### Dynamic Webpages:
+### Dynamic Webpages
 
 - changes the content each time access it
 - are usually witten in Scripting Languages such as PHP, JSP, ASP, Perl etc.
@@ -71,18 +71,18 @@
 
 ## Difference between a Webpage, a Website and a Web Application
 
-### Webpage:
+### Webpage
 
 - Single document written using HTML
 - Can be accessed by entering its URL (Uniform Resource Locator) address in a Web Browser
 
-### Website:
+### Website
 
 - A group of **interlinked** and **well-structured** web pages that exist on the same domain
 - We move from one page to another using **hyperlinks**
 - As there exists 2 types of webpages, there are 2 types of websites also: **static** (contains only static web pages) and **dynamic** (contains dynamic web pages)
 
-### Web Application:
+### Web Application
 
 - A **software program** that exists on the server and run using a web browser, through a web page
 - Created using a combination of **programming languages** and **web application frameworks**
@@ -99,14 +99,14 @@ The web is reffered to as **Client-Server** communication:
 - computers that ask for data, so these are **Clients**
 - computers that give the data, calling also *computers that serve*, so this is the **Servers**
 
-### Client:
+### Client
 
 - is a way to make requests through the web
 - can be a machine or a program
 - ***Client Machine*** is the device that the user can use to access the web (e.g. : laptop, desktop, smartphones)
 - ***Client Program*** is a program that allows the user to ***make requests*** (*e.g. : Web Browser*)
 
-### Server:
+### Server
 
 - is a computer program, **NOT** a device
 - by extension, the server is a high-performance computer, but it is called server because it runs **server programs**
@@ -196,7 +196,7 @@ It is an architecture on the web that splits computers into 2 sections:
   - a declarative header section (delimited by the **head** element)
   - a body, which contains the document's actual content (delimited by **body** element)
 
-### HTML Basic Tags:
+### HTML Basic Tags
 
 **Heading tags: *&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;***
 
@@ -226,7 +226,7 @@ It is an architecture on the web that splits computers into 2 sections:
 
 > **Note**
 >
-> This is just a quick preview of some samples of HTML tags. The whole list can be found here: https://www.w3schools.com/tags/ref_byfunc.asp
+> This is just a quick preview of some samples of HTML tags. The whole list can be found at [w3schools](https://www.w3schools.com/tags/ref_byfunc.asp)
 
 ### Semantic HTML
 
@@ -237,7 +237,7 @@ It is an architecture on the web that splits computers into 2 sections:
   - **More accessible**: it can be better understood by a greater variety of devices
   - **Search engine friendly**: search engines rank content and not code, but using semantics to understand content
   - **Clean**: easier to read and edit
-- Some examples of using Semantic HTML can be found here: https://internetingishard.com/html-and-css/semantic-html/
+- See some examples of using [Semantic HTML](https://internetingishard.com/html-and-css/semantic-html/)
 
 ## Let's add some style using CSS
 
@@ -254,7 +254,7 @@ It is an architecture on the web that splits computers into 2 sections:
 - can control the displaying style of multiple web pages at once
 - external stylesheets are stored in **CSS files**
 
-### Style element:
+### Style element
 
 - **&lt;style&gt;** element helps to add some design to the web page
 - placed inside the head of HTML
@@ -451,13 +451,13 @@ a:visited {
 }
 ```
 
-### Pseudo-class:
+### Pseudo-class
 
 - is used to define a special state of an element. For example, it can be used to:
   - Style an element when a user mouses over it
   - Style visited and unvisited links differently
 
-### Pseudo-element:
+### Pseudo-element
 
 - is used to style specified parts of an element. For example, it can be used to:
 - Style the first letter or line of an element
@@ -688,7 +688,7 @@ The display will be divided in this way:
 
 > **Note**
 >
-> To learn CSS Grid in an easy and funny way, play this game: http://cssgridgarden.com/
+> To learn CSS Grid in an easy and funny way, play [CSS Garden](http://cssgridgarden.com/).
 
 ### Responsive Web Design
 
@@ -704,7 +704,7 @@ The display will be divided in this way:
 - uses the **@media** rule to include a block of CSS properties only if a certain condition is true.
 - it is added a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.
 
-````CSS
+```CSS
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
@@ -723,4 +723,4 @@ The display will be divided in this way:
     width: 8.33%;
   }
 }
-````
+```
