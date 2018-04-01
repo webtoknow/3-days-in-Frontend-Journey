@@ -28,7 +28,7 @@
   - [Function expressions](#function-expressions)
   - [Calling functions](#calling-functions)
   - [Function scope](#function-scope)
-  - [Arrow functions](arrow-functions)
+  - [Arrow functions](#arrow-functions)
 - [DOM](#dom)
   - [DOM and JavaScript](#dom-and-javascript)
   - [Data Types](#data-types)
@@ -40,7 +40,7 @@
 ## How browsers work?
 
 - in the years of IE 90% dominance, the browser was like a "black box"
-- now, with open-source browsers serve the majority of the web, so we can see what's inside a web browser -> millions of C++ lines
+- now, open-source browsers serve the majority of the web, so we can see what's inside a web browser: millions of C++ lines
 - as a web developer, **learning the internals of browser operations helps you make better decisions and know the justifications behind development best practices**
 - there are 5 major browsers used on desktop today:
   - Chrome
@@ -59,13 +59,13 @@
 
 ### The browser's high level structure
 
-1. **The user interface** (address bar, back/forward button, bookmarking menu etc.)
+1. **The user interface (UI)** (address bar, back/forward button, bookmarking menu etc.)
 2. **The browser engine**: manages actions between the UI and the rendering engine
-3. **The rendering engine**: displays the requested content (*e.g.: parses HTML and CSS and displays the parsed content on the screen*). IE uses Trident, Firefox uses Gecko, Safari uses WebKit, Chrome and Opera (from version 15) use Blink, a fork of WebKit.
+3. **The rendering engine**: displays the requested content (*e.g.: parses HTML and CSS and displays the parsed content on the screen*). IE uses *Trident*, Firefox uses *Gecko*, Safari uses *WebKit*, Chrome and Opera (from version 15) use *Blink*, a fork of WebKit.
 4. **Networking**: for HTTP requests
 5. **UI backend**: exposes a generic interface that is not platform specific
-6. **JavaSCript interpreter**: parse and execute JS code
-7. **Data storage**: persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem
+6. **JavaScript interpreter**: parse and execute JS code
+7. **Data storage**: persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as *localStorage*, *IndexedDB*, *WebSQL* and *FileSystem*.
 
 > ### **Note**
 >
@@ -75,7 +75,7 @@
 
 ![Rendering-Engine-Flow](img/Rendering-Engine-Flow.png "Rendering-Engine-Flow")
 
-- Start Parsing the HTML document and convert them to DOM nodes in a tree called **content tree**
+- Start **Parsing the HTML** document and convert them to DOM nodes in a tree called **content tree**
 - Parse the style data, both in external CSS and in style elements
 - Styling information & visual intructions in the HTML => **render tree**
 - Render tree contains rectangles with visual attributes, places in right order to be displayed to the screen
@@ -85,7 +85,7 @@
 > **Note**
 >
 > - this is a gradual process
-> - for beeter user experience, the rendering engine will try to display contents on the screen as soon as possible (it will not wait until all HTML is parsed before starting to build and layout the render tree, it will start to display parts of it, while the process will continue with the rest of contents)
+> - for better user experience, the rendering engine will try to display contents on the screen as soon as possible (it will not wait until all HTML is parsed before starting to build and layout the render tree, it will start to display parts of it, while the process will continue with the rest of contents)
 
 ### DOM Intro
 
@@ -120,7 +120,7 @@ will be translated to the following DOM tree:
 
 - Each CSS file is parsed into a StyleSheet object
 - Each object contains CSS rules
-- CSS rule objects contain selector and declaration objects and other other objects corresponding to CSS grammar
+- CSS rule objects contain selector and declaration objects and other objects corresponding to CSS grammar
 - *e.g.:*
 
 ```CSS
@@ -141,7 +141,7 @@ will be translated into:
 #### Scripts
 
 - the model of the web is synchronous
-- scripts are expecting to be parsed and executed immediately when the parser reaches a &lt;script&gt; tag
+- scripts are expecting to be parsed and executed immediately when the parser reaches a ***&lt;script&gt;*** tag
 - parsing of the document stops until the script has been executed
 - if the script is external, then the resource must first be fetched from the network
 - both WebKit and Firefox do an optimization: while executing scripts, another thread parses the rest of the document and finds out what other resources need to be loaded from the network and loads them (**Speculative parsing**)
@@ -193,7 +193,7 @@ will be translated into:
 
 ## What is JavaScript?
 
-- scripting language that allows us to implement complex things on web pages (*e.g.: create dynamically updating content, control multimedia, animate images and so on.*)
+- scripting language that allows us to implement complex things on web pages (*e.g.: create dynamically updating content, control multimedia, animate images and so on*).
 - the third layer of the three standard web technologies ( beside HTML and CSS )
 - the core JavaScript language consists of some common programming features that allow us to do things like:
   - store useful values inside variables
@@ -220,24 +220,20 @@ will be translated into:
 ### How can JavaScript be added to a Web page?
 
 - in a similar way to CSS (**&lt;link&gt;** to apply external stylesheets and **&lt;style&gt;** to apply internal stylesheets to HTML)
-- uses **&lt;script&gt;** tag
+- using **&lt;script&gt;** tag
 - 2 ways on doing this:
   - **internal JavaScript**
+    ```javascript
+    <script>
 
-        *e.g.:*
-        ```javascript
-        <script>
+        //JavaScript goes here
 
-            //JavaScript goes here
-
-        </script>
-        ```
+    </script>
+    ```
   - **external JavaScript**
-
-        *e.g.:*
-        ```javascript
-        <script src="script.js"></script>
-        ```
+    ```javascript
+    <script src="script.js"></script>
+    ```
 
 ## Primitives
 
@@ -245,7 +241,7 @@ will be translated into:
 - in JavaScript, there are 6 primitive data types:
   - **string**: textual data
   - **number**: only one number type (no specific type for integer, for example)
-  - **boolean**: **true** or **false**
+  - **boolean**: true or false
   - **null**: intentional absence of a value
   - **undefined**: no assigned value
   - **symbol** (new to ES6): an **unique** value that may be used as the key of on Object property
@@ -255,7 +251,7 @@ will be translated into:
 
 ### Primitive wrapper objects in JavaScript
 
-- except for **null** and **undefined**, all primitive values have object equivalents that wrao around the primitive values:
+- except for **null** and **undefined**, all primitive values have object equivalents that wrap around the primitive values:
   - **String**
   - **Number**
   - **Boolean**
@@ -266,7 +262,7 @@ will be translated into:
 
 - in JavaScript, objects can be seen as a collection of properties
 - a limited set of properties are initialized, then properties can be added and removed
-- property values can be of any type, including other objects => enables building complex data dtructures
+- property values can be of any type, including other objects => enables building complex data structures
 - properties are identified using key values
 - a key value is a String or a Symbol value
 - 2 types of object properties which have certain attributes:
@@ -297,7 +293,7 @@ will be translated into:
 
 > **Note**
 >
-> The type can be determined using the **typeof** operator
+> The type can be determined using the ***typeof*** operator
 
 ## Functions
 
@@ -347,7 +343,7 @@ var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
 
 ### Calling functions
 
-- defining a funciton does not execute it
+- defining a function does not execute it
 - just names the function and specifies what to do when the function is called
 - **calling** the function actually performs the specified actions with the indicated parameters
 - *e.g.:*
@@ -376,8 +372,8 @@ function square(n) {return n*n; }
 
 ### Arrow functions
 
-- an arrow function expression has a shorer syntax than function expressions
-- lexically bind the **this** value
+- an arrow function expression has a shorter syntax than function expressions
+- lexically bind **this** value
 - until arrow functions, all function defined has **its own this** value
 - an arrow function does not newly define its own **this**
 - are **anonymous**
@@ -444,15 +440,15 @@ window.onload = function() {
 - **[element](https://developer.mozilla.org/en-US/docs/Web/API/Element)**:
   - element or node of type element
   - implement the **DOM Element** and **Node** interfaces
-  - for example, **document.createElement()** returns an object reference to a node
+  - for example, ***document.createElement()*** returns an object reference to a node
 - **[nodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)**:
   - array of elements
   - items are accessed by index
-  - returned by, for example, **document.getElementsByTagName()**
+  - returned by, for example, ***document.getElementsByTagName()***
 - **[attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)**:
   - an object refference that exposes a special interface for attributes
   - attributes are nodes in DOM just like elements
-  - returned by, for example, **createAttribute()** method
+  - returned by, for example, ***createAttribute()*** method
   - an attribute is, for example, the class of a node
 - **[namedNodeMap](https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap)**:
   - like an array of Attribute objects
@@ -529,7 +525,7 @@ function myLoadFunction() {
 ### Inline event handlers
 
 - the attribute value is literally the JavaScript code you want to run when the event occurs
-- **it is NOT recommended to be used**, because it is not a good idea to mix HTML with JavaScript, as it becomes hard to parse. In addition, keeping JavaScript in one place is better, because it can be aaplied to multiple HTML documents
+- **it is NOT recommended to be used**, because it is not a good idea to mix HTML with JavaScript, as it becomes hard to parse. In addition, keeping JavaScript in one place is better, because it can be applied to multiple HTML documents
 
 ```HTML
 <button onclick="alert('Hello from HTML!');">
@@ -538,7 +534,7 @@ function myLoadFunction() {
 ### addEventListener() and removeElementListener()
 
 - another way to add events
-- these functions are similar to event handlers, but the syntax is different
+- these functions are similar to event handlers, but the syntax is different:
 
 ```javascript
 var btn = document.querySelector('button')
