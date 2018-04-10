@@ -6,13 +6,15 @@ Each day will give the learner the opportunity to read and understand theoretica
 
 ## Technical requirements
 
-We just need a [moder browser](https://caniuse.com/#search=css%20grid) a simple text editor like:
+We just need:
 
+- [Modern browser](https://browsehappy.com/)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
-- [Atom](https://atom.io)
-- [Brackets](http://brackets.io/)
-
-[Git](https://git-scm.com/download/win) and [NodeJS](https://nodejs.org/en/) to use with [JSON Server](https://github.com/typicode/json-server) and [Angular CLI](https://github.com/angular/angular-cli).
+- [Git](https://git-scm.com/download/win)
+- [NodeJS](https://nodejs.org/en/)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Node gyp](https://github.com/nodejs/node-gyp)
+- [Angular CLI](https://github.com/angular/angular-cli)
 
 ## The agenda
 
@@ -44,6 +46,6 @@ You can find all design specifications in
 
 ![CSS_Grid](Day-1_HTML-CSS/Exercise/Design/modal.jpg "Modal")
 
-### Article
+### Article page
 
 ![CSS_Grid](Day-1_HTML-CSS/Exercise/Design/article.jpg "Article")
