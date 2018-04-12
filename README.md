@@ -13,7 +13,6 @@ We just need:
 - [Git](https://git-scm.com/download/win)
 - [NodeJS](https://nodejs.org/en/)
 - [JSON Server](https://github.com/typicode/json-server)
-- [Node gyp](https://github.com/nodejs/node-gyp)
 - [Angular CLI](https://github.com/angular/angular-cli)
 
 ## The agenda
