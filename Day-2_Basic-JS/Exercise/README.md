@@ -102,7 +102,6 @@ We will solve the exercise in `4-days-in-Frontend-Journey/Day-1_HTML-CSS/Exercis
 - Get main element by id
 - Render articles:
   - Iterate through articles list
-  - Create a DOM Node for each element of the list
-  - Append to main the new created DOM nodes
+  - Create a DOM node for each element of the list and append it to `<main>` using [DOM Methods](https://www.impressivewebs.com/10-essential-dom-methods-techniques-for-practical-javascript/)
 - Remove old articles from DOM
 - Create article DOM node

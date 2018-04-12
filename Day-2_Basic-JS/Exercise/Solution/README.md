@@ -50,7 +50,7 @@ After this:
 
 - iterate through articles list
 - create a DOM Node for each element of the list
-- append to main the new created DOM nodes
+- append to `<main>` the new created DOM nodes
 
 ```JavaScript
 function renderArticles(articles) {
