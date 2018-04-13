@@ -15,7 +15,7 @@
 
 ## Link JavaScript to DOM
 
-We need to add id attributes in HTML. Then, we will assign the nodes to variables.
+We need to add `id` attributes in HTML. Then, we will assign the nodes to variables.
 
 ```HTML
 <body id="body">
@@ -70,7 +70,7 @@ cancelButton.addEventListener('click', closeModal);
 
 ## Open add modal
 
-Because we use same modal for Add and Edit actions, we need to be sure that we bind the right functions (add or update) to the buttons. In order to do this, we remove the previous event and add the appropriate ones.
+Because we use same modal for Add and Edit actions, we need to be sure that we bind the right functions (add or update) to the buttons. In order to do this, we remove the previous events and add the appropriate ones.
 
 To show the modal, add `show-modal` class to `<body>` and the rest is CSS magic.
 
@@ -98,7 +98,7 @@ function clearSaveButtonEvents() {
 
 ## Add article to server
 
-To add the article to server, we will make a POST fetch request to `/articles` route with `postObject`.
+To add the article to server, we will make a POST fetch request to `/articles` route with `postObject` as body.
 
 After the response is received, we need to get articles from server to display the updated list, then reset form and close modal.
 
