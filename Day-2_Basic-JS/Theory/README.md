@@ -363,7 +363,7 @@ function square(n) {return n*n; }
 
 ### Function scope
 
-- variables defined inside of a funciton cannot be accessed from outside
+- variables defined inside of a function cannot be accessed from outside
 - the variable is defined only in the scope of the function
 - a function can access all variables and functions defined inside the scope in which it is defined
 - *e.g.:*
