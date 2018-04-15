@@ -570,3 +570,7 @@ btn.addEventListener('click', myClickFunction);
     ```javascript
     btn.removeEventListener('click', myClickFunction)
     ```
+
+Previous | Next
+:------- | ---:
+← [Day 1 - Exercise](../../Day-1_HTML-CSS/Exercise/README.md) | [Day 2 - Exercise](../Exercise/README.md) →

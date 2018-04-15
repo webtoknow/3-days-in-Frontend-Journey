@@ -31,3 +31,7 @@ Create travelling blog page using HTML and CSS following the [Design Specificati
   - Article ReadMore button
 - Footer
 - Modal
+
+Previous | Next
+:------- | ---:
+← [Day 1 - HTML & CSS Introduction](../Theory/README.md) | [Day 2 - Basic JavaScript Introduction](../../Day-2_Basic-JS/Theory/README.md) →

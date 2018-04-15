@@ -724,3 +724,7 @@ The display will be divided in this way:
   }
 }
 ```
+
+Previous | Next
+:------- | ---:
+← [Home](../../README.md) | [Day 1 - Exercise](../Exercise/README.md) →

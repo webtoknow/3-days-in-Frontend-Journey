@@ -225,3 +225,7 @@ theSecret.saySecretCode() // CLosures are amazing!
 ```
 
 - `saySecretCode` exposes `secretCode` outside the original `secret` function. It is called **privileged function**
+
+Previous | Next
+:------- | ---:
+← [Day 2 - Exercise](../../Day-2_Basic-JS/Exercise/README.md) | [Day 3 - Exercise](../Exercise/README.md) →

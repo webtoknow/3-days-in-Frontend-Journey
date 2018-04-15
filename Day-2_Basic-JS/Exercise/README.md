@@ -105,3 +105,7 @@ We will solve the exercise in `4-days-in-Frontend-Journey/Day-2_Basic-JS/Exercis
   - Create a DOM node for each element of the list and append it to `<main>` using [DOM Methods](https://www.impressivewebs.com/10-essential-dom-methods-techniques-for-practical-javascript/)
 - Remove old articles from DOM
 - Create article DOM node
+
+Previous | Next
+:------- | ---:
+← [Day 2 - Basic JavaScript Introduction](../Theory/README.md) | [Day 3 - More JavaScript Introduction](../../Day-3_More-JS/Theory/README.md) →

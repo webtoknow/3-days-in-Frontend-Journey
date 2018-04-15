@@ -43,3 +43,7 @@ Next, let's solve the exercise.
 - Implement `deleteArticleFromServer(id)`:
   - Fetch DELETE method using [fetch API](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
   - When the request is resolved, get the new articles list from the server
+
+Previous | Next
+:------- | ---:
+← [Day 3 - More JavaScript Introduction](../Theory/README.md) | [Day 4 - Angular](../../Day-4_Angular/Theory/README.md) →
