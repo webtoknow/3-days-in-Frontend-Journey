@@ -46,4 +46,4 @@ Next, let's solve the exercise.
 
 Previous | Next
 :------- | ---:
-← [Day 3 - More JavaScript Introduction](../Theory/README.md) | [Day 4 - Angular](../../Day-4_Angular/Theory/README.md) →
+← [Day 3 - More JavaScript Introduction](../Theory/README.md) | [Day 4 - Angular](../../Day-4_Angular/Exercise/README.md) →
