@@ -127,7 +127,6 @@ Our main page should have a navigation menu:
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
-    list-style-type: none;
     margin: 0 0 0 100px;
     padding: 0;
     text-transform: uppercase;
@@ -248,7 +247,6 @@ For every article we need to create and style:
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    list-style-type: none;
     padding: 0;
 }
 
