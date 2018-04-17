@@ -1,4 +1,4 @@
-import { Component, OnInit, ComponentRef } from '@angular/core';
+import { Component, ComponentRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Article } from './../article.model';
 import { ArticleService } from './../article.service';
@@ -8,7 +8,7 @@ import { ArticleService } from './../article.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
   article = new Article();
   isUpdate = false;
@@ -16,10 +16,6 @@ export class ModalComponent implements OnInit {
 
   constructor(public bsModalRef: BsModalRef,
               public articleService: ArticleService) {}
-
-  ngOnInit() {
-    console.log(this.article);
-  }
 
   onSave() {
     if (this.isUpdate) {
