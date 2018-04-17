@@ -66,6 +66,11 @@ p {
     line-height: 1.9;
 }
 
+/* Image style */
+img {
+    width: 100%;
+}
+
 ```
 
 ## Page container
