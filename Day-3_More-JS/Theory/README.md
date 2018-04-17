@@ -11,8 +11,6 @@
     - [Function hoisting](#function-hoisting)
     - [Nested scopes](#nested-scopes)
   - [Closures](#closures)
-    - [Controlling side effects with closures](#controlling-side-effects-with-closures)
-    - [Private variables with closures](#private-variables-with-closures)
 
 ## Var, let or const
 
@@ -179,52 +177,31 @@ function outerFunction() {
 ### Closures
 
 - when a function is created into an another function, a **closure** was created. The inner function is the closure.
-- because closures have access to the variables in outer function, they are usually used for:
-  - controlling side effects
-  - create private variables
-
-#### Controlling side effects with closures
-
-- side effects happen when other things happen inside the function aside from returning a value
-
-```JavaScript
-function (x) {
-    console.log('This is a side effect!')
-}
-```
-
-- side effects are reduced by creating the function that activates the inner closure whenever we want to
-
-```JavaScript
-function prepareCake(flavor) {
-    return function() {
-        setTimeout(_ => console.log('Made a ${flavor} cake!', 1000))
-    }
-}
-
-const makeCakeLater = prepareCake('banana')
-
-makeCakeLater() // Made a banana cake!
-```
-
-#### Private variables with closures
-
+- because closures have access to the variables in outer function, they are usually used for creating private variables.
 - variables created in function cannot be accessed outside the function
 - they are called **private variables**
 - if we want to access these private variables, we can use closures:
 
 ```JavaScript
-function secret(secretCode) {
-    return saySecretCode() {
-        console.log(secretCode)
-    }
+function person() {
+    // private variable
+    let name = 'No Name';
+    return {
+        // getter
+        getName: function() {
+            return name;
+        },
+        // setter
+        setName: function(newName) {
+            name = newName;
+        }
 }
 
-const theSecret = secret('CLosures are amazing!')
-theSecret.saySecretCode() // CLosures are amazing!
+const myBrother = person();
+console.log(myBrother.getName()); // No Name
+myBrother.setName('John');
+console.log(myBrother.getName()); // John
 ```
-
-- `saySecretCode` exposes `secretCode` outside the original `secret` function. It is called **privileged function**
 
 Previous | Next
 :------- | ---:
