@@ -1,0 +1,19 @@
+<div class="modal__box">
+  <form class="modal__content" (ngSubmit)="onSave()" #modalForm="ngForm">
+    <h2 class="title">Add/Edit article</h2>
+    <div class="inputs__container">
+      <input type="text" class="input" name="title" placeholder="Please enter title" [(ngModel)]="article.title">
+      <input type="text" class="input" name="author" placeholder="Please enter author" [(ngModel)]="article.author">
+      <input type="text" class="input" name="tag" placeholder="Please enter tag" [(ngModel)]="article.tag">
+      <input type="text" class="input" name="date" placeholder="Please enter date" [(ngModel)]="article.date">
+      <input type="text" class="input" name="imgUrl" placeholder="Please enter image url" [(ngModel)]="article.imgUrl">
+      <input type="text" class="input" name="saying" placeholder="Please enter saying" [(ngModel)]="article.saying">
+      <input type="text" class="input input--big" name="summary" placeholder="Please enter summary" [(ngModel)]="article.summary">
+    </div>
+    <textarea class="textarea" name="content" cols="28" rows="7" placeholder="Please enter content" [(ngModel)]="article.content"></textarea>
+    <div class="modal__buttons">
+      <button type="button" class="button" (click)="bsModalRef.hide()">Cancel</button>
+      <button type="submit" class="button button--pink">Save</button>
+    </div>
+  </form>
+</div>

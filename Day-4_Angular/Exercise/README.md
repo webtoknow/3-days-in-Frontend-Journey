@@ -3,6 +3,7 @@
 ## Table of contents
 
 - [About Angular](#about-angular)
+- [Play with Angular](#play-with-angular)
 
 ## About Angular
 
@@ -13,3 +14,7 @@
 > **Note**
 >
 > More info about Angular can be found on [official website](https://angular.io)
+
+## Play with Angular
+
+Let's create out Travelling Blog application using Angular.
