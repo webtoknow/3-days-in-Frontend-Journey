@@ -29,7 +29,6 @@ The agenda has the following content:
   - [Introduction](Day-3_More-JS/Theory/README.md)
   - [Exercise](Day-3_More-JS/Exercise/README.md)
 - Day 4 : Angular
-  - [Introduction](Day-4_Angular/Theory/README.md)
   - [Exercise](Day-4_Angular/Exercise/README.md)
 
 ## Design

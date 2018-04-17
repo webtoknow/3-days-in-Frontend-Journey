@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [About Angular?](#about-angular)
+- [About Angular](#about-angular)
 
 ## About Angular
 
