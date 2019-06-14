@@ -17,4 +17,4 @@
 
 ## Play with Angular
 
-Let's create out Travelling Blog application using Angular.
+Let's create our Travelling Blog application using Angular.
