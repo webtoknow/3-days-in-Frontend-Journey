@@ -22,4 +22,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 > **Note**
 >
-> We can find the solution olso on [Stackblitz](https://stackblitz.com/edit/travelling-blog).
+> We can find the solution also on [Stackblitz](https://stackblitz.com/edit/travelling-blog).
