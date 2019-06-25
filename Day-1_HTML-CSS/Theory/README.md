@@ -59,15 +59,15 @@
 
 ### Static Webpages
 
-- shows the same content each time access it
+- show the same content every time accessing them
 - *e.g. : HTML Webpage*
 
 ### Dynamic Webpages
 
-- changes the content each time access it
-- are usually witten in Scripting Languages such as PHP, JSP, ASP, Perl etc.
-- Sscripting Languages return information in HTML form from a Database. Then, the browser translate the HTML to computer understandable language
-- *e.g. : a Webpage displaying current date and time*
+- their content change 
+- are usually written in Scripting Languages such as PHP, JSP, ASP, Perl etc.
+- Scripting languages return information in HTML form from a Database. Then, the browser translates the HTML to computer-understandable language
+- *e.g. : a blog which allows the users to put comments*
 
 ## Difference between a Webpage, a Website and a Web Application
 
@@ -97,11 +97,10 @@
 The web is reffered to as **Client-Server** communication:
 
 - computers that ask for data, so these are **Clients**
-- computers that give the data, calling also *computers that serve*, so this is the **Servers**
+- computers that give the data, called also *computers that serve*, so these are the **Servers**
 
 ### Client
 
-- is a way to make requests through the web
 - can be a machine or a program
 - ***Client Machine*** is the device that the user can use to access the web (e.g. : laptop, desktop, smartphones)
 - ***Client Program*** is a program that allows the user to ***make requests*** (*e.g. : Web Browser*)
@@ -116,7 +115,7 @@ The web is reffered to as **Client-Server** communication:
 - there are many types of servers:
   - **Web servers** (*Apache*) - serve **HTTP** requests
   - **Database servers** - run Database Management Systems
-- can contain web resources, host web applications, stores user and program data etc.
+- can contain web resources, host web applications, store user and program data etc.
 - is always listening for requests and as soon as it receives one, responds with a message
 
 ### How does the Client-Server model works?
