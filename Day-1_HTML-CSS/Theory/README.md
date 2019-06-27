@@ -507,7 +507,7 @@ The following list of selector types increases by specificity:
 
 ### Specifying CSS Property Values
 
-- There are a lot of ways to specify the property values (by the property):
+- There are a lot of ways to specify the property values:
   - **keywords:** *thin, thick, larger*
   - **physical measurements:** *inches (in), points (pt), picas (pc)*
   - **screen measurements:** *pixels (px)*
