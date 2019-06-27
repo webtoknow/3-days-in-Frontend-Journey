@@ -199,17 +199,17 @@ It is an architecture on the web that splits computers into 2 sections:
 
 **Heading tags: *&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;***
 
-- Any document starts with a heading
+- Any document starts with a heading.
 - The headings may have 6 different sizes, which use the following elements: *&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;*.
 
-**Paragraph Tag - *&lt;p&gt;***
+**Paragraph tag - *&lt;p&gt;***
 
-- The *&lt;p&gt;* tag offers a way to structure the text into different paragraphs
+- The *&lt;p&gt;* tag offers a way to structure the text into different paragraphs.
 
-**Line break Tag - *&lt;br /&gt;***
+**Line break tag - *&lt;br /&gt;***
 
 - After using the *&lt;br /&gt;* tag, anything following it starts from the next line.
-- This is an example of **empty** element, when no opening or closing tags are needed, because there is nothing to go between them
+- This is an example of **empty** element (named also **self-closing** tag), when no opening or closing tags are needed, because there is nothing to go between them.
 
 **Centering content - *&lt;center&gt;***
 
@@ -217,25 +217,25 @@ It is an architecture on the web that splits computers into 2 sections:
 
 **Preserve formatting - *&lt;pre&gt;***
 
-- Sometimes it is needed to keep the exact format as it is written; *&lt;pre&gt;* tag may be used for this purpose.
+- Sometimes it is needed to keep the exact format for text as it is written; *&lt;pre&gt;* tag may be used for this purpose.
 
-**Nonbreaking Spaces - *\&nbsp;***
+**Nonbreaking spaces - *\&nbsp;***
 
-- To make client browser not to break text, *\&nbsp;* space entity should be used.
+- To make client browser not to break text, *\&nbsp;* should be used.
 
 > **Note**
 >
-> This is just a quick preview of some samples of HTML tags. The whole list can be found at [w3schools](https://www.w3schools.com/tags/ref_byfunc.asp)
+> This is just a quick preview of some examples of HTML tags. The whole list can be found at [w3schools](https://www.w3schools.com/tags/ref_byfunc.asp)
 
 ### Semantic HTML
 
 - refers to the idea that all HTML markup should convey the underlying meaning of the content - not its appearance
 - it is about using **tags**, **class names** and **ids** that reinforce the **meaning of the content** within the tags
-- It is an additional layer of communication. Real people looking only at how your page displays may never get that additional communication, but machines will (like screen readers and search engines)
+- it is an additional layer of communication - real people looking only at how your page displays may never get that additional communication, but machines will (like screen readers and search engines)
 - **Semantic HTML** is important because it is:
-  - **More accessible**: it can be better understood by a greater variety of devices
-  - **Search engine friendly**: search engines rank content and not code, but using semantics to understand content
-  - **Clean**: easier to read and edit
+  - **more accessible**: more readable and understandable by both devices and humans (including the 1 billion people with disabilities) 
+  - **search engine friendly**: search engines rank content and not code, but using semantics to understand content
+  - **clean**: easier to read and edit
 - See some examples of using [Semantic HTML](https://internetingishard.com/html-and-css/semantic-html/)
 
 ## Let's add some style using CSS
@@ -249,7 +249,7 @@ It is an architecture on the web that splits computers into 2 sections:
 
 - **C**ascading **S**tyle **S**heets
 - while HTML gives the structure of the content, CSS gives a way to describe how the content should be presented
-- whem the browser displays HTML, it uses its own built-in default style
+- when the browser displays HTML, it uses its own built-in default style
 - can control the displaying style of multiple web pages at once
 - external stylesheets are stored in **CSS files**
 
@@ -258,7 +258,7 @@ It is an architecture on the web that splits computers into 2 sections:
 - **&lt;style&gt;** element helps to add some design to the web page
 - placed inside the head of HTML
 - just like other tags, it has an opening tag and a closing one
-- but the &lt;style&gt; tag also requires an **attribute** called **type** which tells the browser the king of style used. In this case, it will be **text/css**
+- but the &lt;style&gt; tag also requires an **attribute** called **type** which tells the browser the kind of style is used. In this case, it will be **text/css**
 - an **attribute** provides additional information about an element
 - there are not currently any other styles that work with today's browsers, but **type** attribute was created to anticipate possible future ones
 - *e.g.:*
@@ -287,16 +287,16 @@ It is an architecture on the web that splits computers into 2 sections:
 - Let's analyze the content between *&lt;style&gt;* tags:
   - **body** : is the selector, the content between curly braces follow the template: **propertyName: value**
   - **background-color** : sets the background color to the desired one
-  - **margin-left**, **margin-right** : sets the left and right margins to some values
+  - **margin-left**, **margin-right** : sets the left and right margins
   - **border** : defines a border deisgned with specific width, style and color
   - **padding**: creates some padding
-  - **font-family** : defines the font to use for text
+  - **font-family** : sets the font to use for text
 
 ### Include External CSS
 
 - Styles are usually included into external CSS files
 - With an external style sheet, look of the entire site can be changed by modifying one file
-- To use an external style sheet, a link can be added in the **&lt;head&gt;** section of the HTML page:
+- To use an external style sheet, a link should be added in the **&lt;head&gt;** section of the HTML page:
 
 ```HTML
 <!DOCTYPE html>
@@ -330,7 +330,7 @@ p {
 - **RGBA colors : *rgba(red, green, blue, alpha)***
   - extension of RGB colors
   - *alpha* parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)
-  - *e.g. : rgba(0, 0, 0, 255, 0.3) is blue with opacity*
+  - *e.g. : rgba(0, 0, 0, 255, 0.3) is blue with 0.3 opacity*
 - **HSL Colors: *hsl(hue, saturation, lightness)***
   - hue is a degree on the color wheel (from 0 to 360, 0 or 360 is red, 120 is green, 240 is blue), saturation is a percentage value (0% means a shade of gray and 100% is the full color) and lightness is also a percentage (0% is black, 100% is white)
   - *e.g. : hsl(240, 60%, 70%) is pastel blue*
@@ -340,18 +340,18 @@ p {
   - *e.g. : hsla(240, 60%, 70%, 0.3) is pastel blue with opacity*
 - **Predefined/Cross-browser colors**
   - there are 140 color names predefined in CSS specification
-  - *e.g.: Aqua, Blue, Brown*
+  - *e.g. : Aqua, Blue, Brown*
 
 ### Simple Selectors
 
-- A selector is a pattern used to apply patterns to elements
+- A selector is a pattern used to apply styles to elements
 - There are 3 types of simple selectors:
   - **based on the type of element**
     - *e.g.: the previous **body** selector will select all body elements in HTML*
   - **based on class**
     - *e.g. : **.bookTitle** identifies the HTML elements matching *bookTitle* class atrribute*
   - **based on id**
-    - *e.g.: **#menu** : will select all elements which have the id named menu*
+    - *e.g. : **#menu** : will select all elements which have the id named menu*
 - Same CSS properties may be applied to multiple selectors, by separating them by comma:
   - *e.g.: h1, h2 {...}*
 - Also, for selecting everything, **star selector (*)** can be used
@@ -377,7 +377,7 @@ h1, h2, h3 {
 
 ### More Complex Selectors
 
-- **Descendant selector** - apply the style for all **p** elements anywhere inside of **div** elements
+- **Descendant selector** - *e.g. : apply the style for all **p** elements anywhere inside of **div** elements*
 
 ```CSS
 div p {
@@ -394,7 +394,7 @@ div p {
 </div>
 ```
 
-- **Child selector** - apply the style for all **p** elements that are direct descendants (childs) of **div** elements
+- **Child selector** - *e.g. : apply the style for all **p** elements that are direct descendants (children) of **div** elements*
 
 ```CSS
 div > p {
@@ -411,7 +411,7 @@ div > p {
 </div>
 ```
 
-- **Chain selector** - apply the style for all **div** elements that contain the class  **mark**
+- **Chain selector** - *e.g. : apply the style for all **div** elements containing the class  **mark** *
 
 ```CSS
 div.mark {
@@ -430,7 +430,7 @@ div.mark {
 </div>
 ```
 
-- **Attribute selector** - apply the style for all **img** elements that have the value of *alt* atribute equal to *fruit*
+- **Attribute selector** - *e.g. : apply the style for all **img** elements that have the value of *alt* atribute equal to *fruit* *
 
 ```CSS
 img[alt=fruit] {
@@ -442,7 +442,7 @@ img[alt=fruit] {
 <img src="apple.jpg" alt="fruit"></img>
 ```
 
-- **Pseudo-class** - apply the style for all visited **a** elements (hyperlinks)
+- **Pseudo-class** - *e.g. : apply the style for all visited **a** elements (hyperlinks)*
 
 ```CSS
 a:visited {
@@ -453,15 +453,15 @@ a:visited {
 ### Pseudo-class
 
 - is used to define a special state of an element. For example, it can be used to:
-  - Style an element when a user mouses over it
-  - Style visited and unvisited links differently
+  - style an element when a user mouses over it
+  - style visited and unvisited links differently
 
 ### Pseudo-element
 
 - is used to style specified parts of an element. For example, it can be used to:
-  - Style the first letter or line of an element
-  - Insert content before or after the content of an element
-- *e.g.: **selector::pseudo-element***
+  - style the first letter or line of an element
+  - insert content before or after the content of an element
+- *e.g.: div::after*
 
 > **Note**
 >
@@ -469,8 +469,8 @@ a:visited {
 
 ### Specificity
 
-- is a weight that is applied to a given CSS declaration, determined by the number of seach **selector type** in the matching selector
-- when multiple delcarations have equal specificity, the last declaration found in the CSS is applied to the element
+- is a weight that is applied to a given CSS declaration, determined by the number of each **selector types** in the matching selector
+- when multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element
 - only applies when the same element is targeted by multiple declarations
 - **directly targeted elements** will always take precedence over rules which an element inherits from its ancestor
 
@@ -506,14 +506,14 @@ The following list of selector types increases by specificity:
 
 ### Specifying CSS Property Values
 
-- There are a lot of ways to specify property values (by the property):
-  - **Keywords:** *thin, thick, larger*
-  - **Physical measurements:** *inches (in), points (pt), picas (pc)*
-  - **Screen measurements:** *pixels (px)*
-  - **Relative measurements:** *%,em*
-  - **Color codes:** *hex, rgb*
-  - **Fonts:** *Helvetica, sans-serif*
-  - **Functional notation:** *url("images/ex.jpg")*
+- There are a lot of ways to specify the property values (by the property):
+  - **keywords:** *thin, thick, larger*
+  - **physical measurements:** *inches (in), points (pt), picas (pc)*
+  - **screen measurements:** *pixels (px)*
+  - **relative measurements:** *%,em*
+  - **color codes:** *hex, rgb*
+  - **fonts:** *Helvetica, sans-serif*
+  - **functional notation:** *url("images/ex.jpg")*
 
 > **Note**
 >
@@ -521,11 +521,11 @@ The following list of selector types increases by specificity:
 
 ### Inheritance
 
-- some properties will be inherited from the element's parents
+- Some properties will be inherited from the element's parents
   - *e.g. : font-size*
-- if we take a look at a make, it looks pretty much as a tree
+- If we take a look at a make, it looks pretty much as a tree
 
-### The box Three
+### The Box Three
 
 - An HTML element can be considered as a box
 - There are three big properties that can influence this box:
@@ -546,7 +546,7 @@ ul li {
 }
 ```
 
-- the order of the 4 values from **margin** are: **top, right, bottom and left** ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
+- The order of the 4 values from **margin** are: **top, right, bottom and left** ( clockorder ) - this is the short form, to avoid writing 4 lines by writing only one
 - **border** also has a shorter form, the 3 values means: **width**, **type** and **color**
 
 > **Note**
@@ -555,7 +555,7 @@ ul li {
 
 ### Display and Visibility
 
-- **Display** is generally **block**, **inline** or **none**
+- **Display** can be **block**, **inline** or **none**
   - **Block elements** sit on top of each other
     - *e.g.: **div** element is a block-level element*
   - **Inline elements** only move downward when there is no enough space
@@ -567,26 +567,42 @@ ul li {
 
 ### Position
 
-- 4 possible values:
+- 5 possible values:
   - **static:**
     - default value
     - an element with **position: static** is not positioned in any special way, it is always positioned according to the normal flow of the page
+    - it is used for removing some positioning applied out of our control, but this is fairly rare, as positioning doesn't cascade
   - **fixed:**
-    - an element with **position: fixed** always stays in the same place even if the page is scrolled
-    - it does not leave a gap in the page where it would normally have been located
+    - is positioned relative to the viewport (the user's visible area of a web page) or the browser window itself
+    - the viewport doesn't change when the window is scrolled, so a fixed element always stays in the same place even if the page is scrolled
   - **sticky:**
     - an element with **position: sticky** is positioned based on the user's scroll position
+    - can be used for navigation bars or footers to always be accessible as the user scrolls
   - **relative:**
     - an element with **position: relative** is positioned relative to its normal position
+    - if the element does not have other positioning attributes (top, left, bottom or right), it will be exactly like position:static
+    - introduces the ability to use z-index on that element
+    - limits the scope of absolutely positioned child elements
   - **absolute**
-    - an element with **position: absolute** is positioned relative to the nearest positioned ancestor. If there is no positioned ancestor, it uses the document body
+    - an element with **position: absolute** is positioned relative to the next parent element with relative (or absolute) positioning
+    - if there is no such parent, it uses the document body
+    
+### Float
+
+- CSS positioning property
+- page elements with **float** property applied to them are just like the images in the print layout where the text flows around them
+- 4 possible values:
+  - **left:** - the element floats to the left of its container
+  - **right:** - the element floats to the right of its container
+  - **none:** - default - the element will be displayed just where it occurs in the text
+  - **inherit** - the element inherits the float value of its parent
 
 ### Flexbox
 
-- The **Flexible Box Layout Module** makes it easier to design flexible responsive layout structure without using float or positioning
+- The **Flexible Box Layout Module** makes it easier to design flexible responsive layout structure without using positioning or float
 - Excels at vertical centering and equal heights
 - Very easy to reorder boxes
-- First, it is needed to define **flex container** (the parent) and **flex items** (the children)
+- First, it is needed to define **flex container** (the parent) and next, **flex items** (the children)
 - The flex container becomes flexible by setting the **display** property to **flex**
 
 ```CSS
@@ -617,7 +633,7 @@ ul li {
 - The **direct child elements of a flex container** automatically become flexible (flex) items
 - The flex item properties are:
   - **order**
-  - **flex-arrow**
+  - **flex-grow**
   - **flex-shrink**
   - **flex-basis**
   - **flex**
@@ -627,15 +643,15 @@ ul li {
 
 > **Note**
 >
-> To learn flexbox in an easy and funny way, play [Flexbox defence](http://www.flexboxdefense.com/).
+> To learn flexbox in an easy and funny way, play [Flexbox defense](http://www.flexboxdefense.com/).
 
 ### CSS Grid
 
 - Released on March 2017
-- Excels at dividing a page into major regions or defining the relationship in terms of size, position and layer
-- Like tables, **grid layout** enables the author to align elements into columns and rows
-- CSS Grid is designed to work in 2-dimension way - no "row" markup required
-- It is better to use Flexbox for UI elements, but use Grid for major layout
+- Excels at dividing a page into major regions and defining the relationship in terms of size, position and layer
+- Like tables, **grid layout** enables the developer to align elements into columns and rows
+- CSS Grid is designed to work in 2-dimension way
+- It is better to use Flexbox for UI elements, but Grid for major layout
 - Example for using CSS Grid:
 
 ```HTML
@@ -696,6 +712,7 @@ The display will be divided in this way:
 - can be viewed using many different devices: desktops, tablets and phones
 - the web page should look good and be easy to use, regardless of the device
 - it is called responsive web design when CSS and HTML is used in order to resize, hide or move the content to make it look good on any screen
+- it is created using **Media Queries**
 
 ### Media Query
 
