@@ -524,7 +524,8 @@ The following list of selector types increases by specificity:
 
 - Some properties will be inherited from the element's parents
   - *e.g. : font-size*
-- If we take a look at a make, it looks pretty much as a tree
+- But others will not be inherited:
+  - *e.g. : position*
 
 ### The Box Three
 
