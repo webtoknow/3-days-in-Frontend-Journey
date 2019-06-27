@@ -35,6 +35,7 @@
   - [Padding, Margin, Border](#padding-margin-border)
   - [Display and Visibility](#display-and-visibility)
   - [Position](#position)
+  - [Float](#float)
   - [Flexbox](#flexbox)
   - [CSS Grid](#css-grid)
   - [Responsive Web Design](#responsive-web-design)
