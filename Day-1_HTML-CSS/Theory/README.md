@@ -412,7 +412,7 @@ div > p {
 </div>
 ```
 
-- **Chain selector** - *e.g. : apply the style for all **div** elements containing the class  **mark** *
+- **Chain selector** - *e.g. : apply the style for all **div** elements containing the class  **mark***
 
 ```CSS
 div.mark {
@@ -431,7 +431,7 @@ div.mark {
 </div>
 ```
 
-- **Attribute selector** - *e.g. : apply the style for all **img** elements that have the value of *alt* atribute equal to *fruit* *
+- **Attribute selector** - *e.g. : apply the style for all **img** elements that have the value of *alt* atribute equal to *fruit**
 
 ```CSS
 img[alt=fruit] {
