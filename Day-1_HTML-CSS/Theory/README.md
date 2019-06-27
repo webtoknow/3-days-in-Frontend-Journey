@@ -534,6 +534,8 @@ The following list of selector types increases by specificity:
   - **border**: not visible by default, but the width, style and color can be controlled
   - **padding**: the space between the border and the content of the box
   - **margin**: the space between the box and other elements
+  
+![Box-Model](img/Box.png "Box Model")
 
 ### Padding, Margin, Border
 
