@@ -577,17 +577,17 @@ ul li {
     - an element with **position: static** is not positioned in any special way, it is always positioned according to the normal flow of the page
     - it is used for removing some positioning applied out of our control, but this is fairly rare, as positioning doesn't cascade
   - **fixed:**
-    - is positioned relative to the viewport (the user's visible area of a web page) or the browser window itself
+    - is positioned relative to the viewport (the user's visible area of a web page) or the browser's window itself
     - the viewport doesn't change when the window is scrolled, so a fixed element always stays in the same place even if the page is scrolled
   - **sticky:**
     - an element with **position: sticky** is positioned based on the user's scroll position
-    - can be used for navigation bars or footers to always be accessible as the user scrolls
+    - can be used for navigation bars or footers to always be accessible even if the user scrolls up or down
   - **relative:**
     - an element with **position: relative** is positioned relative to its normal position
     - if the element does not have other positioning attributes (top, left, bottom or right), it will be exactly like position:static
     - introduces the ability to use z-index on that element
     - limits the scope of absolutely positioned child elements
-  - **absolute**
+  - **absolute:**
     - an element with **position: absolute** is positioned relative to the next parent element with relative (or absolute) positioning
     - if there is no such parent, it uses the document body
     
@@ -643,7 +643,7 @@ ul li {
   - **flex**
   - **align-self**
 
-- Main disadvantage is that Flexbox was planned to be 1-dimension
+- Main disadvantage is that Flexbox was planned to be 1-dimensional
 
 > **Note**
 >
@@ -654,7 +654,7 @@ ul li {
 - Released on March 2017
 - Excels at dividing a page into major regions and defining the relationship in terms of size, position and layer
 - Like tables, **grid layout** enables the developer to align elements into columns and rows
-- CSS Grid is designed to work in 2-dimension way
+- CSS Grid is designed to work in 2-dimensional way
 - It is better to use Flexbox for UI elements, but Grid for major layout
 - Example for using CSS Grid:
 
@@ -712,9 +712,7 @@ The display will be divided in this way:
 ### Responsive Web Design
 
 - makes web pages look good on all devices
-- uses only HTML and CSS
-- can be viewed using many different devices: desktops, tablets and phones
-- the web page should look good and be easy to use, regardless of the device
+- the web page should look good and be easy to use, regardless of the device (desktops, tablets and phones)
 - it is called responsive web design when CSS and HTML is used in order to resize, hide or move the content to make it look good on any screen
 - it is created using **Media Queries**
 
@@ -722,7 +720,7 @@ The display will be divided in this way:
 
 - CSS technique introduced in CSS3.
 - uses the **@media** rule to include a block of CSS properties only if a certain condition is true.
-- it is added a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.
+- a breakpoint is added where certain parts of the design will behave differently depending on the condition
 
 ```CSS
 @media only screen and (max-width: 768px) {
