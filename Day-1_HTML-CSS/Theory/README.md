@@ -535,7 +535,7 @@ The following list of selector types increases by specificity:
   - **padding**: the space between the border and the content of the box
   - **margin**: the space between the box and other elements
   
-![Box-Model](img/Box.png "Box Model")
+![Box-Model](img/Box.PNG "Box Model")
 
 ### Padding, Margin, Border
 
