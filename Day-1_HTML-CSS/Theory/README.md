@@ -61,13 +61,13 @@
 ### Static Webpages
 
 - show the same content every time accessing them
-- *e.g. : HTML Webpage*
+- *e.g. : a HTML Webpage*
 
 ### Dynamic Webpages
 
 - their content change 
 - are usually written in Scripting Languages such as PHP, JSP, ASP, Perl etc.
-- Scripting languages return information in HTML form from a Database. Then, the browser translates the HTML to computer-understandable language
+- scripting languages return information in HTML form from a Database. Then, the browser translates the HTML to computer-understandable language
 - *e.g. : a blog which allows the users to put comments*
 
 ## Difference between a Webpage, a Website and a Web Application
