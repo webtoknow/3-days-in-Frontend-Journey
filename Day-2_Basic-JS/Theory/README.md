@@ -39,10 +39,10 @@
 
 ## How browsers work?
 
-- in the years of IE 90% dominance, the browser was like a "black box"
-- now, open-source browsers serve the majority of the web, so we can see what's inside a web browser: millions of C++ lines
-- as a web developer, **learning the internals of browser operations helps you make better decisions and know the justifications behind development best practices**
-- there are 5 major browsers used on desktop today:
+- In the years of IE 90% dominance, the browser was like a "black box"
+- Now, open-source browsers serve the majority of the web, so we can see what's inside a web browser: millions of C++ lines
+- As a web developer, **learning the internals of browser operations helps you make better decisions and know the justifications behind development best practices**
+- There are 5 major browsers used on desktop today:
   - Chrome
   - Internet Explorer
   - Firefox
@@ -53,7 +53,7 @@
 
 - The main function of a browser is **to present a web resource** (usually a HTML, but may also be image or other type of content), by requesting it from the server and displaying it in the browser's window. The location of the resource is specified by the user using an **URI (Uniform Resource Identifier)**
 - The way the browser interprets and displays HTML is specified in the **HTML and CSS specifications**
-- specifications are maintained by the [W3C](https://www.w3.org/) (World Wide Web Consortion) organization
+- Specifications are maintained by the [W3C](https://www.w3.org/) (World Wide Web Consortion) organization
 - For years browsers conformed to only a part of the specifications and developed their own extensions => browser incompatibility issues
 - Today most of the browsers more or less conform to the specifications
 
@@ -90,10 +90,10 @@
 ### DOM Intro
 
 - Coming from **D**ocument **O**bject **M**odel
-- The output tree is a tree of DOM element and attribute nodes
+- The output is a tree of DOM element and attribute nodes
 - It is the object presentation of the HTML document and the interface of HTML elements
 - Like HTML, DOM is specified by the W3C organization
-- has an almost one-to-one relation to the markup
+- Has an almost one-to-one relation to the markup
 - *e.g.:*
 
 ```HTML
@@ -140,36 +140,36 @@ will be translated into:
 
 #### Scripts
 
-- the model of the web is synchronous
-- scripts are expecting to be parsed and executed immediately when the parser reaches a ***&lt;script&gt;*** tag
-- parsing of the document stops until the script has been executed
-- if the script is external, then the resource must first be fetched from the network
-- both WebKit and Firefox do an optimization: while executing scripts, another thread parses the rest of the document and finds out what other resources need to be loaded from the network and loads them (**Speculative parsing**)
+- The model of the web is synchronous
+- Scripts are expecting to be parsed and executed immediately when the parser reaches a ***&lt;script&gt;*** tag
+- Parsing of the document stops until the script has been executed
+- If the script is external, then the resource must first be fetched from the network
+- Both WebKit and Firefox do an optimization: while executing scripts, another thread parses the rest of the document and finds out what other resources need to be loaded from the network and loads them (**Speculative parsing**)
 
 #### Style sheets
 
-- it seems that since style sheets don't change the DOM tree, there is no reason to wait for them and stop the document parsing
-- there is an edge case: for the scripts asking for style information during the document parsing steps, if the style is not loaded and parsed yet, the script will get wrong answers and this caused lots of problems
+- It seems that since style sheets don't change the DOM tree, there is no reason to wait for them and stop the document parsing
+- There is an edge case: for the scripts asking for style information during the document parsing steps, if the style is not loaded and parsed yet, the script will get wrong answers and this caused lots of problems
 - **Firefox blocks all scripts** when there is a style sheet that is still being loaded and parsed
 - **WebKit blocks scripts only when they try to access certain style properties that may be affected by unloaded style sheet**
 
 #### Style computation
 
-- visual properties of each render object will be calculated by style properties of each element
-- the style includes style sheets of various origins: **inline elements** and **visual properties in the HTML** (*e.g.: bgcolor property*), then is translated to matching CSS style properties
+- Visual properties of each render object will be calculated by style properties of each element
+- The style includes style sheets of various origins: **inline elements** and **visual properties in the HTML** (*e.g.: bgcolor property*), then is translated to matching CSS style properties
 
 ### The rendering engine's threads
 
-- the rendering engine is single threaded
-- almost everything, except network operations, happens in a single thread
-- network operations can be performed by several parallel threads
-- the number of parralel connections is limited (usually 2-6 connections)
+- The rendering engine is single threaded
+- Almost everything, except network operations, happens in a single thread
+- Network operations can be performed by several parallel threads
+- The number of parralel connections is limited (usually 2-6 connections)
 
 ### Event loop
 
-- the browser main thread is an event loop
-- it's an infinite loop that keeps the process alive
-- it waits for events (like layout and paint events) and processes them
+- The browser main thread is an event loop
+- It's an infinite loop that keeps the process alive
+- It waits for events (like layout and paint events) and processes them
 
 ## Web Application Programming Interfaces
 
@@ -180,7 +180,7 @@ will be translated into:
 ### API in client-side JavaScript
 
 - are not part of the JavaScript language itself
-- they are built on top of the core JavaScript language
+- are built on top of the core JavaScript language
 - there are 2 categories:
   - **Browser APIs**:
     - built into web browser
@@ -199,14 +199,14 @@ will be translated into:
   - store useful values inside variables
   - operations with different types of variables
   - running code in response to certain events occuring on a web page (*e.g.: **click** event*)
-- when a web page is loaded in the browser, the code (HTML, CSS and JS) are run inside an execution environment (the browser tab)
+- when a web page is loaded into the browser, the code (HTML, CSS and JS) are run inside an execution environment (the browser tab)
 - is executed by the browser's JavaScript engine, after the HTML and CSS have been assembled and put together into a web page
 - dinamically modify HTML and CSS to update an user interface, via the DOM API
 
 ### JavaScript running order
 
-- when the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom
-- this means that it needs to be careful what order the things are put in
+- When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom
+- This means that it needs to be careful what order the things are put in
 
 ### Interpreted versus compiled code
 
@@ -260,11 +260,11 @@ will be translated into:
 
 ## Objects
 
-- in JavaScript, objects can be seen as a collection of properties
-- a limited set of properties are initialized, then properties can be added and removed
-- property values can be of any type, including other objects => enables building complex data structures
-- properties are identified using key values
-- a key value is a String or a Symbol value
+- In JavaScript, objects can be seen as a collection of properties
+- A limited set of properties are initialized, then properties can be added and removed
+- Property values can be of any type, including other objects => enables building complex data structures
+- Properties are identified using key values
+- A key value is a String or a Symbol value
 - 2 types of object properties which have certain attributes:
   - **data property**:
     - associates a key with a value
@@ -273,7 +273,7 @@ will be translated into:
 
 ### Dates
 
-- when representing dates, the best choice is to use the built-in [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JS
+- When representing dates, the best choice is to use the built-in [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JS
 
 ### Indexed collections: Arrays and Typed Arrays
 
