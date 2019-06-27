@@ -345,7 +345,7 @@ p {
 
 ### Simple Selectors
 
-- A selector is a pattern used to apply styles to elements
+- A selector is a way to select one or multiple elements and then apply some style for them
 - There are 3 types of simple selectors:
   - **based on the type of element**
     - *e.g.: the previous **body** selector will select all body elements in HTML*
