@@ -54,17 +54,17 @@
 - The main function of a browser is **to present a web resource** (usually a HTML, but may also be image or other type of content), by requesting it from the server and displaying it in the browser's window. The location of the resource is specified by the user using an **URI (Uniform Resource Identifier)**
 - The way the browser interprets and displays HTML is specified in the **HTML and CSS specifications**
 - Specifications are maintained by the [W3C](https://www.w3.org/) (World Wide Web Consortion) organization
-- For years browsers conformed to only a part of the specifications and developed their own extensions => browser incompatibility issues
+- For years, browsers conformed to only a part of the specifications and developed their own extensions => browser incompatibility issues
 - Today most of the browsers more or less conform to the specifications
 
 ### The browser's high level structure
 
 1. **The user interface (UI)** (address bar, back/forward button, bookmarking menu etc.)
-2. **The browser engine**: manages actions between the UI and the rendering engine
-3. **The rendering engine**: displays the requested content (*e.g.: parses HTML and CSS and displays the parsed content on the screen*). IE uses *Trident*, Firefox uses *Gecko*, Safari uses *WebKit*, Chrome and Opera (from version 15) use *Blink*, a fork of WebKit.
-4. **Networking**: for HTTP requests
-5. **UI backend**: exposes a generic interface that is not platform specific
-6. **JavaScript interpreter**: parse and execute JS code
+2. **The browser engine**: manages actions between the UI and the rendering engine. It provides methods to initiate the loading of a URL and other actions like reload, back, and forward
+3. **The rendering engine**: displays the requested content (*e.g.: parses HTML and CSS and displays the parsed content on the screen*). IE uses *Trident*, Firefox uses *Gecko*, Safari uses *WebKit*, Chrome and Opera (from version 15) use *Blink*, a fork of WebKit
+4. **Networking**: handles all aspects of Internet communication and URLs to use with HTTP, FTP
+5. **UI backend**: exposes a generic interface that is not platform specific. It helps to draw widgets like select box, input box, checkbox etc.
+6. **JavaScript interpreter**: parses and executes JS code
 7. **Data storage**: persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as *localStorage*, *IndexedDB*, *WebSQL* and *FileSystem*.
 
 > ### **Note**
@@ -90,7 +90,7 @@
 ### DOM Intro
 
 - Coming from **D**ocument **O**bject **M**odel
-- The output is a tree of DOM element and attribute nodes
+- The output is a tree of DOM elements and attribute nodes
 - It is the object presentation of the HTML document and the interface of HTML elements
 - Like HTML, DOM is specified by the W3C organization
 - Has an almost one-to-one relation to the markup
@@ -113,14 +113,14 @@ will be translated to the following DOM tree:
 
 ![DOM-tree](img/DOM-tree.png "DOM-tree")
 
-- during the tree construction stage the DOM tree with the Document in its root will be modified and elements will be added to it
-- you will never get an "Invalid Syntax" error on an HTML page (browsers fix any invalid content and go on)
+- During the tree construction stage, the DOM tree will be modified and the elements will be added to it
+- We will never get an "Invalid Syntax" error on an HTML page (browsers fix/ignore any invalid content and go on)
 
 ### CSS parsing
 
 - Each CSS file is parsed into a StyleSheet object
-- Each object contains CSS rules
-- CSS rule objects contain selector and declaration objects and other objects corresponding to CSS grammar
+- Each StyleSheet object contains CSS rules
+- CSS rules contain selector and declaration objects and other objects corresponding to CSS grammar
 - *e.g.:*
 
 ```CSS
@@ -163,7 +163,7 @@ will be translated into:
 - The rendering engine is single threaded
 - Almost everything, except network operations, happens in a single thread
 - Network operations can be performed by several parallel threads
-- The number of parralel connections is limited (usually 2-6 connections)
+- The number of parallel connections is limited (usually 2-6 connections)
 
 ### Event loop
 
@@ -219,8 +219,7 @@ will be translated into:
 
 ### How can JavaScript be added to a Web page?
 
-- in a similar way to CSS (**&lt;link&gt;** to apply external stylesheets and **&lt;style&gt;** to apply internal stylesheets to HTML)
-- using **&lt;script&gt;** tag
+- in a similar way to CSS, using **&lt;script&gt;** tag
 - 2 ways on doing this:
   - **internal JavaScript**
     ```javascript
@@ -247,7 +246,7 @@ will be translated into:
   - **symbol** (new to ES6): an **unique** value that may be used as the key of on Object property
 > **Note**
 >
-> All primitives are **immutable** (after they were created, it can never change)
+> All primitives are **immutable** (after they were created, they can never change)
 
 ### Primitive wrapper objects in JavaScript
 
@@ -260,9 +259,9 @@ will be translated into:
 
 ## Objects
 
-- In JavaScript, objects can be seen as a collection of properties
+- In JavaScript, objects can be identified as a collection of properties
 - A limited set of properties are initialized, then properties can be added and removed
-- Property values can be of any type, including other objects => enables building complex data structures
+- Property values can be of any type, including other objects (**nested objects**) => enable building complex data structures
 - Properties are identified using key values
 - A key value is a String or a Symbol value
 - 2 types of object properties which have certain attributes:
@@ -297,14 +296,14 @@ will be translated into:
 
 ## Functions
 
-- JavaScript procedure: a set of statements that performs a task or calculates a value
+- a set of statements that performs a task or calculates a value
 - to use a function, it has to be defined somewhere in the scope from which it will be called
 
 ### Function declaration
 
 - **function** keyword, followed by:
   - the name of the function
-  - list of parameters to the function, followed enclosed in parantheses and separated by commas
+  - list of parameters are passed to the function, followed enclosed in parantheses and separated by commas
   - the JavaScript statements that define the function, enclosed in curly brakets, { }
   - *e.g.:*
     ```javascript
@@ -343,8 +342,7 @@ var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
 
 ### Calling functions
 
-- defining a function does not execute it
-- just names the function and specifies what to do when the function is called
+- defining a function does not execute it, just specifies what to do when the function is called
 - **calling** the function actually performs the specified actions with the indicated parameters
 - *e.g.:*
 
@@ -402,7 +400,7 @@ students.map((student) => {
 ## DOM
 
 - **D**ocument **O**bject **M**odel
-- API which takes a HTML, XHTML or XML document as a tree, and every node is an object, meaning a part of the document
+- API takes HTML, XHTML or XML document as a tree, and every node is an object, meaning a part of the document
 - The objects can be manipulated through functions and the changes after calling them will be reflected in the display of document
 - So, DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript
 - The [W3 DOM](https://www.w3.org/DOM/) standards are implemented in most modern browsers
@@ -486,7 +484,7 @@ window.onload = function() {
   - a form being submitted
   - a video being played, paused or finishing play
   - an error occurring
-- each available event has an **event handler** (also named **event listener**) : a block of code, usually a user-defined JavaSript function, that will be run when event fires
+- each available event has an **event handler** (also named **event listener**) : a block of code, usually a user-defined JavaScript function, that will be run when event fires
 - defining such a block of code to be run in response to event firing is called **registering an event handler**
 - HTML4 added the ability to let events trigger actions in a browser - [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
 
@@ -564,7 +562,7 @@ btn.addEventListener('click', myClickFunction);
 - this mechanism has some advantages over the previous one
 - there is a counterpart function, **removeEventListener()**:
   - removes a previously added listener
-  - improve the efficiency to clean up old unused event handlers
+  - improves the efficiency to clean up old unused event handlers
   - *e.g.:*
 
     ```javascript
