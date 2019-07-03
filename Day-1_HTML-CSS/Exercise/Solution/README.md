@@ -21,7 +21,7 @@
 
 Create *index.html* and *style.css* files.
 
-In the document we need to define a HTML document structure.
+In the document we need to define a HTML document structure:
 
 ```HTML
 <!DOCTYPE html>
@@ -145,7 +145,7 @@ Our main page should have a navigation menu:
 
 ## Button
 
-The first button in the page will be `Add Article`.
+The first button in the page will be `Add Article`:
 
 ```HTML
 <div class="add__container">
