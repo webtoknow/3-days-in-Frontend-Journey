@@ -85,14 +85,14 @@ Let's check we have properly configured JSON Server. If you go to [http://localh
 
 It is good to know that:
 
-- If you make **POST**, **PUT** or **DELET**E requests, changes will be automatically and safely saved to `db.json` using [lowdb](https://github.com/typicode/lowdb).
-- Your request body JSON should be an object, just like the **GET** output. (for example `{"name": "Foobar"}`)
-- Id values are not mutable. Any `id` value in the body of your **PUT** request wil be ignored. Only a value set in a **POST** request wil be respected, but only if not already taken.
-- A **POST** or **PUT** request should include a `Content-Type: application/json` header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.
+- If you make **POST**, **PUT** or **DELETE** requests, changes will be automatically and safely saved to `db.json` using [lowdb](https://github.com/typicode/lowdb).
+- Your request body JSON should be an object, just like the **GET** output (for example `{"name": "Foobar"}`).
+- Id values are not mutable. Any `id` value in the body of your **PUT** request will be ignored. Only an id value set in a **POST** request will be considered, but only if it is not a duplicated one.
+- A **POST** or **PUT** request should include a `Content-Type: application/json` header because we want to use the JSON in the request body. Otherwise, it will result in a 200 OK but without any change to the data.
 
 > **Note**
 >
-> You can find more about Routes, Paginate, CLI, HTTPS visiting [JSON Server Github Page](https://github.com/typicode/json-server).
+> You can find more about Routes, Pagination, CLI, HTTPS by visiting [JSON Server Github Page](https://github.com/typicode/json-server).
 
 ## Get articles from server
 
