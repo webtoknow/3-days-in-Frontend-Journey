@@ -713,7 +713,7 @@ The display will be divided in this way:
 
 - makes web pages look good on all devices
 - the web page should look good and be easy to use, regardless of the device (desktops, tablets and phones)
-- it is called responsive web design when CSS and HTML is used in order to resize, hide or move the content to make it look good on any screen
+- it is called responsive web design when CSS and HTML is used in order to resize, hide or move the content to make it looks good on any screen
 - it is created using **Media Queries**
 
 ### Media Query
