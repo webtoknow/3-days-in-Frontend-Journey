@@ -5,7 +5,7 @@
 This is the simple way to get the project:
 
 ```SH
-git clone https://github.com/danamunteanu/4-days-in-Frontend-Journey.git
+git clone https://github.com/WebToLearn/4-days-in-Frontend-Journey.git
 ```
 
 Open the repository in Visual Studio Code.
