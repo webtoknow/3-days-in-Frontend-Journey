@@ -87,7 +87,7 @@
 
 - A **software program** that exists on the server and run using a web browser, through a web page
 - Created using a combination of **programming languages** and **web application frameworks**
-- It may use the RAM, allow user interactivity and it is designed for many uses
+- It may use the RAM and allow user interactivity
 - Based on **user engagement**
 - *e.g. : YouTube application*
 
