@@ -126,7 +126,7 @@ It is an architecture on the web that splits computers into 2 sections:
 - computers that asks for and request services (**Clients**)
 - computers that serve clients (**Servers**)
 
-![Client-Server-Architecture](img/Client-Server-Architecture.png "Client-Server-Architecture")
+![How HTTP Works](img/How-HTTP-Works.png "How HTTP Works")
 
 > **Note**
 >
@@ -156,9 +156,9 @@ It is an architecture on the web that splits computers into 2 sections:
   - Body - sometimes contains binary data
 - the information found in these three sections **vary depending if there is a request or response**:
 
-![HTTP-Request-message](img/HTTP-Request-message.png "HTTP-Request-message")
+![HTTP-Request-message](img/Request.png "HTTP-Request-message")
 &nbsp;
-![HTTP-Response-message](img/HTTP-Response-message.png "HTTP-Response-message")
+![HTTP-Response-message](img/Response.png "HTTP-Response-message")
 
 ## HTML Page Structure
 
