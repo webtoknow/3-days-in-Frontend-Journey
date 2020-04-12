@@ -1,31 +1,30 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
-import { ArticleService } from './article.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
-
-const appRoutes: Routes = [
-  { path: 'articles', component: ArticlesListComponent },
-  { path: 'articles/:id', component: ArticleDetailComponent },
-  { path: '', redirectTo: '/articles', pathMatch: 'full' },
-];
-
+import { ArticleService } from './article.service';
 
 @NgModule({
+  declarations: [
+    AppComponent, 
+    ArticlesListComponent, 
+    ArticleDetailComponent, 
+    ModalComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule,    
     ModalModule.forRoot(),
-    RouterModule.forRoot(appRoutes)],
-  declarations: [AppComponent, ArticlesListComponent, ArticleDetailComponent, ModalComponent],
+    AppRoutingModule
+  ],
   bootstrap: [AppComponent],
   providers: [HttpClientModule, ArticleService],
   entryComponents: [ModalComponent]
