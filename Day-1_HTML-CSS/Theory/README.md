@@ -16,6 +16,12 @@
   - [Server](#server)
   - [How does the Client-Server model works?](#how-does-the-client-server-model-works)
 - [HTTP Protocol](#http-protocol)
+- [Static vs Dynamic Websites](#static-vs-dynamic-websites)
+  - [Static Websites](#static-websites)
+  - [Dynamic Websites](#dynamic-websites)
+    - [Server Side vs Client Side Rendering](#server-side-vs-client-side-rendering)
+      - [Server Side Rendering](#server-side-rendering)
+      - [Client Side Rendering](#client-side-rendering)
 - [HTML Page Structure](#html-page-structure)
   - [HTML Basic Tags](#html-basic-tags)
   - [Semantic HTML](#semantic-html)
@@ -159,6 +165,70 @@ It is an architecture on the web that splits computers into 2 sections:
 ![HTTP-Request-message](img/Request.png "HTTP-Request-message")
 &nbsp;
 ![HTTP-Response-message](img/Response.png "HTTP-Response-message")
+
+## Static vs Dynamic Websites
+
+### Static Websites
+
+- are webpages delivered to the user's browser exactly as stored
+- usually, are written exclusively in HTML
+- the user cannot interact with the page
+- are purely informational
+- advantages:
+  - great for SEO since the page is already generated
+  - no performance hit since the page is already generated
+- disadvantages:
+  - not suited for fast-changing content
+
+![Static-Websites](img/Static-Websites.png "Static-Websites")
+
+### Dynamic Websites
+
+- can display different content
+- provide user interaction
+- is functional
+- require using more than HTML
+
+#### Server Side vs Client Side Rendering
+
+- in the past, the websites and web applications has a common strategy to follow: they used to prepare the HTML content to be sent to the browsers at the server side; this content was then rendered as HTML with CSS in the browser
+- in the latest years, increased clients' performance changed this approach: it became possible to render dynamic pages (desktop) or screens (mobile) requesting only the required content
+
+##### Server Side Rendering
+
+- when a new URL is accessed, the user sends the request to the server via a browser
+- the server checks the resource and, when it is ready, prepare the compiled HTML content for the client
+- this HTML is sent to the client for rendering and display
+- the browser downloads the HTML and makes the site visible to the user
+- advantages:
+  - great for SEO since the page is generated on server
+  - initial page load is faster
+  - better maintainability
+- disadvantages:
+  - increased loading time when using the app (page reloads)
+  - high coupling
+  - mobile app development becomes difficult
+
+![Server-Side-Rendering](img/Server-Side-Rendering.png "Server-Side-Rendering")
+
+##### Client Side Rendering
+
+- every time the user clicks to another page, the user sends the request to the server via a browser
+- instead of a server, a CDN (Content Delivery Network) can be used to serve static HTML, CSS and other necessary files to the user
+- the browser first downloads the HTML, then the app JavaScript files
+- after the JavaScript is fetched, the app will bootstrap
+- after that, the app will make API requests to fetch the dynamic content
+- after the server responds, the final content is rendered using DOM in the browser
+- advantages:
+  - highly Reactive, mobile like application
+  - small loading time when using the app (no page reload)
+  - easier debugging, testing and developing because of clear separation between front-end and back-end
+  - mobile app development becomes simple
+- disadvantages:
+  - not great for SEO since the page is generated on client
+  - more processing (may have to be) done in browser
+
+![Client-Side-Rendering](img/Client-Side-Rendering.png "Client-Side-Rendering")
 
 ## HTML Page Structure
 
