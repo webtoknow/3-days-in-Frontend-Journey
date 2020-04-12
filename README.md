@@ -2,7 +2,7 @@
 
 The purpose of this project is to give some basic lines to the ones who want to have a start in Frontend Journey in **just 4 days**.
 
-Each day will give the learner the opportunity to read and understand theoretical concepts and also to solve exercices to obtain a functional travelling blog. At the end, the user will be able to execute the CRUD actions (Create, Read, Update and Delete) on the articles, displayed as in the [provided design](#design).
+Each day will give the learner the opportunity to read and understand theoretical concepts and also to solve exercises to obtain a functional travelling blog. At the end, the user will be able to execute the CRUD actions (Create, Read, Update and Delete) on the articles, displayed as in the [provided design](#design).
 
 ## Technical requirements
 
