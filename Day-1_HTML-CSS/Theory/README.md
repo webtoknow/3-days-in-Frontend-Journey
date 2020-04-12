@@ -45,7 +45,7 @@
 
 - is a document commonly written in **HTML** (***HyperText Markup Language***)
 - is accesible through the internet using any web browser (*Google Chrome*, *Opera*, *Safari*, *Mozilla Firefox* and so on)
-- may contain text, audio, video, downloadable data files, hyperlink to other web pages
+- may contain text, audio, video, downloadable data files, hyperlinks to other web pages
 - can be viewed by entering correct URL pointing to the Web page
 
 ## First Webpage created
@@ -66,7 +66,7 @@
 ### Dynamic Webpages
 
 - their content change 
-- are usually written in Scripting Languages such as PHP, JSP, ASP, Perl etc.
+- are usually written in Scripting Languages such as PHP, JSP, ASP, Perl, JavaScript etc.
 - scripting languages return information in HTML form from a Database. Then, the browser translates the HTML to computer-understandable language
 - *e.g. : a blog which allows the users to put comments*
 
@@ -74,21 +74,21 @@
 
 ### Webpage
 
-- Single document written using HTML
-- Can be accessed by entering its URL (Uniform Resource Locator) address in a Web Browser
+- single document written using HTML
+- can be accessed by entering its URL (Uniform Resource Locator) address in a Web Browser
 
 ### Website
 
-- A group of **interlinked** and **well-structured** web pages that exist on the same domain
-- We move from one page to another using **hyperlinks**
-- As there exists 2 types of webpages, there are 2 types of websites also: **static** (contains only static web pages) and **dynamic** (contains dynamic web pages)
+- a group of **interlinked** and **well-structured** web pages that exist on the same domain
+- we move from one page to another using **hyperlinks**
+- as there exists 2 types of webpages, there are 2 types of websites also: **static** (contains only static web pages) and **dynamic** (contains dynamic web pages)
 
 ### Web Application
 
-- A **software program** that exists on the server and run using a web browser, through a web page
-- Created using a combination of **programming languages** and **web application frameworks**
-- It may use the RAM and allow user interactivity
-- Based on **user engagement**
+- a **software program** that exists on the server and run using a web browser, through a web page
+- created using a combination of **programming languages** and **web application frameworks**
+- it may use the RAM 
+- allow user interactivity
 - *e.g. : YouTube application*
 
 ## Client-Server model
@@ -134,27 +134,27 @@ It is an architecture on the web that splits computers into 2 sections:
 > - It is based on a **centralized structure**
 > - There is another way to communicate via a **decentralized structure** - ***The Peer to Peer Model***
 > - In The Peer to Peer Model:
->   - There is no client and no server
->   - Both computers can be requesters and response providers
->   - Each one is able to send and receive data directly with one another
+>   - there is no client and no server
+>   - both computers can be requesters and response providers
+>   - each one is able to send and receive data directly with one another
 >   - *e.g. : Videochat protocols*
 
 ## HTTP Protocol
 
-- Most used protocol in the world
+- most used protocol in the world
 - **HTTP** comes from: **Hypertext Transfer Protocol**
-- It is an **application layer protocol** allowing web applications to communicate and exchange data
+- tt is an **application layer protocol** allowing web applications to communicate and exchange data
 - **TCP/IP based** protocol
-- Used to **deliver contents** (*images, videos, documents etc.*)
-- It is a **connectionless** protocol: after making the request, the client **disconnect** from the server; then, when the response is ready, the server **re-estabilish** the connection and deliver the response
-- Can deliver all sort of data, as long as the computers are **able to read** it.
-- It is a **stateless** protocol: the client and the server know about each other **just durring the current request**. If they wants to reconnect, will estabilish a new connection as the first time.
-- Was designed for the Web in the first place
-- A typical HTTP message contains:
+- used to **deliver contents** (*images, videos, documents etc.*)
+- it is a **connectionless** protocol: after making the request, the client **disconnect** from the server; then, when the response is ready, the server **re-estabilish** the connection and deliver the response
+- can deliver all sort of data, as long as the computers are **able to read** it
+- it is a **stateless** protocol: the client and the server know about each other **just durring the current request**. If they wants to reconnect, will estabilish a new connection as the first time
+- was designed for the Web in the first place
+- a typical HTTP message contains:
   - Start line - contain plain text information
   - Headers - contain plain text information
   - Body - sometimes contains binary data
-- The information found in these three sections **vary depending if there is a request or response**:
+- the information found in these three sections **vary depending if there is a request or response**:
 
 ![HTTP-Request-message](img/HTTP-Request-message.png "HTTP-Request-message")
 &nbsp;
@@ -211,10 +211,6 @@ It is an architecture on the web that splits computers into 2 sections:
 
 - After using the *&lt;br /&gt;* tag, anything following it starts from the next line.
 - This is an example of **empty** element (named also **self-closing** tag), when no opening or closing tags are needed, because there is nothing to go between them.
-
-**Centering content - *&lt;center&gt;***
-
-- This tag is used to put any content in the center of the page.
 
 **Preserve formatting - *&lt;pre&gt;***
 
@@ -295,8 +291,8 @@ It is an architecture on the web that splits computers into 2 sections:
 
 ### Include External CSS
 
-- Styles are usually included into external CSS files
-- With an external style sheet, look of the entire site can be changed by modifying one file
+- Styles are usually included into external CSS files.
+- With an external style sheet, look of the entire site can be changed by modifying one file.
 - To use an external style sheet, a link should be added in the **&lt;head&gt;** section of the HTML page:
 
 ```HTML
@@ -345,7 +341,7 @@ p {
 
 ### Simple Selectors
 
-- A selector is a way to select one or multiple elements and then apply some style for them
+- A selector is a way to select one or multiple elements and then apply some style for them.
 - There are 3 types of simple selectors:
   - **based on the type of element**
     - *e.g.: the previous **body** selector will select all body elements in HTML*
@@ -355,7 +351,7 @@ p {
     - *e.g. : **#menu** : will select all elements which have the id named menu*
 - Same CSS properties may be applied to multiple selectors, by separating them by comma:
   - *e.g.: h1, h2 {...}*
-- Also, for selecting everything, **star selector (*)** can be used
+- Also, for selecting everything, **star selector (*)** can be used.
 
 ```CSS
 nav {
@@ -453,13 +449,13 @@ a:visited {
 
 ### Pseudo-class
 
-- is used to define a special state of an element. For example, it can be used to:
+- it is used to define a special state of an element. For example, it can be used to:
   - style an element when a user mouses over it
   - style visited and unvisited links differently
 
 ### Pseudo-element
 
-- is used to style specified parts of an element. For example, it can be used to:
+- it is used to style specified parts of an element. For example, it can be used to:
   - style the first letter or line of an element
   - insert content before or after the content of an element
 - *e.g.: div::after*
@@ -470,7 +466,7 @@ a:visited {
 
 ### Specificity
 
-- is a weight that is applied to a given CSS declaration, determined by the number of each **selector types** in the matching selector
+- it is a weight that is applied to a given CSS declaration, determined by the number of each **selector types** in the matching selector
 - when multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element
 - only applies when the same element is targeted by multiple declarations
 - **directly targeted elements** will always take precedence over rules which an element inherits from its ancestor
@@ -603,11 +599,11 @@ ul li {
 
 ### Flexbox
 
-- The **Flexible Box Layout Module** makes it easier to design flexible responsive layout structure without using positioning or float
-- Excels at vertical centering and equal heights
-- Very easy to reorder boxes
-- First, it is needed to define **flex container** (the parent) and next, **flex items** (the children)
-- The flex container becomes flexible by setting the **display** property to **flex**
+- the **Flexible Box Layout Module** makes it easier to design flexible responsive layout structure without using positioning or float
+- excels at vertical centering and equal heights
+- very easy to reorder boxes
+- first, it is needed to define **flex container** (the parent) and next, **flex items** (the children)
+- the flex container becomes flexible by setting the **display** property to **flex**
 
 ```CSS
 .flex-container {
@@ -615,7 +611,7 @@ ul li {
 }
 ```
 
-- The flex container properties are:
+- the flex container properties are:
   - **flex-direction**
   - **flex-wrap**
   - **flex-flow**
@@ -623,7 +619,7 @@ ul li {
   - **align-items**
   - **align-content**
 
-- It easily solves one of the most common style problem: **perfect centering**:
+- it easily solves one of the most common style problem: **perfect centering**:
 
 ```CSS
 .flex-container {
@@ -634,8 +630,8 @@ ul li {
 }
 ```
 
-- The **direct child elements of a flex container** automatically become flexible (flex) items
-- The flex item properties are:
+- the **direct child elements of a flex container** automatically become flexible (flex) items
+- the flex item properties are:
   - **order**
   - **flex-grow**
   - **flex-shrink**
@@ -643,20 +639,20 @@ ul li {
   - **flex**
   - **align-self**
 
-- Main disadvantage is that Flexbox was planned to be 1-dimensional
+- main disadvantage is that Flexbox was planned to be 1-dimensional
 
 > **Note**
 >
-> To learn flexbox in an easy and funny way, play [Flexbox defense](http://www.flexboxdefense.com/).
+> To learn flexbox in an easy and funny way, play [Flexbox froggy](https://flexboxfroggy.com/) and [Flexbox defense](http://www.flexboxdefense.com/).
 
 ### CSS Grid
 
-- Released on March 2017
-- Excels at dividing a page into major regions and defining the relationship in terms of size, position and layer
-- Like tables, **grid layout** enables the developer to align elements into columns and rows
+- released on March 2017
+- excels at dividing a page into major regions and defining the relationship in terms of size, position and layer
+- like tables, **grid layout** enables the developer to align elements into columns and rows
 - CSS Grid is designed to work in 2-dimensional way
-- It is better to use Flexbox for UI elements, but Grid for major layout
-- Example for using CSS Grid:
+- it is better to use Flexbox for UI elements, but Grid for major layout
+- example for using CSS Grid:
 
 ```HTML
 <div class="wrapper">
