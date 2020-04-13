@@ -111,7 +111,7 @@
 
 will be translated to the following DOM tree:
 
-![DOM-tree](img/DOM-tree.png "DOM-tree")
+![DOM-tree](img/HTML-tree.png "DOM-tree")
 
 - During the tree construction stage, the DOM tree will be modified and the elements will be added to it
 - We will never get an "Invalid Syntax" error on an HTML page (browsers fix/ignore any invalid content and go on)
