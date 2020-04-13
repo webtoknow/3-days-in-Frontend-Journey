@@ -584,7 +584,7 @@ The following list of selector types increases by specificity:
 
 > **Note**
 >
-> To learn more easy CSS properties we can use a [Cheet Sheet](https://toptal-email-assets.s3.amazonaws.com/css-cheat-sheet.pdf).
+> To learn more easy CSS properties we can use a [Cheet Sheet](https://github.com/WebToLearn/laborator-tehnici-web/raw/master/doc/laborator-2/css-cheat-sheet.pdf).
 
 ### Inheritance
 
@@ -713,6 +713,7 @@ ul li {
 
 > **Note**
 >
+> One of the best guide to CSS flexbox layout is on (CSS Tricks)[https://css-tricks.com/snippets/css/a-guide-to-flexbox/].
 > To learn flexbox in an easy and funny way, play [Flexbox froggy](https://flexboxfroggy.com/) and [Flexbox defense](http://www.flexboxdefense.com/).
 
 ### CSS Grid
