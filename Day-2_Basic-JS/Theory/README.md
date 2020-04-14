@@ -10,7 +10,6 @@
   - [CSS Parsing](#css-parsing)
   - [Processing scripts and style sheets](#processing-scripts-and-style-sheets)
   - [The rendering engine's threads](#the-rendering-engines-threads)
-  - [Event loop](#event-loop)
 - [Web Application Programming Interfaces](#web-application-programming-interfaces)
   - [API in client-side JavaScript](#api-in-client-side-javascript)
 - [What is JavaScript?](#what-is-javascript)
@@ -164,12 +163,6 @@ will be translated into:
 - Almost everything, except network operations, happens in a single thread
 - Network operations can be performed by several parallel threads
 - The number of parallel connections is limited (usually 2-6 connections)
-
-### Event loop
-
-- The browser main thread is an event loop
-- It's an infinite loop that keeps the process alive
-- It waits for events (like layout and paint events) and processes them
 
 ## Web Application Programming Interfaces
 

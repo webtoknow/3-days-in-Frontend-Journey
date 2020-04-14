@@ -29,7 +29,10 @@
 
 ## Event loop
 
-Let's watch an amazing [video](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=6s) regarding **Event Loop** from [JSConf EU 2014](https://2014.jsconf.eu/).
+- The browser main thread is an event loop
+- It's an infinite loop that keeps the process alive
+- It waits for events (like layout and paint events) and processes them
+- Let's watch an amazing [video](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=6s) regarding **Event Loop** from [JSConf EU 2014](https://2014.jsconf.eu/).
 
 ## Scope and Closures
 
