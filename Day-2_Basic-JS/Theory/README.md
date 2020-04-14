@@ -203,12 +203,7 @@ will be translated into:
 - A limited set of properties are initialized, then properties can be added and removed
 - Property values can be of any type, including other objects (**nested objects**) => enable building complex data structures
 - Properties are identified using key values
-- A key value is a String or a Symbol value
-- 2 types of object properties which have certain attributes:
-  - **data property**:
-    - associates a key with a value
-  - **accessor property**
-    - associates a key with one or two accessor functions (**get** and **set**) to retrieve or store a value
+- A key can be a String or a Symbol value
 
 ```javascript
 var person = {
