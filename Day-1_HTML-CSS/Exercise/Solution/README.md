@@ -333,13 +333,13 @@ For every article we need to create and style:
 ### Article ReadMore button
 
 ```HTML
-<div class="readme__container">
+<div class="readmore__container">
     <button type="button" class="button">Read More</button>
 </div>
 ```
 
 ```CSS
-.readme__container {
+.readmore__container {
     display: flex;
     justify-content: center;
     margin: 140px 0 100px 0;
