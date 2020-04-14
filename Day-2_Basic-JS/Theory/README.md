@@ -250,7 +250,7 @@ var person = {
 
 > **Note**
 >
-> The type can be determined using the ***typeof*** operator
+> The data type can be determined using ***typeof*** operator
 
 ## Functions
 
@@ -279,13 +279,22 @@ var person = {
 ### Function expressions
 
 - a function can be **anonymous** (it can not have a name)
-- can be also defined as:
+- can be defined as:
 
 ```javascript
 var square = function(number) { return number*number; }
 ```
 
-- a name can be provided, for example, for the recursive functions, which are called inside the function:
+- or as an argument to other functions:
+
+```javascript
+setTimeout(function() {
+  alert('hello');
+}, 1000);
+```
+
+- but, in the most cases, **a name is provided** for our functions to be easy to be called
+- in JavaScript, we can also have recursive functions:
 
 ```javascript
 var factorial = function fac(n) {return n<2 ? 1 : n * fac(n-1); }
@@ -320,8 +329,7 @@ function square(n) {return n*n; }
 
 ### Function scope
 
-- variables defined inside of a function cannot be accessed from outside
-- the variable is defined only in the scope of the function
+- variables defined inside of a function cannot be accessed from outside because they are defined only in the scope of that function
 - a function can access all variables and functions defined inside the scope in which it is defined
 - *e.g.:*
   - *a function declared in global scope can access all variables defined in the global scope*
