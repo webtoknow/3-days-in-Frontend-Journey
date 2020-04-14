@@ -26,7 +26,6 @@
   - [Arrow functions](#arrow-functions)
 - [DOM](#dom)
   - [DOM and JavaScript](#dom-and-javascript)
-  - [Data Types](#data-types)
   - [Interfaces in the DOM](#interfaces-in-the-dom)
 - [Events](#events)
   - [Inline event handlers](#inline-event-handlers)
@@ -369,26 +368,6 @@ window.onload = function() {
 }
 ```
 
-### Data Types
-
-- **[document](https://developer.mozilla.org/en-US/docs/Web/API/Document)**: the root of document itself
-- **[element](https://developer.mozilla.org/en-US/docs/Web/API/Element)**:
-  - element or node of type element
-  - implement the **DOM Element** and **Node** interfaces
-  - for example, ***document.createElement()*** returns an object reference to a node
-- **[nodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)**:
-  - array of elements
-  - items are accessed by index
-  - returned by, for example, ***document.getElementsByTagName()***
-- **[attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)**:
-  - an object refference that exposes a special interface for attributes
-  - attributes are nodes in DOM just like elements
-  - returned by, for example, ***createAttribute()*** method
-  - an attribute is, for example, the class of a node
-- **[namedNodeMap](https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap)**:
-  - like an array of Attribute objects
-  - the items are accessed by name or index
-
 ### Interfaces in the DOM
 
 - many objects borrow from several different interfaces
@@ -408,6 +387,10 @@ window.onload = function() {
   - ***[window.onload()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)***
   - ***[window.scrollTo()](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo)***
 
+> **Note**
+>
+> - For more info you can take a look at this [article](https://www.impressivewebs.com/10-essential-dom-methods-techniques-for-practical-javascript/).
+
 ## Events
 
 - actions or occurences that happen in the programming environment
@@ -424,7 +407,6 @@ window.onload = function() {
 - each available event has an **event handler** (also named **event listener**) : a block of code, usually a user-defined JavaScript function, that will be run when event fires
 - defining such a block of code to be run in response to event firing is called **registering an event handler**
 - HTML4 added the ability to let events trigger actions in a browser - [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
-
 
 > **Note**
 >
