@@ -6,14 +6,11 @@
   - [The browser's main functionality](#the-browsers-main-functionality)
   - [The browser's high level structure](#the-browsers-high-level-structure)
   - [The main flow](#the-main-flow)
-  - [DOM Intro](#dom-intro)
+  - [HTML Parsing using DOM](#html-parsing-using-dom)
   - [CSS Parsing](#css-parsing)
   - [The rendering engine's threads](#the-rendering-engines-threads)
-- [Web Application Programming Interfaces](#web-application-programming-interfaces)
-  - [API in client-side JavaScript](#api-in-client-side-javascript)
 - [What is JavaScript?](#what-is-javascript)
   - [JavaScript running order](#javascript-running-order)
-  - [Interpreted versus compiled code](#interpreted-versus-compiled-code)
   - [How can JavaScript be added to a Web page?](#how-can-javascript-be-added-to-a-web-page)
 - [Primitives](#primitives)
   - [Primitive wrapper objects in JavaScript](#primitive-wrapper-objects-in-javascript)
@@ -85,11 +82,10 @@
 > - this is a gradual process
 > - for better user experience, the rendering engine will try to display contents on the screen as soon as possible (it will not wait until all HTML is parsed before starting to build and layout the render tree, it will start to display parts of it, while the process will continue with the rest of contents)
 
-### DOM Intro
+### HTML Parsing using DOM
 
-- Coming from **D**ocument **O**bject **M**odel
-- The output is a tree of DOM elements and attribute nodes
-- It is the object presentation of the HTML document and the interface of HTML elements
+- The output of HTML parsing is a tree of DOM elements and attribute nodes
+- DOM is coming from **D**ocument **O**bject **M**odel
 - Like HTML, DOM is specified by the W3C organization
 - Has an almost one-to-one relation to the markup
 - *e.g.:*
@@ -141,26 +137,6 @@ will be translated into:
 - Network operations can be performed by several parallel threads
 - The number of parallel connections is limited (usually 2-6 connections)
 
-## Web Application Programming Interfaces
-
-- called also API
-- are a set clearly defined methods of communication between various software components
-- allow developers to create complex functionality more easily
-
-### API in client-side JavaScript
-
-- are not part of the JavaScript language itself
-- are built on top of the core JavaScript language
-- there are 2 categories:
-  - **Browser APIs**:
-    - built into web browser
-    - able to expose data from the browser
-    - *e.g.: [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) provides some simple JS constructs for retrieving location data*
-  - **Third party APIs:**
-    - are not build into the browser by default
-    - the developer have to grab their code and information from somewhere on the Web
-    - *e.g.: [Twitter API](https://developer.twitter.com/en/docs) alows to display latest tweets on your website*
-
 ## What is JavaScript?
 
 - scripting language that allows us to implement complex things on web pages (*e.g.: create dynamically updating content, control multimedia, animate images and so on*).
@@ -177,15 +153,6 @@ will be translated into:
 
 - When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom
 - This means that it needs to be careful what order the things are put in
-
-### Interpreted versus compiled code
-
-- **JavaScript is an interpreted language**:
-  - the code is run from top to bottom and the result of running the code is immediately returned
-  - code is not needed to be transformed into a different form before the browser runs it
-- **Compiled languages** :
-  - are transformed (compiled) into another form before they are run by the computer
-  - *e.g.: C/C++ are compiled into assembly language that is then run by the computer*
 
 ### How can JavaScript be added to a Web page?
 
