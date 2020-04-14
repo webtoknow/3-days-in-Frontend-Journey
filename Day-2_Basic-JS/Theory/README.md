@@ -22,7 +22,6 @@
   - [Function declaration](#function-declaration)
   - [Function expressions](#function-expressions)
   - [Calling functions](#calling-functions)
-  - [Function scope](#function-scope)
   - [Arrow functions](#arrow-functions)
 - [DOM](#dom)
   - [DOM and JavaScript](#dom-and-javascript)
@@ -326,14 +325,6 @@ console.log(square(5));
 /*...*/
 function square(n) {return n*n; }
 ```
-
-### Function scope
-
-- variables defined inside of a function cannot be accessed from outside because they are defined only in the scope of that function
-- a function can access all variables and functions defined inside the scope in which it is defined
-- *e.g.:*
-  - *a function declared in global scope can access all variables defined in the global scope*
-  - *a function defined inside another function can access all variables defined in the parent function and all the variables to which the parent function has access*
 
 ### Arrow functions
 
