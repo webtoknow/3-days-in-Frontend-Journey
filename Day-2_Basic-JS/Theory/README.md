@@ -8,7 +8,6 @@
   - [The main flow](#the-main-flow)
   - [DOM Intro](#dom-intro)
   - [CSS Parsing](#css-parsing)
-  - [Processing scripts and style sheets](#processing-scripts-and-style-sheets)
   - [The rendering engine's threads](#the-rendering-engines-threads)
   - [Event loop](#event-loop)
 - [Web Application Programming Interfaces](#web-application-programming-interfaces)
@@ -135,28 +134,6 @@ p, div {
 will be translated into:
 
 ![CSS-tree](img/CSS-tree.png "CSS-tree")
-
-### Processing scripts and style sheets
-
-#### Scripts
-
-- The model of the web is synchronous
-- Scripts are expecting to be parsed and executed immediately when the parser reaches a ***&lt;script&gt;*** tag
-- Parsing of the document stops until the script has been executed
-- If the script is external, then the resource must first be fetched from the network
-- Both WebKit and Firefox do an optimization: while executing scripts, another thread parses the rest of the document and finds out what other resources need to be loaded from the network and loads them (**Speculative parsing**)
-
-#### Style sheets
-
-- It seems that since style sheets don't change the DOM tree, there is no reason to wait for them and stop the document parsing
-- There is an edge case: for the scripts asking for style information during the document parsing steps, if the style is not loaded and parsed yet, the script will get wrong answers and this caused lots of problems
-- **Firefox blocks all scripts** when there is a style sheet that is still being loaded and parsed
-- **WebKit blocks scripts only when they try to access certain style properties that may be affected by unloaded style sheet**
-
-#### Style computation
-
-- Visual properties of each render object will be calculated by style properties of each element
-- The style includes style sheets of various origins: **inline elements** and **visual properties in the HTML** (*e.g.: bgcolor property*), then is translated to matching CSS style properties
 
 ### The rendering engine's threads
 
