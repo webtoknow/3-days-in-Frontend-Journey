@@ -159,6 +159,7 @@ will be translated into:
 - in a similar way to CSS, using **&lt;script&gt;** tag
 - 2 ways on doing this:
   - **internal JavaScript**
+
     ```javascript
     <script>
 
@@ -166,7 +167,9 @@ will be translated into:
 
     </script>
     ```
+
   - **external JavaScript**
+
     ```javascript
     <script src="script.js"></script>
     ```
@@ -181,6 +184,7 @@ will be translated into:
   - **null**: intentional absence of a value
   - **undefined**: no assigned value
   - **symbol** (new to ES6): an **unique** value that may be used as the key of on Object property
+
 > **Note**
 >
 > All primitives are **immutable** (after they were created, they can never change)
@@ -207,6 +211,14 @@ will be translated into:
   - **accessor property**
     - associates a key with one or two accessor functions (**get** and **set**) to retrieve or store a value
 
+```javascript
+var person = {
+  name: "Lion"
+  age: 24
+  married: false;
+}
+```
+
 ### Dates
 
 - When representing dates, the best choice is to use the built-in [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JS
@@ -227,6 +239,21 @@ will be translated into:
 - [JavaScript Object Notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - derived from JavaScript, but used by many programming languages
 
+```json
+{
+    "message": [
+        "afghan",
+        "basset",
+        "blood",
+        "english",
+        "ibizan",
+        "plott",
+        "walker"
+    ],
+    "status": "success"
+}
+```
+
 > **Note**
 >
 > The type can be determined using the ***typeof*** operator
@@ -243,6 +270,7 @@ will be translated into:
   - list of parameters are passed to the function, followed enclosed in parantheses and separated by commas
   - the JavaScript statements that define the function, enclosed in curly brakets, { }
   - *e.g.:*
+
     ```javascript
     function square(number) {
         return number * number;
@@ -424,7 +452,6 @@ window.onload = function() {
 - each available event has an **event handler** (also named **event listener**) : a block of code, usually a user-defined JavaScript function, that will be run when event fires
 - defining such a block of code to be run in response to event firing is called **registering an event handler**
 - HTML4 added the ability to let events trigger actions in a browser - [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
-
 
 > **Note**
 >
