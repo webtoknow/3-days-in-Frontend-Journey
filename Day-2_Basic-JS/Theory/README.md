@@ -215,7 +215,7 @@ var person = {
 
 ### Dates
 
-- When representing dates, the best choice is to use the built-in [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) in JS
+- You can represent dates using the built-in JavaScript [Date utility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or third-party libraries ([momentjs](https://momentjs.com/) is an example).
 
 ### Indexed collections: Arrays and Typed Arrays
 
