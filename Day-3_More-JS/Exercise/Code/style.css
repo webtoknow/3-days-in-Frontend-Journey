@@ -124,12 +124,6 @@ img {
     margin-top: 80px;
 }
 
-.readmore__container {
-    display: flex;
-    justify-content: center;
-    margin: 140px 0 100px 0;
-}
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -193,10 +187,6 @@ img {
     font-family: 'Cardo', serif;
     padding: 0 5px;
     margin-bottom: 25px;
-}
-
-.input--big {
-    width: 100%;
 }
 
 .textarea {

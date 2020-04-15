@@ -82,16 +82,6 @@ function createArticleDOMNode(article) {
     paragraphContainer.className = "content__container";
     paragraphContainer.appendChild(paragraph);
 
-    // Read more
-    let readmore = document.createElement('button');
-    readmore.className = "button";
-    readmore.textContent = "Read More";
-
-    // Paragraph container
-    let readmoreContainer = document.createElement('div');
-    readmoreContainer.className = "readmore__container";
-    readmoreContainer.appendChild(readmore);
-
     // Append all article nodes to container
     let articleNode = document.createElement('article');
     articleNode.appendChild(title);
@@ -99,7 +89,6 @@ function createArticleDOMNode(article) {
     articleNode.appendChild(buttonsContainer);
     articleNode.appendChild(img);
     articleNode.appendChild(paragraphContainer);
-    articleNode.appendChild(readmoreContainer);
 
     return articleNode;
 }

@@ -38,12 +38,8 @@ You can find all design specifications in
 
 ### Articles
 
-![CSS_Grid](Day-1_HTML-CSS/Exercise/Design/home.jpg "Home Page")
+![Home_Page](Day-1_HTML-CSS/Exercise/Design/home.jpg "Home Page")
 
 ### Modal
 
-![CSS_Grid](Day-1_HTML-CSS/Exercise/Design/modal.jpg "Modal")
-
-### Article page
-
-![CSS_Grid](Day-1_HTML-CSS/Exercise/Design/article.jpg "Article")
+![Modal](Day-1_HTML-CSS/Exercise/Design/modal.jpg "Modal")
