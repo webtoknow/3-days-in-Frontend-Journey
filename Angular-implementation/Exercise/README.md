@@ -1,4 +1,4 @@
-# Day 4 - Angular makes things easier to do
+# Implement same app with Angular
 
 ## Table of contents
 
