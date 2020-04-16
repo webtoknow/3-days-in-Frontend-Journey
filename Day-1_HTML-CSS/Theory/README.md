@@ -7,10 +7,6 @@
 - [Types of Webpages](#types-of-webpages)
   - [Static Webpages](#static-webpages)
   - [Dynamic Webpages](#dynamic-webpages)
-- [Difference between a Webpage, a Website and a Web Application](#difference-between-a-webpage-a-website-and-a-web-application)
-  - [Webpage](#webpage)
-  - [Website](#website)
-  - [Web Application](#web-application)
 - [Client-Server model](#client-server-model)
   - [Client](#client)
   - [Server](#server)
@@ -75,27 +71,6 @@
 - are usually written in Scripting Languages such as PHP, JSP, ASP, Perl, JavaScript etc.
 - scripting languages return information in HTML form from a Database. Then, the browser translates the HTML to computer-understandable language
 - *e.g. : a blog which allows the users to put comments*
-
-## Difference between a Webpage, a Website and a Web Application
-
-### Webpage
-
-- single document written using HTML
-- can be accessed by entering its URL (Uniform Resource Locator) address in a Web Browser
-
-### Website
-
-- a group of **interlinked** and **well-structured** web pages that exist on the same domain
-- we move from one page to another using **hyperlinks**
-- as there exists 2 types of webpages, there are 2 types of websites also: **static** (contains only static web pages) and **dynamic** (contains dynamic web pages)
-
-### Web Application
-
-- a **software program** that exists on the server and run using a web browser, through a web page
-- created using a combination of **programming languages** and **web application frameworks**
-- it may use the RAM 
-- allow user interactivity
-- *e.g. : YouTube application*
 
 ## Client-Server model
 
