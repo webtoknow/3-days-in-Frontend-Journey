@@ -13,7 +13,6 @@
   - [Article edit delete buttons](#article-edit-delete-buttons)
   - [Article image](#article-image)
   - [Article content](#article-content)
-  - [Article ReadMore button](#article-readmore-button)
 - [Footer](#footer)
 - [Modal](#modal)
 
@@ -205,7 +204,6 @@ For every article we need to create and style:
 - [Article edit delete buttons](#article-edit-delete-buttons)
 - [Article image](#article-image)
 - [Article content](#article-content)
-- [Article ReadMore button](#article-readmore-button)
 
 ### Article title
 
@@ -330,22 +328,6 @@ For every article we need to create and style:
 }
 ```
 
-### Article ReadMore button
-
-```HTML
-<div class="readmore__container">
-    <button type="button" class="button">Read More</button>
-</div>
-```
-
-```CSS
-.readmore__container {
-    display: flex;
-    justify-content: center;
-    margin: 140px 0 100px 0;
-}
-```
-
 ## Footer
 
 To improve the user experience and not to load all articles, we can use pagination.
@@ -394,8 +376,6 @@ Modal markup will be added within `<body>` tag, after `<div class="container">`.
                 <input type="text" class="input" placeholder="Please enter author">
                 <input type="text" class="input" placeholder="Please enter date">
                 <input type="text" class="input" placeholder="Please enter image url">
-                <input type="text" class="input" placeholder="Please enter saying">
-                <input type="text" class="input input--big" placeholder="Please enter summary">
             </div>
             <textarea class="textarea" name="content" cols="28" rows="7" placeholder="Please enter content"></textarea>
             <div class="modal__buttons">
@@ -456,10 +436,6 @@ Modal markup will be added within `<body>` tag, after `<div class="container">`.
     font-family: 'Cardo', serif;
     padding: 0 5px;
     margin-bottom: 25px;
-}
-
-.input--big {
-    width: 100%;
 }
 
 .textarea {

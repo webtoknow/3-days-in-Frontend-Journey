@@ -28,7 +28,6 @@ Create travelling blog page using HTML and CSS following the [Design Specificati
   - Article edit delete buttons
   - Article image
   - Article content
-  - Article ReadMore button
 - Footer
 - Modal
 

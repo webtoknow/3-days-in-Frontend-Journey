@@ -1,4 +1,4 @@
-# Day 4 - Angular makes things easier to do
+# Implement same app with Angular
 
 ## Table of contents
 
@@ -17,4 +17,17 @@
 
 ## Play with Angular
 
-Let's create our Travelling Blog application using Angular.
+Let's create our Travelling Blog application using Angular. You can find the design specifications for this workshop in
+[Design Information Section](Design/README.md).
+
+### Articles
+
+![Home_Page](Design/home.jpg "Home Page")
+
+### Modal
+
+![Modal](Design/modal.jpg "Modal")
+
+### Article
+
+![Article](Design/article.jpg "Article")

@@ -32,8 +32,6 @@ We need to add `id` attributes in HTML. Then, we will assign the nodes to variab
     <input id="formAuthor" type="text" class="input" placeholder="Please enter author">
     <input id="formDate" type="text" class="input" placeholder="Please enter date">
     <input id="formImgUrl" type="text" class="input" placeholder="Please enter image url">
-    <input id="formSaying" type="text" class="input" placeholder="Please enter saying">
-    <input id="formSummary" type="text" class="input input--big" placeholder="Please enter summary">
 </div>
 <textarea id="formContent" class="textarea" name="content" cols="28" rows="7" placeholder="Please enter content"></textarea>
 <div class="modal__buttons">
