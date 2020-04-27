@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
 html {
     font-family: 'Cardo', serif;
-    color:#1e1e1e;
+    color: #1e1e1e;
 }
 
 p {
@@ -11,7 +9,7 @@ p {
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 
 .container {
@@ -22,7 +20,7 @@ img {
 .nav {
     display: flex;
     justify-content: flex-end;
-    margin-top:100px;
+    margin-top: 100px;
 }
 
 .nav__container {
@@ -36,7 +34,6 @@ img {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
-    list-style-type: none;
     margin: 0 0 0 100px;
     padding: 0;
     text-transform: uppercase;
@@ -44,7 +41,7 @@ img {
 
 .nav__link {
     text-decoration: none;
-    color:#1e1e1e;
+    color: #1e1e1e;
 }
 
 .add__container {
@@ -81,6 +78,13 @@ img {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+
+}
+.info__container--margin {
+    margin-bottom: 60px;
+}
+.title--margin {
+    margin-top: 60px;
 }
 
 .info__item {
@@ -88,7 +92,6 @@ img {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    list-style-type: none;
     padding: 0;
 }
 
@@ -96,8 +99,8 @@ img {
     content: '\2022';
     font-weight: bold;
     padding: 0 20px;
-
 }
+
 .info__mark {
     color: #1e1e1e;
     font-weight: bold;
@@ -141,14 +144,36 @@ img {
 }
 
 .footer__link {
-    color:#1e1e1e;
+    color: #1e1e1e;
     font-family: 'Montserrat', sans-serif;
     font-size: 34px;
     line-height: 1.2;
     text-decoration: none;
 }
 
-.modal__box {
+.show-modal {
+    overflow: hidden;
+}
+
+.show-modal.modal__overlay {
+    display: flex;
+}
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
     width: 1000px;
     height: 750px;
     background: white;
@@ -199,7 +224,4 @@ img {
 
 .button--pink {
     background: #FFE3E3;
-}
-.modal-dialog {
-  max-width: 1000px;
 }

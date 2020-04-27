@@ -1,5 +1,4 @@
-import { Component, ComponentRef } from '@angular/core';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { Component, ComponentRef, EventEmitter, Output, Input } from '@angular/core';
 import { Article } from './../article.model';
 import { ArticleService } from './../article.service';
 
@@ -10,25 +9,35 @@ import { ArticleService } from './../article.service';
 })
 export class ModalComponent {
 
-  article = new Article();
-  isUpdate = false;
-  callbackFunction : () => void;
+  @Input()
+  article: Article;
 
-  constructor(public bsModalRef: BsModalRef,
-              public articleService: ArticleService) {}
+  @Output()
+  getArticleEvent = new EventEmitter();
+  
+  @Output()
+  toggleModalEvent = new EventEmitter();
+
+  constructor(
+    public articleService: ArticleService
+  ) { }
 
   onSave() {
-    if (this.isUpdate) {
+    if (this.article.id) {
       this.articleService.putArticle(this.article, this.article.id).subscribe(response => {
-        this.callbackFunction();
-        this.bsModalRef.hide();
+        this.toggleModalEvent.emit();
+        this.getArticleEvent.emit();
       });
     } else {
       this.articleService.postArticle(this.article).subscribe(response => {
-        this.callbackFunction();
-        this.bsModalRef.hide();
+        this.toggleModalEvent.emit();
+        this.getArticleEvent.emit();
       });;
     }
+  }
+
+  closeModal() {
+    this.toggleModalEvent.emit();
   }
 
 }

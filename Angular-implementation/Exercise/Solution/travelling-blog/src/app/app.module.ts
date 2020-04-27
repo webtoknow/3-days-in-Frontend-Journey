@@ -5,24 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ArticlesListComponent } from './articles-list/articles-list.component';
-import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { ArticlesListComponent } from './pages/articles-list/articles-list.component';
+import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
 import { ModalComponent } from './modal/modal.component';
 import { ArticleService } from './article.service';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     ArticlesListComponent, 
     ArticleDetailComponent, 
-    ModalComponent
+    ModalComponent, 
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,    
-    ModalModule.forRoot(),
     AppRoutingModule
   ],
   bootstrap: [AppComponent],
