@@ -24,5 +24,8 @@ export class ArticleService {
     return this.http.delete(`http://localhost:3000/articles/${id}`) as Observable<Article>;
   }
 
+  getArticleById(id: string): Observable<Article> {
+    return this.http.get(`http://localhost:3000/articles/${id}`) as Observable<Article>;
+  }
 
 }

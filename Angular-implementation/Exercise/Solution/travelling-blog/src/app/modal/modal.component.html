@@ -1,4 +1,4 @@
-<div class="modal__box">
+<div class="modal">
   <form class="modal__content" (ngSubmit)="onSave()" #modalForm="ngForm">
     <h2 class="title">Add/Edit article</h2>
     <div class="inputs__container">
@@ -12,7 +12,7 @@
     </div>
     <textarea class="textarea" name="content" cols="28" rows="7" placeholder="Please enter content" [(ngModel)]="article.content"></textarea>
     <div class="modal__buttons">
-      <button type="button" class="button" (click)="bsModalRef.hide()">Cancel</button>
+      <button type="button" class="button" (click)="closeModal()">Cancel</button>
       <button type="submit" class="button button--pink">Save</button>
     </div>
   </form>

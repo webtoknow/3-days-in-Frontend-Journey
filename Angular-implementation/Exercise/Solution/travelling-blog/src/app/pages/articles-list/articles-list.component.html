@@ -1,0 +1,15 @@
+<div class="add__container">
+	<button id="add" type="button" class="button" (click)="openAddModal()"> + Add Article</button>
+</div>
+<main>
+	<app-article *ngFor="let article of articlesList" [article]="article" (getArticleEvent)="getArticles()"
+		(editEvent)="openEditModal($event)">
+	</app-article>
+</main>
+<div class="modal__overlay" [ngClass]="{'show-modal': showModal}">
+	<app-modal
+		(toggleModalEvent)="toggleModal()"
+		(getArticleEvent)="getArticles()"
+		[article]="article"
+	></app-modal>
+</div>
