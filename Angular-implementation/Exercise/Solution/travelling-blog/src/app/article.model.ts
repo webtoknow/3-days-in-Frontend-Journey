@@ -8,4 +8,16 @@ export class Article {
   saying: string;
   summary: string;
   content: string;
+
+  constructor() {
+    this.id = 0;
+    this.title = '';
+    this.tag = '';
+    this.author = '';
+    this.date = '';
+    this.imgUrl = '';
+    this.saying = '';
+    this.summary = '';
+    this.content = '';
+}
 }

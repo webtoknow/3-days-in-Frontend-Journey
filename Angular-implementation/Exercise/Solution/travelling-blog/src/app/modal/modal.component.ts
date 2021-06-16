@@ -10,11 +10,11 @@ import { ArticleService } from './../article.service';
 export class ModalComponent {
 
   @Input()
-  article: Article;
+  article: Article = new Article();
 
   @Output()
   getArticleEvent = new EventEmitter();
-  
+
   @Output()
   toggleModalEvent = new EventEmitter();
 

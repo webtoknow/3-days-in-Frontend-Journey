@@ -8,7 +8,7 @@ import { ArticleService } from 'src/app/article.service';
   styleUrls: ['./articles-list.component.css']
 })
 export class ArticlesListComponent implements OnInit {
-  articlesList: Article[];
+  articlesList: Article[] = [];
   showModal: boolean = false;
   article = new Article();
 

@@ -10,14 +10,14 @@ import { ArticleService } from '../article.service';
 export class ArticleComponent implements OnInit {
 
   @Input()
-  article: Article;
+  article: Article = new Article();
 
   @Output()
   getArticleEvent = new EventEmitter();
-  
+
   @Output()
   editEvent = new EventEmitter<Article>();
-  
+
 
   constructor(
     private articleService: ArticleService,
