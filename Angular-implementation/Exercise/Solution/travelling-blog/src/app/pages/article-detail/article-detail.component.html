@@ -1,4 +1,4 @@
-<article>
+<article *ngIf="article$ | async as article">
     <h2 class="title title--margin">{{ article.title }}</h2>
     <ul class="info__container ">
         <li class="info__item">{{ article.tag }}</li>

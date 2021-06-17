@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/article.model';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from 'src/app/article.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-article-detail',
@@ -10,17 +11,22 @@ import { ArticleService } from 'src/app/article.service';
 })
 export class ArticleDetailComponent implements OnInit {
 
-  article =  new Article();
+  article$: Observable<Article> = this.articleService.article$;
+
   constructor(
     private route: ActivatedRoute,
-    private articleService: ArticleService, 
+    private articleService: ArticleService,
     ) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.articleService.getArticleById(id).subscribe((response) => {
-      this.article = response;
-    })
+    this.getArticle();
+  }
+
+  getArticle(): void {
+    let id: string | null = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.articleService.getArticleById(id);
+    }
   }
 
 }

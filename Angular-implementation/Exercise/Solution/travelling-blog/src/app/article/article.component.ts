@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Article } from '../article.model';
 import { ArticleService } from '../article.service';
 
@@ -7,7 +8,7 @@ import { ArticleService } from '../article.service';
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent implements OnInit, OnDestroy {
 
   @Input()
   article: Article = new Article();
@@ -18,6 +19,7 @@ export class ArticleComponent implements OnInit {
   @Output()
   editEvent = new EventEmitter<Article>();
 
+  deleteArticleSubscription = new Subscription()
 
   constructor(
     private articleService: ArticleService,
@@ -27,13 +29,17 @@ export class ArticleComponent implements OnInit {
   }
 
   deleteArticle(id: number) {
-    this.articleService.deleteArticle(id).subscribe(() => {
+    this.deleteArticleSubscription = this.articleService.deleteArticle(id).subscribe(() => {
       this.getArticleEvent.emit();
     })
   }
 
   editArticle(article: Article) {
     this.editEvent.emit(article);
+  }
+
+  ngOnDestroy(): void {
+    this.deleteArticleSubscription.unsubscribe();
   }
 
 }
