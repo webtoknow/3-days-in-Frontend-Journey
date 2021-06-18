@@ -1,31 +1,36 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Article } from './article.model';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { switchMap, tap } from 'rxjs/operators';
+import { URL } from './core/constant';
 
 @Injectable()
 export class ArticleService {
 
   constructor(private http: HttpClient) { }
 
-  getArticles(): Observable<Article[]> {
-    return this.http.get('http://localhost:3000/articles') as Observable<Article[]>;
-  }
+
+  articles$ = this.http.get(URL.articles) as Observable<Article[]>;
+
+  private _articleSubject = new BehaviorSubject<string>('');
+  articleSelectedAction$ = this._articleSubject.asObservable();
+  article$ = this.articleSelectedAction$.pipe(
+    switchMap((id: string) => this.http.get(`${URL.articles}/${id}`) as Observable<Article>));
 
   postArticle(article: Article): Observable<Article> {
-    return this.http.post('http://localhost:3000/articles', article) as Observable<Article>;
+    return this.http.post(URL.articles, article) as Observable<Article>;
   }
 
   putArticle(article: Article, id: number): Observable<Article> {
-    return this.http.put(`http://localhost:3000/articles/${id}`, article) as Observable<Article>;
+    return this.http.put(`${URL.articles}/${id}`, article) as Observable<Article>;
   }
 
   deleteArticle(id: number): Observable<Article> {
-    return this.http.delete(`http://localhost:3000/articles/${id}`) as Observable<Article>;
+    return this.http.delete(`${URL.articles}/${id}`) as Observable<Article>;
   }
 
-  getArticleById(id: string | null): Observable<Article> {
-    return this.http.get(`http://localhost:3000/articles/${id}`) as Observable<Article>;
+  getArticleById(id: string): void {
+    this._articleSubject.next(id);
   }
-
 }

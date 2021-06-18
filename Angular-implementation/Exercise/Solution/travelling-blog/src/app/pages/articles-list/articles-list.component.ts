@@ -8,7 +8,7 @@ import { ArticleService } from 'src/app/article.service';
   styleUrls: ['./articles-list.component.css']
 })
 export class ArticlesListComponent implements OnInit {
-  articlesList: Article[] = [];
+  articles$ = this.articleService.articles$;
   showModal: boolean = false;
   article = new Article();
 
@@ -17,13 +17,9 @@ export class ArticlesListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getArticles();
   }
 
   getArticles() {
-    this.articleService.getArticles().subscribe((response) => {
-      this.articlesList = response;
-    })
   }
 
   openAddModal() {
